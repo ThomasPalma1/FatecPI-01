@@ -1,8 +1,17 @@
 # FatecPI-01
-## Mr.Academy
-o intuido do projeto é aprestar um site funcional e prático para apresentçaõ de conteúdos didaticos
+# Mr.Academy
 
-![Mr.Academy]()
+### Objetivos
+Nosso objetivo é aprestar um site funcional e prático para apresentçaõ de conteúdos didaticos, com a Mr. Academy  seu estudo rende!!!
+
+![Mr.Academy](https://github.com/ThomasPalma1/FatecPI-01/blob/69a3024fd8c1ea48164e317c2ad9bd7372df9b8d/logo.jpg)
+
+
+### Conteúdo
+Aprenda HTML 5, Excel e JavaScript de forma rápida e com qualidade, cursos  completos e com um preço que cabe no seu bolso. Venha expandir seus horizontes com a gente ;)
+
+![gif explosão](https://github.com/ThomasPalma1/FatecPI-01/blob/ba30336017a7bde49877399c2a9dcf79a44e8891/explos%C3%A3o.gif)
+
 
 ### Nossa Equipe
 [Thomas Palma](https://www.linkedin.com/in/thomas-palma-0764b81b3/)
