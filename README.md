@@ -1,17 +1,13 @@
-# FatecPI-01
-# Mr.Academy
+<h1 align="center">Mr. ACADEMY</h1>
+
+### Descrição do Projeto
+O projeto se trata de um wedsite para vendas de conteúdo didaticos.
+
+### Introdução
+Através do site será possivel ao aluno acessar o conteúdo da matéria desejada, através de uma plataforma simples e prática, facilitando a aprendizagem, além de permitir o acesso em qualquer lugar. 
 
 ### Objetivos
-Nosso objetivo é aprestar um site funcional e prático para apresentçaõ de conteúdos didaticos, com a Mr. Academy  seu estudo rende!!!
-
-![Mr.Academy](https://github.com/ThomasPalma1/FatecPI-01/blob/69a3024fd8c1ea48164e317c2ad9bd7372df9b8d/logo.jpg)
-
-
-### Conteúdo
-Aprenda HTML 5, Excel e JavaScript de forma rápida e com qualidade, cursos  completos e com um preço que cabe no seu bolso. Venha expandir seus horizontes com a gente ;)
-
-![gif explosão](https://github.com/ThomasPalma1/FatecPI-01/blob/ba30336017a7bde49877399c2a9dcf79a44e8891/explos%C3%A3o.gif)
-
+Nosso objetivo é aprestar um site funcional e prático para apresentaçaõ de conteúdos didaticos, permitindo um fácil acesso ao estudante.
 
 ### Nossa Equipe
 [Thomas Palma](https://www.linkedin.com/in/thomas-palma-0764b81b3/)
@@ -25,5 +21,3 @@ Aprenda HTML 5, Excel e JavaScript de forma rápida e com qualidade, cursos  com
 [Pedro Ferreira](https://www.linkedin.com/in/pedro-ferreira-6a8417190/)
 
 [Rogério Camargo](https://www.linkedin.com/in/rogério-camargo-3a01191a5)
-
-Este repositório será para podermos adicionar os arquivos/conteúdos do projeto.
