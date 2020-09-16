@@ -9,7 +9,7 @@ Através do site será possivel ao aluno acessar o conteúdo da matéria desejad
 ### Objetivos
 Nosso objetivo é aprestar um site funcional e prático para apresentaçaõ de conteúdos didaticos, permitindo um fácil acesso ao estudante.
 
-<h1 align="center">Nossa equipe</h1>
+<h2>Nossa equipe</h2>
            
  - [Thomas Palma](https://www.linkedin.com/in/thomas-palma-0764b81b3/)
 
