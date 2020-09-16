@@ -9,15 +9,15 @@ Através do site será possivel ao aluno acessar o conteúdo da matéria desejad
 ### Objetivos
 Nosso objetivo é aprestar um site funcional e prático para apresentaçaõ de conteúdos didaticos, permitindo um fácil acesso ao estudante.
 
-### Nossa Equipe
-[Thomas Palma](https://www.linkedin.com/in/thomas-palma-0764b81b3/)
+### <h1 align="center> Nossa Equipe </h1>
+ - [Thomas Palma](https://www.linkedin.com/in/thomas-palma-0764b81b3/)
 
-[Juliane Freitas](https://www.linkedin.com/in/juliane-freitas-9b6287163)
+ - [Juliane Freitas](https://www.linkedin.com/in/juliane-freitas-9b6287163)
 
-[Leticia Amorim](https://www.linkedin.com/in/leticia-amorim-4761b1185/)
+ - [Leticia Amorim](https://www.linkedin.com/in/leticia-amorim-4761b1185/)
 
-[Bryan Santos](https://www.linkedin.com/in/bryan-santos-77b53317b)
+ - [Bryan Santos](https://www.linkedin.com/in/bryan-santos-77b53317b)
 
-[Pedro Ferreira](https://www.linkedin.com/in/pedro-ferreira-6a8417190/)
+ - [Pedro Ferreira](https://www.linkedin.com/in/pedro-ferreira-6a8417190/)
 
-[Rogério Camargo](https://www.linkedin.com/in/rogério-camargo-3a01191a5)
+ - [Rogério Camargo](https://www.linkedin.com/in/rogério-camargo-3a01191a5)
