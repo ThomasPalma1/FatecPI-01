@@ -1,12 +1,15 @@
 <h1 align="center">Mr. Academy 📖🦉</h1>
 
-### Descrição do Projeto
-O projeto se trata de um wedsite para vendas de conteúdo didaticos.
+<h2>Descrição do projeto</h2>
 
-### Introdução
+O projeto se trata de um _website_ para vendas de conteúdo didaticos.
+
+<h2>Introdução</h2>
+
 Através do site será possivel ao aluno acessar o conteúdo da matéria desejada, através de uma plataforma simples e prática, facilitando a aprendizagem, além de permitir o acesso em qualquer lugar. 
 
-### Objetivos
+<h2>Objetivo da empresa</h2>
+
 Nosso objetivo é aprestar um site funcional e prático para apresentaçaõ de conteúdos didaticos, permitindo um fácil acesso ao estudante.
 
 <h2>Nossa equipe</h2>
