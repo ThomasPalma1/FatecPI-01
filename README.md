@@ -1,4 +1,4 @@
-<h1 align="center">Mr. ACADEMY</h1>
+<h1 align="center">Mr. Academy 📖🦉</h1>
 
 ### Descrição do Projeto
 O projeto se trata de um wedsite para vendas de conteúdo didaticos.
