@@ -27,4 +27,4 @@ Nosso objetivo é aprestar um site funcional e prático para apresentaçaõ de c
  - [Rogério Camargo](https://www.linkedin.com/in/rogério-camargo-3a01191a5)
 
 <h2>Modelo de negócio da nossa equipe<h2>
-<img  align="center" src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/Canvas_Mr.Academy-1.png">
+<img align="center" src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/Canvas_Mr.Academy-1.png">
