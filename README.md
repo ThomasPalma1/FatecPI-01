@@ -25,3 +25,6 @@ Nosso objetivo é aprestar um site funcional e prático para apresentaçaõ de c
  - [Pedro Ferreira](https://www.linkedin.com/in/pedro-ferreira-6a8417190/)
 
  - [Rogério Camargo](https://www.linkedin.com/in/rogério-camargo-3a01191a5)
+
+<h2>Modelo de negócio da nossa equipe<h2>
+![canvas mr. academy](https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/Canvas - Mr.Academy.pdf?raw=true)
