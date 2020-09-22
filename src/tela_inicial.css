@@ -7,48 +7,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital@1&display=swap');
 
- body{
-  width: 1366px;
- }
+div#interface{
+	max-width: 200px;
+	max-height: 1000px;
+}
   
 nav#navbar{
-	position: absolute; 
-width: 1366px;
+	position: relative; 
+width: 1355px;
 height: 66px;
-left: 0px;
-top: 0px;
+left: -8px;
+top: -9px;
 background: #9677D9;
 }
 
 img#icone{
-	position: absolute;
+	position: relative;
 width: 60px;
 height: 60px;
-left: 14px;
-top: 3px;
+left: 0px;
+top: -228px;
 }
 
 nav#titulo h1{
-	position: absolute;
+	position: relative;
 width: 184px;
 height: 62px;
 left: 65px;
-top: 40px;
+top: -30px;
 font-family: 'Poppins',sans-serif;
 font-size: 36px;
 color: #9677D9;
 line-height: 85%;
-font-weight: bold;
+font-weight: bolder;
 text-shadow: 0px 4px 4px rgba(97, 0, 255, 0.25);
 }
 
 nav#titulo h2{
-	position: absolute;
+	position: relative;
 width: 316px;
 height: 19px;
 left: 65px;
-top: 115px;
+top: -60px;
 font-family: 'Roboto',sans-serif;
 font-size: 17px;
 color: #ffffff;
@@ -57,13 +59,12 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 nav#menud{
-	position: absolute;
+	position: relative;
 width: 200px;
 height: 23px;
 left: 1175px;
-top: -10px;
+top: -365px;
 }
-
 
 nav#menud li{
 	font-family:'Poppins',sans-serif;
@@ -81,7 +82,7 @@ nav#menud li{
 nav#menue{
 		list-style: none;
 	position: relative;
-	top: -7px;
+	top: -300px;
 	left: 30px;
 }
 
@@ -101,11 +102,11 @@ nav#menud li:hover{background-color: #BCE3B6;}
 nav#menue li:hover{background-color: #BCE3B6;}
 li#config:hover {background-color: #BCE3B6;}
 li#config{
-	position: absolute;
+	position: relative;
 width: 82px;
 height: 3px;
 left: 1060px;
-top: 10px;}
+top: -385px;}
 
 li#config{
 font-family: 'Poppins',sans-serif;
@@ -122,32 +123,31 @@ transition: background-color 1s;
 	width:110px;
 }
 
-nav#boasvindas{position: absolute;
-width: 305px;
+nav#boasvindas{position: relative;
+width: 320px;
 height: 279px;
 left: 65px;
-top: 190px;
-
+top: -800px;
+text-align: left;
 font-family: 'Abel', sans-serif;
-font-size: 20px;
+font-size: 25px;
 line-height: 31px;
-
 color: #FFFFFF;
 
 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);}
 
 figure.fotoum{
-position: absolute;
-width: 532px;
+position: relative;
+width: 0px;
 height: 510px;
-left: 700px;
-top: -100px;}
+left: 675px;
+top: 450px;}
 
 nav#op{
-	position: absolute;
-left: 110px;
+	position: relative;
+left: 80px;
 right: 600px;
-top: 400px;
+top: -80px;
 bottom: 500px;
 }
 
@@ -159,10 +159,138 @@ font-weight: bold;
 font-size: 18px;
 line-height: 27px;
 text-align: center;
+color: #FFFFFF;
+}
+
+nav#pv{
+	position: relative;
+left: 528px;
+right: 0px;
+top: -315px;
+bottom: 0px;
+}
+
+nav#pv{
+		width: 250px;
+	font-family: 'Poppins' sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 27px;
+text-align: center;
+color: #FFFFFF;
+}
+
+nav#rc{
+position: relative;
+left: 990px;
+right: 600;
+top: -522px;
+bottom:0px;
+}
+
+nav#rc{
+			width: 250px;
+	font-family: 'Poppins' sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 27px;
+text-align: center;
+color: #FFFFFF;
+}
+
+.imgaqui{
+	position: relative;
+left: 880px;
+right: 1px;
+top: 270px;
+bottom: 368px;
+
+}
+
+nav#aqui{
+	position: relative;
+left: 45px;
+right: 384px;
+top: -700px;
+bottom: 317px;
+width: 900px;
+}
+
+nav#aqui{
+	font-family: 'Roboto',sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 22px;
+line-height: 36px;
+text-align: justify;
 
 color: #FFFFFF;
 }
 
-nav#op h2{
-	font-family:  
+.imgplat{
+	position: relative;
+left: -450px;
+right: 70.64px;
+top: 250px;
+bottom: 147px;
+}
+
+nav#plataforma{
+	position: relative;
+left: 500px;
+right: 384px;
+top: -900px;
+bottom: 317px;
+width: 900px;
+}
+
+nav#plataforma{
+	width: 800px;
+		font-family: 'Roboto',sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 22px;
+line-height: 36px;
+text-align: justify;
+
+color: #FFFFFF;
+}
+
+.imgcad{
+		position: relative;
+left: 850px;
+right: 70.64px;
+top: 250px;
+bottom: 147px;
+}
+
+nav#cadastre{
+		position: relative;
+left: 70px;
+right: 384px;
+top: -1170px;
+bottom: 317px;
+width: 900px;
+}
+
+nav#cadastre{
+	width: 700px;
+		font-family: 'Roboto',sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 22px;
+line-height: 36px;
+text-align: justify;
+color: #FFFFFF;
+}
+
+nav#final{
+	position: relative; 
+width: 1366px;
+height: 50px;
+left: -80px;
+top: 50px;
+background: #333333;
 }
