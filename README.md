@@ -2,7 +2,7 @@
 
 <h2>Descrição do projeto</h2>
 
-O projeto se trata de um _website_ para vendas de conteúdo didaticos.
+O projeto se trata de um _website_ para vendas de conteúdo didáticos.
 
 <h2>Introdução</h2>
 
@@ -10,7 +10,7 @@ Através do site será possivel ao aluno acessar o conteúdo da matéria desejad
 
 <h2>Objetivo da empresa</h2>
 
-Nosso objetivo é aprestar um site funcional e prático para apresentaçaõ de conteúdos didaticos, permitindo um fácil acesso ao estudante.
+Nosso objetivo é aprestar um site funcional e prático para apresentação de conteúdos didáticos, permitindo um fácil acesso ao estudante.
 
 <h2>Nossa equipe</h2>
            
@@ -26,5 +26,5 @@ Nosso objetivo é aprestar um site funcional e prático para apresentaçaõ de c
 
  - [Rogério Camargo](https://www.linkedin.com/in/rogério-camargo-3a01191a5)
 
-<h2 align="center">Modelo de negócio da nossa equipe</h2>
+<h2 align="center">Modelo de negócio do nosso projeto</h2>
 <img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/Canvas_Mr.Academy-1.png">

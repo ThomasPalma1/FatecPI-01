@@ -1,0 +1,296 @@
+@charset = 'UTF-8'
+* {
+	box-sizing: border-box;
+	margin: 0px
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital@1&display=swap');
+
+div#interface{
+	max-width: 200px;
+	max-height: 1000px;
+}
+  
+nav#navbar{
+	position: relative; 
+width: 1355px;
+height: 66px;
+left: -8px;
+top: -9px;
+background: #9677D9;
+}
+
+img#icone{
+	position: relative;
+width: 60px;
+height: 60px;
+left: 0px;
+top: -228px;
+}
+
+nav#titulo h1{
+	position: relative;
+width: 184px;
+height: 62px;
+left: 65px;
+top: -30px;
+font-family: 'Poppins',sans-serif;
+font-size: 36px;
+color: #9677D9;
+line-height: 85%;
+font-weight: bolder;
+text-shadow: 0px 4px 4px rgba(97, 0, 255, 0.25);
+}
+
+nav#titulo h2{
+	position: relative;
+width: 316px;
+height: 19px;
+left: 65px;
+top: -60px;
+font-family: 'Roboto',sans-serif;
+font-size: 17px;
+color: #ffffff;
+font-weight: bold;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+nav#menud{
+	position: relative;
+width: 200px;
+height: 23px;
+left: 1175px;
+top: -365px;
+}
+
+nav#menud li{
+	font-family:'Poppins',sans-serif;
+	font-size: 14px;
+	text-align: center;
+	display: inline-block;
+	background-color: #ffffff;
+	padding: 0px;
+	margin: 2px;
+	transition: background-color 1s;
+	border-radius: 100px;
+	width: 115px;
+}
+
+nav#menue{
+		list-style: none;
+	position: relative;
+	top: -300px;
+	left: 30px;
+}
+
+nav#menue li{
+	font-family:'Poppins',sans-serif;
+	font-size: 14px;
+	text-align: center;
+	display: block;
+	background-color: #ffffff;
+	padding: 0px;
+	margin: 4px;
+	transition: background-color 1s;
+	border-radius: 100px;
+	width: 170px;
+}
+nav#menud li:hover{background-color: #BCE3B6;}
+nav#menue li:hover{background-color: #BCE3B6;}
+li#config:hover {background-color: #BCE3B6;}
+li#config{
+	position: relative;
+width: 82px;
+height: 3px;
+left: 1060px;
+top: -385px;}
+
+li#config{
+font-family: 'Poppins',sans-serif;
+display: block;
+	background-color: #ffffff;
+	padding: 10px;
+	margin: 10px;
+font-size: 15px;
+line-height: 15%;
+text-align: center;
+color: #000000;
+transition: background-color 1s;
+	border-radius: 100px;
+	width:110px;
+}
+
+nav#boasvindas{position: relative;
+width: 320px;
+height: 279px;
+left: 65px;
+top: -800px;
+text-align: left;
+font-family: 'Abel', sans-serif;
+font-size: 25px;
+line-height: 31px;
+color: #FFFFFF;
+
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);}
+
+figure.fotoum{
+position: relative;
+width: 0px;
+height: 510px;
+left: 675px;
+top: 450px;}
+
+nav#op{
+	position: relative;
+left: 80px;
+right: 600px;
+top: -80px;
+bottom: 500px;
+}
+
+nav#op{
+	width: 250px;
+	font-family: 'Poppins' sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 27px;
+text-align: center;
+color: #FFFFFF;
+}
+
+nav#pv{
+	position: relative;
+left: 528px;
+right: 0px;
+top: -315px;
+bottom: 0px;
+}
+
+nav#pv{
+		width: 250px;
+	font-family: 'Poppins' sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 27px;
+text-align: center;
+color: #FFFFFF;
+}
+
+nav#rc{
+position: relative;
+left: 990px;
+right: 600;
+top: -522px;
+bottom:0px;
+}
+
+nav#rc{
+			width: 250px;
+	font-family: 'Poppins' sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 27px;
+text-align: center;
+color: #FFFFFF;
+}
+
+.imgaqui{
+	position: relative;
+left: 880px;
+right: 1px;
+top: 270px;
+bottom: 368px;
+
+}
+
+nav#aqui{
+	position: relative;
+left: 45px;
+right: 384px;
+top: -700px;
+bottom: 317px;
+width: 900px;
+}
+
+nav#aqui{
+	font-family: 'Roboto',sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 22px;
+line-height: 36px;
+text-align: justify;
+
+color: #FFFFFF;
+}
+
+.imgplat{
+	position: relative;
+left: -450px;
+right: 70.64px;
+top: 250px;
+bottom: 147px;
+}
+
+nav#plataforma{
+	position: relative;
+left: 500px;
+right: 384px;
+top: -900px;
+bottom: 317px;
+width: 900px;
+}
+
+nav#plataforma{
+	width: 800px;
+		font-family: 'Roboto',sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 22px;
+line-height: 36px;
+text-align: justify;
+
+color: #FFFFFF;
+}
+
+.imgcad{
+		position: relative;
+left: 850px;
+right: 70.64px;
+top: 250px;
+bottom: 147px;
+}
+
+nav#cadastre{
+		position: relative;
+left: 70px;
+right: 384px;
+top: -1170px;
+bottom: 317px;
+width: 900px;
+}
+
+nav#cadastre{
+	width: 700px;
+		font-family: 'Roboto',sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 22px;
+line-height: 36px;
+text-align: justify;
+color: #FFFFFF;
+}
+
+nav#final{
+	position: relative; 
+width: 1366px;
+height: 50px;
+left: -80px;
+top: 50px;
+background: #333333;
+}
