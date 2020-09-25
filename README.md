@@ -31,5 +31,5 @@ Nosso objetivo é aprestar um site funcional e prático para apresentação de c
 <br>
 <img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/Canvas_Mr.Academy-1.png">
 <h2 align="center"> Pesquisa de campo </h2>
-<h3 align="left"> Gráfico sobre o impacto da coloração ta tela incial, se ela é agradável ou não</h3>
+<h3 align="left"> Gráfico sobre o impacto da coloração ta tela incial.</h3>
 <img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/pesquisa_cor/Capturar.PNG">
