@@ -33,3 +33,5 @@ Nosso objetivo é aprestar um site funcional e prático para apresentação de c
 <h2 align="center"> Pesquisa de campo </h2>
 <h3 align="left"> Gráfico sobre o impacto da coloração na tela incial.</h3>
 <img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/pesquisa_cor/Cor_tela1.PNG"/>
+<h3 align="left"> Gráfico principais componentes de um site.</h3>
+<img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/pesquisa_cor/Conte%C3%BAdos_principais.PNG">
