@@ -27,7 +27,7 @@ Nosso objetivo é aprestar um site funcional e prático para apresentação de c
  - [Rogério Camargo](https://www.linkedin.com/in/rogério-camargo-3a01191a5) (Development Team)
 <br>
 <h2 align="center">Modelo de negócio do nosso projeto</h2>
-<h4 align="center">Para uma melhor visualização das imagens, clique com o botão direito em cima da imagem e depois clique em ''abrir imagem em uma nova guia''.</h4>
+<h4 align="center">Para uma melhor visualização do modelo de negócio, clique com o botão direito em cima da imagem e depois clique em <i>''abrir imagem em uma nova guia''<i>.</h4>
 <br>
 <img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/Canvas_Mr.Academy-1.png" class="responsive">
 
