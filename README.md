@@ -31,4 +31,5 @@ Nosso objetivo é aprestar um site funcional e prático para apresentação de c
 <br>
 <img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/Canvas_Mr.Academy-1.png">
 
-<img align = 'center' src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/pesquisa_cor/Capturar.PNG">
+text align = 'center'
+<img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/pesquisa_cor/Capturar.PNG">
