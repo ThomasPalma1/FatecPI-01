@@ -30,3 +30,5 @@ Nosso objetivo é aprestar um site funcional e prático para apresentação de c
 <h4 align="center">Para uma melhor visualização das imagens, clique com o botão direito em cima da imagem e depois clique em ''abrir imagem em uma nova guia''.</h4>
 <br>
 <img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/Canvas_Mr.Academy-1.png">
+
+<img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/pesquisa_cor/Capturar.PNG>
