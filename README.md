@@ -14,17 +14,17 @@ Nosso objetivo é aprestar um site funcional e prático para apresentação de c
 
 <h2>Nossa equipe</h2>
            
- - [Thomas Palma](https://www.linkedin.com/in/thomas-palma-0764b81b3/) (Scrum Master)
+ - [Thomas Palma](https://www.linkedin.com/in/thomas-palma-0764b81b3/) <i>(Scrum Master)</i>
 
- - [Juliane Freitas](https://www.linkedin.com/in/juliane-freitas-9b6287163) (Development Team)
+ - [Juliane Freitas](https://www.linkedin.com/in/juliane-freitas-9b6287163) <i>(Development Team)</i>
 
- - [Leticia Amorim](https://www.linkedin.com/in/leticia-amorim-4761b1185/) (Development Team)
+ - [Leticia Amorim](https://www.linkedin.com/in/leticia-amorim-4761b1185/) <i>(Development Team)</i>
 
- - [Bryan Santos](https://www.linkedin.com/in/bryan-santos-77b53317b) (Development Team)
+ - [Bryan Santos](https://www.linkedin.com/in/bryan-santos-77b53317b) <i>(Development Team)</i>
 
- - [Pedro Ferreira](https://www.linkedin.com/in/pedro-ferreira-6a8417190/) (Development Team)
+ - [Pedro Ferreira](https://www.linkedin.com/in/pedro-ferreira-6a8417190/) <i>(Development Team)</i>
 
- - [Rogério Camargo](https://www.linkedin.com/in/rogério-camargo-3a01191a5) (Development Team)
+ - [Rogério Camargo](https://www.linkedin.com/in/rogério-camargo-3a01191a5) <i>(Development Team)</i>
 <br>
 <h2 align="center">Modelo de negócio do nosso projeto</h2>
 <h4 align="center">Para uma melhor visualização do modelo de negócio do nosso projeto, clique com o botão direito do <i>mouse</i> em cima da imagem e depois clique em <i>''abrir imagem em uma nova guia''.</i></h4>
