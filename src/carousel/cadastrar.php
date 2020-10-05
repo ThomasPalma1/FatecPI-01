@@ -23,7 +23,7 @@ if ($senha === $senhaconfirm){
 
     if ($conexao->query($sql) === true) {
         $_SESSION ['status_cadastro'] = true;
-        header ('Location: index.php');
+        header ('Location: logar.php');
         exit;
     }
 
