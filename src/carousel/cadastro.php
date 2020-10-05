@@ -72,7 +72,7 @@ body {
                 </div>
             </center>
         </form>
-        <div class="text-center">Você já possui uma conta? <a href="index.php">Logue-se!</a></div>
+        <div class="text-center">Você já possui uma conta? <a href="logar.php">Logue-se!</a></div>
     </div>
 </body>
 </html>                            
