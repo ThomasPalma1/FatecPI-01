@@ -28,68 +28,49 @@ session_start();
 
 <body>
 
-	<!-- Start Header Area -->
-	<header class="header_area sticky-header">
-		<div class="main_menu">
-			<nav class="navbar navbar-expand-lg navbar-light main_box">
-				<div class="container">
-					<!-- Brand and toggle get grouped for better mobile display -->
-					<a class="navbar-brand logo_h" href="index.html"><img src="imagens/logo.png" width="150px"></a>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-						<ul class="nav navbar-nav menu_nav ml-auto">
-							<li class="nav-item active"><a class="nav-link" href="index.html">Inicio</a></li>
-							<li class="nav-item submenu dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-								 aria-expanded="false">Materiais didáticos</a>
-								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="">Português</a></li>
-									<li class="nav-item"><a class="nav-link" href="">Inglês</a></li>
-									<li class="nav-item"><a class="nav-link" href="">Matemática Discreta</a></li>
-									<li class="nav-item"><a class="nav-link" href="">Laboratorio de Hardware</a></li>
-									<li class="nav-item"><a class="nav-link" href="">Administração Geral</a></li>
-									<li class="nav-item"><a class="nav-link" href="">Python</a></li>
-									<li class="nav-item"><a class="nav-link" href="">Arquitetura e Organização de Computadores</a></li>
-								</ul>
-							</li>
-							<li class="nav-item submenu dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-								 aria-expanded="false">Meu Perfil</a>
-								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="perfil_cliente/editar_perfil.html">Editar Perfil</a></li>
-									<li class="nav-item"><a class="nav-link" href="html">Meus pedidos</a></li>
-									<li class="nav-item"><a class="nav-link" href=".html">Minha carteira</a></li>
-								</ul>
-							</li>
-							<li class="nav-item"><a class="nav-link" href="contato.php">Contato</a></li>
-						</ul>
-						<ul class="nav navbar-nav navbar-right">
-							<li class="nav-item"><a href="#" class="cart"><span class="lnr lnr-cart"></span></a></li>
-							<li class="nav-item">
-								<button class="search"><span class="lnr lnr-magnifier" id="search"></span></button>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</nav>
-		</div>
-		<div class="search_input" id="search_input_box">
-			<div class="container">
-				<form class="d-flex justify-content-between">
-					<input type="text" class="form-control" id="search_input" placeholder="O que você procura?">
-					<button type="submit" class="btn"></button>
-					<span class="lnr lnr-cross" id="close_search" title="Close Search"></span>
-				</form>
-			</div>
-		</div>
-	</header>
-	<!-- End Header Area -->
+	 <!-- Start Header Area -->
+  <header class="header_area sticky-header">
+    <div class="main_menu">
+      <nav class="navbar navbar-expand-lg navbar-light main_box" style="height: 80px;">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <a class="navbar-brand logo_h" href="index.html"><img src="imagens/logo.png" width="150px"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+            <ul class="nav navbar-nav menu_nav ml-auto">
+              <li class="nav-item active"><a class="nav-link" href="index.html">Inicio</a></li>
+              <li class="nav-item submenu dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                 aria-expanded="false">Entrar</a>
+                <ul class="dropdown-menu">
+                  <li class="nav-item"><a class="nav-link" href="logar.php">Login</a></li>
+                  <li class="nav-item"><a class="nav-link" href="cadastro.php">Cadastrar</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="contato.php">Contato</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Sobre Nós</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="search_input" id="search_input_box">
+      <div class="container">
+        <form class="d-flex justify-content-between">
+          <input type="text" class="form-control" id="search_input" placeholder="O que você procura?">
+          <button type="submit" class="btn"></button>
+          <span class="lnr lnr-cross" id="close_search" title="Close Search"></span>
+        </form>
+      </div>
+    </div>
+  </header>
+  <!-- End Header Area -->
 
 	
 <main role="main">
@@ -232,7 +213,7 @@ session_start();
           <div class="col-xs-6 col-md-3">
             <h6>Contato</h6>
             <ul class="footer-links">
-              <li><a href="http://scanfcode.com/contact/">Fale Conosco</a></li>
+              <li><a href="contato.php">Fale Conosco</a></li>
          	</ul>
           </div>
         </div>
