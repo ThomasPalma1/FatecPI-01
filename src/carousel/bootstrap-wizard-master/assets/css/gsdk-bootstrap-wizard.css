@@ -393,6 +393,26 @@ h1 .subtitle {
   color: #999999;
   font-size: 14px;
 }
+div#final{
+  position: absolute;
+  text-align: center;
+color: white;
+width: 122px;
+left: 78%;
+top: 95%;
+font-size: max(60px, 0,3vw);
+}
+
+div#final{
+  background-color: #109CFF;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+div#final:hover{
+  background-color: #65b3ba ;
+  transition: 1s;
+}
 
 /*             Inputs               */
 .form-control {
