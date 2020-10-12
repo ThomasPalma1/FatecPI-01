@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
     <!-- Required meta tags-->
     <meta charset="UTF-8">
@@ -27,7 +25,7 @@
                     <h2 class="title">Cadastro de produto</h2>
                 </div>
                 <div class="card-body">
-                    <form method="POST">
+                <form  id="envio" enctype="multipart/form-data" action="upload.php" method="POST">
                         <div class="form-row">
                             <div class="name">Título</div>
                             <div class="value">
@@ -35,10 +33,19 @@
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="name">Matéria do produto</div>
+                            <div class="name">Disciplina</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="email" name="email" placeholder="example@email.com">
+                                <select class="selectpicker">
+                                        <option>Português</option>
+                                        <option>Inglês</option>
+                                        <option>Matemática Discreta</option>
+                                        <option>Laboratório de Hardware</option>
+                                        <option>Administração Geral</option>
+                                        <option>Algoritmos e Lógica de Programação</option>
+                                        <option>Arquitetura e Organização de Computadores</option>
+                                </select>
+
                                 </div>
                             </div>
                         </div>
@@ -54,9 +61,7 @@
                             <div class="name">Upload do material</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="file_cv" id="file">
-                                    <label class="label--file" for="file">Escolha um arquivo</label>
-                                    <span class="input-file__info">Nenhum arquivo selecionado.</span>
+                                    <input type="file" name="file_cv[]" multiple>
                                 </div>
                                 <div class="label--desc">Faça o upload do material didático. As extensões permitidas são: <b><i>pdf, doc e docx</i></b></div>
                             </div>
@@ -64,7 +69,7 @@
                     </form>
                 </div>
                 <div class="card-footer">
-                    <button class="btn btn--radius-2 btn--blue-2" type="submit">Finalizar cadstro de produto</button>
+                    <button form="envio" class="btn btn--radius-2 btn--blue-2" name="enviar" type="submit">Finalizar cadastro de produto</button>
                 </div>
             </div>
         </div>
