@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 12/10/2020 às 21:55
+-- Tempo de geração: 14/10/2020 às 01:56
 -- Versão do servidor: 10.4.11-MariaDB
 -- Versão do PHP: 7.4.4
 
@@ -31,7 +31,9 @@ CREATE TABLE `arquivos` (
   `nome_arquivo` varchar(100) NOT NULL,
   `disciplina` varchar(100) NOT NULL,
   `descricao` varchar(250) NOT NULL,
-  `extensao_arquivo` varchar(5) NOT NULL
+  `extensao_arquivo` varchar(5) NOT NULL,
+  `titulo_produto` varchar(250) NOT NULL,
+  `preco` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 COMMIT;
 
