@@ -4,14 +4,16 @@
 
 O projeto se trata de um _website_ para vendas de conteúdo didáticos.
 
-<h2>Introdução</h2>
+<h2>Objetivo do Projeto</h2>
 
-Através do site será possivel ao aluno acessar o conteúdo da matéria desejada, através de uma plataforma simples e prática, facilitando a aprendizagem, além de permitir o acesso em qualquer lugar. 
+Nosso primeiro projeto é uma plataforma de estudos. Basicamente é um site, onde estudantes poderão entrar e encontrar materiais que auxiliem seu aprendizado, todo o conteúdo será revisado por professores.
+Nosso objetivo como empresa, é criar um ambiente acessível e intuitivo para que estudantes e professores possam consultar nossa plataforma em busca de conhecimento.
 
-<h2>Objetivo da empresa</h2>
-
-Nosso objetivo é aprestar um site funcional e prático para apresentação de conteúdos didáticos, permitindo um fácil acesso ao estudante.
-
+<h2>Tecnologias utilizadas</h2>
+<p><b>Banco de Dados:</b> MySQL</p>
+<p><b>Backend:</b> JavaScript e PhP</p>
+<p><b>Frontend:</b> HTML, CSS e Bootstrap</p>
+           
 <h2>Nossa equipe</h2>
            
  - [Thomas Palma](https://www.linkedin.com/in/thomas-palma-0764b81b3/) <i>(Scrum Master)</i>
@@ -25,19 +27,19 @@ Nosso objetivo é aprestar um site funcional e prático para apresentação de c
  - [Pedro Ferreira](https://www.linkedin.com/in/pedro-ferreira-6a8417190/) <i>(Development Team)</i>
 
  - [Rogério Camargo](https://www.linkedin.com/in/rogério-camargo-3a01191a5) <i>(Development Team)</i>
-<br>
-<h2 align="center">Modelo de negócio do nosso projeto</h2>
-<h4 align="center">Para uma melhor visualização do modelo de negócio do nosso projeto, clique com o botão direito do <i>mouse</i> em cima da imagem e depois clique em <i>''abrir imagem em uma nova guia''.</i></h4>
-<br>
-<img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/Canvas_Mr.Academy-1.png">
-<h2 align="center"> Pesquisa de campo </h2>
-<p align="justify">A pesquisa de campo foi realizada com o intuito de demonstrar aos avaliadores o que o público tem a opinar sobre o protótipo desenvolvido, a avaliação pública é importante pois são eles que utilizarão a nossa plataforma. Aproximadamente 89% das pessoas que responderam a pesquisa gostaram da tela incial, que têm uma predominância na cor roxa, alguns associaram a cor ao luxo e a tecnologia. Cerca de 88% do público avaliou o design geral das telas entre 5 (excelente) e 4 (bom), são retornos importantes para a equipe. Em geral, foram 126 respostas na pesquisa onde obtemos respostas positivas sobre nossos protótipos e ideias do que podemos aprimorar futuramente em nossas telas.</p>
-<h3 align="left"> Gráfico 1: O impacto da coloração na tela incial.</h3>
-<img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/pesquisa_cor/Cor_tela1.PNG"/>
-<h3 align="left"> Breves comentários sobre a cor da tela inicial.</h3>
-<img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/pesquisa_cor/Breves_coment%C3%A1rios2.PNG"/>
-<h3 align="left"> Gráfico 2: Principais componentes de um site.</h3>
-<img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/pesquisa_cor/Conte%C3%BAdos_principais.PNG">
-<h3 align="left"> Gráfico 3: Aprovação do design das telas.</h3> 
-<h4 align="left"> 1 - Péssimo </br>2 - Ruim </br>3 - Regular </br>4 - Bom </br> 5 - Excelente</h4>
-<img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/pesquisa_cor/Agrado_design.PNG"/>
+ 
+ <h2>Cronograma do projeto</h2>
+ <img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/Cronograma%20-%20PI%20.png">
+ 
+ <h2>Progresso do projeto</h2>
+<p>•Tela inicial (ao entrar no site) :white_check_mark:</p>
+<p>•Tela cadastro :white_check_mark:</p>
+<p>•Tela login :white_check_mark:</p>
+<p>•Tela pós login (cara do site)</p>
+<p>•Adicionar produto(Adm.) :white_check_mark:</p> 
+<p>•Tela produto (conteúdo)</p>
+<p>•Perfil cliente</p>
+<p>•Carrinho de compras</p> 
+<p>•Checkout de pagamento</p>
+<p>•Relatório de vendas</p>
+<p>•Perfil administrador</p>
