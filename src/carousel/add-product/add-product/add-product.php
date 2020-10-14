@@ -15,6 +15,7 @@
 
     <!-- Main CSS-->
     <link href="css/main.css" rel="stylesheet" media="all">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body>
@@ -29,21 +30,21 @@
                         <div class="form-row">
                             <div class="name">Título</div>
                             <div class="value">
-                                <input class="input--style-6" type="text" name="full_name">
+                                <input class="input--style-6" type="text" name="titulo_produto">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="name">Disciplina</div>
                             <div class="value">
                                 <div class="input-group">
-                                <select class="selectpicker">
-                                        <option>Português</option>
-                                        <option>Inglês</option>
-                                        <option>Matemática Discreta</option>
-                                        <option>Laboratório de Hardware</option>
-                                        <option>Administração Geral</option>
-                                        <option>Algoritmos e Lógica de Programação</option>
-                                        <option>Arquitetura e Organização de Computadores</option>
+                                <select class="selectpicker" name="disciplina">
+                                        <option value="Português">Português</option>
+                                        <option value="Inglês">Inglês</option>
+                                        <option value="Matemática Discreta">Matemática Discreta</option>
+                                        <option value="Laboratório de Hardware">Laboratório de Hardware</option>
+                                        <option value="Administração Geral">Administração Geral</option>
+                                        <option value="Algoritmos e Lógica de Programação">Algoritmos e Lógica de Programação</option>
+                                        <option value="Arquitetura e Organização de Computadores">Arquitetura e Organização de Computadores</option>
                                 </select>
 
                                 </div>
@@ -53,7 +54,7 @@
                             <div class="name">Descrição do produto</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <textarea class="textarea--style-6" name="message" placeholder="Faça uma breve descrição do seu produto, dizendo o que ele contém."></textarea>
+                                    <textarea class="textarea--style-6" name="descricao" placeholder="Faça uma breve descrição do seu produto, dizendo o que ele contém."></textarea>
                                 </div>
                             </div>
                         </div>
@@ -66,10 +67,27 @@
                                 <div class="label--desc">Faça o upload do material didático. As extensões permitidas são: <b><i>pdf, doc e docx</i></b></div>
                             </div>
                         </div>
+                        <div class="form-row">
+                            <div class="name">Preço</div>
+                            <div class="value">
+                                <input class="input--style-6" type="text" name="preco">
+                            </div>
+                        </div>
                     </form>
                 </div>
                 <div class="card-footer">
-                    <button form="envio" class="btn btn--radius-2 btn--blue-2" name="enviar" type="submit">Finalizar cadastro de produto</button>
+                    <!-- <button form="envio" class="btn btn--radius-2 btn--blue-2" name="enviar" type="submit">Finalizar cadastro de produto</button> -->
+                    <button onclick="sweetalertclick()" form="envio" class="btn btn--radius-2 btn--blue-2" name="enviar" type="submit">Finalizar cadastro de produto</button>
+                    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+                    <script>
+                    	function sweetalertclick() {
+                    		swal({
+                    			title: "Sucesso!",
+                    			text: "Seu material foi adcionado!",
+                    			icon: "success",
+                    		});
+                    }
+                    	</script>
                 </div>
             </div>
         </div>
