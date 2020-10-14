@@ -9,10 +9,13 @@ O projeto se trata de um _website_ para vendas de conteúdo didáticos.
 Nosso primeiro projeto é uma plataforma de estudos. Basicamente é um site, onde estudantes poderão entrar e encontrar materiais que auxiliem seu aprendizado, todo o conteúdo será revisado por professores.
 Nosso objetivo como empresa, é criar um ambiente acessível e intuitivo para que estudantes e professores possam consultar nossa plataforma em busca de conhecimento.
 
-<h2>Tecnologias utilizadas</h2>
-<p><b>Banco de Dados:</b> MySQL</p>
-<p><b>Backend:</b> JavaScript e PhP</p>
-<p><b>Frontend:</b> HTML, CSS e Bootstrap</p>
+<h2>Ferramentas utilizadas</h2>
+           
+ - <b>Banco de dados: </b>MySQL
+
+ - <b>Backend: </b>PHP
+
+ - <b>Frontend: </b>HTML, CSS & Bootstrap 4
            
 <h2>Nossa equipe</h2>
            
