@@ -101,7 +101,7 @@ include_once("conexao.php");
     <div class="carousel-inner">
       <div class="carousel-item active">
         <a href="#" svg class="bd-placeholder-img">
-        	<img src="imagens\s_texto_esquerda.png" width="100%" height="100%"  xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%"  fill="#777"/></svg></a>
+        	<img src="imagens\esquerda.png" width="100%" height="100%"  xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%"  fill="#777"/></svg></a>
         <div class="container">
           <div class="carousel-caption text-left">
           	<div id = slide1>
@@ -116,7 +116,7 @@ include_once("conexao.php");
         </div>
       </div>
       <div class="carousel-item">
-         <a href="#" svg class="bd-placeholder-img"><img src="imagens/sem_texto_centro.png" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg></a>
+         <a href="#" svg class="bd-placeholder-img"><img src="imagens/centro.png" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg></a>
         <div class="container">
           <div class="carousel-caption">
           	<div id = slide2>
@@ -132,7 +132,7 @@ include_once("conexao.php");
         </div>
       </div>
       <div class="carousel-item">
-         <a href="#" svg class="bd-placeholder-img"><img src="imagens/sem_texto_direita.png" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg></a>
+         <a href="#" svg class="bd-placeholder-img"><img src="imagens/direita.png" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg></a>
         <div class="container">
           <div class="carousel-caption text-right">
           	<div id = slide3>

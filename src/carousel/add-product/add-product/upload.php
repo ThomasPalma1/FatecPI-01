@@ -21,6 +21,7 @@
 
                     if (move_uploaded_file($temporario, $pasta.$nome)):
                         echo  "<script>alert('Material cadastrado com sucesso');</script>";
+                        // echo("<a href='../../produtos.php#'>Voltar para a página de produtos</a>");
 
                         $sql = "insert into arquivos (titulo_produto, nome_arquivo, disciplina, descricao, extensao_arquivo, preco) values ('$titulo_produto', '$nome', '$disciplina', '$descricao', '$extensao', '$preco')";
                         mysqli_query($conexao, $sql);
@@ -34,5 +35,6 @@
                 $contador++;
             }
         endif;
+        header('Location:../../upload_concluido.php')
 
     ?>
