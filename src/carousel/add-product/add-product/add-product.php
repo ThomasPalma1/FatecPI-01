@@ -1,11 +1,13 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt-br">
+
 <head>
+
+	<link rel="shortcut icon" href="../../imagens/fav.ico">
+	<meta charset="UTF-8">
     <!-- Required meta tags-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Colorlib Templates">
-    <meta name="author" content="Colorlib">
-    <meta name="keywords" content="Colorlib Templates">
 
     <!-- Title Page-->
     <title>Cadastro de conteúdo</title>
@@ -15,7 +17,21 @@
 
     <!-- Main CSS-->
     <link href="css/main.css" rel="stylesheet" media="all">
+     <link href="css/header.css" rel="stylesheet" media="all">
 </head>
+
+
+<header class="header">
+  <a href="" class="logo"><img src="../../imagens/logo.png" width="120px"></a>
+  <input class="menu-btn" type="checkbox" id="menu-btn" />
+  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+  <ul class="menu">
+    <li><a href="../../produtos.php">Inicio</a></li>
+    <li><a href="#">Editar Perfil</a></li>
+    <li><a href="#add-product.php">Cadastrar Material</a></li>
+    <li><a href="#">Relatório de Vendas</a></li>
+  </ul>
+</header>
 
 <body>
 <style>
@@ -44,7 +60,7 @@ body {
                             <div class="name">Disciplina</div>
                             <div class="value">
                                 <div class="input-group">
-                                <select class="selectpicker" name="disciplina">
+                                <select class="selectpicker" name="disciplina" style="height: 38px;">
                                         <option value="Português">Português</option>
                                         <option value="Inglês">Inglês</option>
                                         <option value="Matemática Discreta">Matemática Discreta</option>
