@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 session_start();
 include_once("conexao.php");
 ?>
@@ -43,8 +43,7 @@ include_once("conexao.php");
 					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 						<ul class="nav navbar-nav menu_nav ml-auto">
 							<li class="nav-item active"><a class="nav-link" href="index.html">Inicio</a></li>
-							<li class="nav-item active"><a class="nav-link" href="add-product/add-product/add-product.php">Cadastrar material</a></li>
-							<li class="nav-item submenu dropdown">
+							  <li class="nav-item submenu dropdown">
 								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
 								 aria-expanded="false">Materiais didáticos</a>
 								<ul class="dropdown-menu">
@@ -61,9 +60,9 @@ include_once("conexao.php");
 								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
 								 aria-expanded="false">Meu Perfil</a>
 								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="perfil_cliente/editar_perfil.html">Editar Perfil</a></li>
-									<li class="nav-item"><a class="nav-link" href="html">Meus pedidos</a></li>
-									<li class="nav-item"><a class="nav-link" href=".html">Minha carteira</a></li>
+									<li class="nav-item"><a class="nav-link" href="#">Editar Perfil</a></li>
+									<li class="nav-item"><a class="nav-link" href="add-product/add-product/add-product.php">Cadastrar Material</a></li>
+									<li class="nav-item"><a class="nav-link" href=".html">Relatório de Vendas</a></li>
 								</ul>
 							</li>
 							<li class="nav-item"><a class="nav-link" href="#">Favoritos</a></li>
@@ -78,7 +77,7 @@ include_once("conexao.php");
 				</div>
 			</nav>
 		</div>
-		<div class="search_input" id="search_input_box">
+		<div class="search_input" id="search_input_box" style="height: 45px;">
 			<div class="container">
 				<form class="d-flex justify-content-between">
 					<input type="text" class="form-control" id="search_input" placeholder="O que você procura?">
@@ -101,34 +100,49 @@ include_once("conexao.php");
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <a href="#" svg class="bd-placeholder-img"><img src="imagens/img1.jpg" width="100%" height="550px" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg></a>
+        <a href="#" svg class="bd-placeholder-img">
+        	<img src="imagens\s_texto_esquerda.png" width="100%" height="100%"  xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%"  fill="#777"/></svg></a>
         <div class="container">
           <div class="carousel-caption text-left">
-            <h1>Seja bem vindo!</h1>
-            <p>A Mr. Academy está feliz com sua presença em nosso site, obtenha conhecimento com nossos produtos. Faça seu login e vincule-se a nós.</p>
-             <br>
-            <br>
+          	<div id = slide1>
+          	<h3>Preparando você para o futuro</h3>
+          	<p>Tudo planejado e desenvolvido para você se acomodar e ter um modo de estudos divertido e prazeroso, estudar nunca foi tão fácil.</p>
           </div>
+            <h1></h1>
+            <p></p>
+            <br>
+            <br>
+           </div>
         </div>
       </div>
       <div class="carousel-item">
-         <a href="#" svg class="bd-placeholder-img"><img src="imagens/img2.jpg" width="100%" height="550px" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg></a>
+         <a href="#" svg class="bd-placeholder-img"><img src="imagens/sem_texto_centro.png" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg></a>
         <div class="container">
           <div class="carousel-caption">
-            <h1>Preparando você para o futuro</h1>
-            <p>Tudo planejado e desenvolvido para o melhor do cliente, ambiente onde você se acomodar e ter um modo de estudos divertido e prazeroso, estudar nunca foi tão legal como na Mr. Academy</p>
+          	<div id = slide2>
+          	<h3>Seja bem vindo</h3>
+          	<p>A Mr. Academy está feliz com sua presença em nosso site, obtenha conhecimento com nossos materiais. Faça Login e vincule-se a nós.
+          	</p>
+          	<h1></h1>
+          	<p></p>
+          </div>
             <br>
             <br>
           </div>
         </div>
       </div>
       <div class="carousel-item">
-         <a href="#" svg class="bd-placeholder-img"><img src="imagens/img3.jpg" width="100%" height="550px" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg></a>
+         <a href="#" svg class="bd-placeholder-img"><img src="imagens/sem_texto_direita.png" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg></a>
         <div class="container">
           <div class="carousel-caption text-right">
-            <h1>Aqui você aprende mais!</h1>
-            <p>A Mr. Academy preparou para você ótimos materiais didáticos para seus estudos, e o melhor, tudo isso por um preço que cabe no seu bolso. Aprenda conosco, você não vai se arrepender!</p>
-             <br>
+          	<div id = slide3>
+          	<h3>Aqui você aprende mais!</h3>
+          	<p>A Mr. Academy preparou para você ótimos materiais didáticos para seus estudos, e o melhor, tudo isso por um preço que cabe no seu bolso. Aprenda conosco, você sempre pronto!
+          	</p>
+          </div>
+            <h1></h1>
+            <p></p>
+            <br>
             <br>
           </div>
         </div>
@@ -136,13 +150,17 @@ include_once("conexao.php");
     </div>
     <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Anterior</span>
+      <span class="sr-only">Previous</span>
     </a>
     <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Próximo</span>
+      <span class="sr-only">Next</span>
     </a>
   </div>
+
+  <br>
+  <br>
+
 
 	<!-- start features Area -->
 	<section class="features-area section_gap">

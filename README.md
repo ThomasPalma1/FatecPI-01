@@ -46,3 +46,7 @@ Nosso objetivo como empresa, é criar um ambiente acessível e intuitivo para qu
 <p>•Checkout de pagamento</p>
 <p>•Relatório de vendas</p>
 <p>•Perfil administrador</p>
+
+<h2>Apresentação das telas</h2>
+<p>• Tela de login > Tela de produtos > Tela de cadastro</p>
+<img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/videoteste.gif">
