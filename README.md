@@ -48,5 +48,5 @@ Nosso objetivo como empresa, é criar um ambiente acessível e intuitivo para qu
 <p>•Perfil administrador</p>
 
 <h2>Apresentação das telas</h2>
-<p>• Tela de produtos > Tela de cadastro</p>
+<p>• Tela de login > Tela de produtos > Tela de cadastro</p>
 <img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/videoteste.gif">
