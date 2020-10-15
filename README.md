@@ -48,4 +48,4 @@ Nosso objetivo como empresa, é criar um ambiente acessível e intuitivo para qu
 <p>•Perfil administrador</p>
 
 <h2>Apresentação das telas</h2>
-![videoteste](https://user-images.githubusercontent.com/70216694/96146297-857ba900-0edc-11eb-8629-c0aaf2fbb4f2.gif)
+<img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/videoteste.gif">
