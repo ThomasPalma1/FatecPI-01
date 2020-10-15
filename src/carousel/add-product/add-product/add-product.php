@@ -15,10 +15,17 @@
 
     <!-- Main CSS-->
     <link href="css/main.css" rel="stylesheet" media="all">
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body>
+<style>
+body {
+  background-image: url('Kashmir.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+</style>
     <div class="page-wrapper bg-dark p-t-100 p-b-50">
         <div class="wrapper wrapper--w900">
             <div class="card card-6">
@@ -76,23 +83,11 @@
                     </form>
                 </div>
                 <div class="card-footer">
-                    <!-- <button form="envio" class="btn btn--radius-2 btn--blue-2" name="enviar" type="submit">Finalizar cadastro de produto</button> -->
-                    <button onclick="sweetalertclick()" form="envio" class="btn btn--radius-2 btn--blue-2" name="enviar" type="submit">Finalizar cadastro de produto</button>
-                    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-                    <script>
-                    	function sweetalertclick() {
-                    		swal({
-                    			title: "Sucesso!",
-                    			text: "Seu material foi adcionado!",
-                    			icon: "success",
-                    		});
-                    }
-                    	</script>
+                    <button form="envio" class="btn btn--radius-2 btn--blue-2" name="enviar" type="submit">Finalizar cadastro de produto</button>
                 </div>
             </div>
         </div>
     </div>
-
     <!-- Jquery JS-->
     <script src="vendor/jquery/jquery.min.js"></script>
 

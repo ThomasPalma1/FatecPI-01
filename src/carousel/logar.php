@@ -47,7 +47,7 @@ body {
             </div>
             <center>
                 <div class="form-group">
-                    <button type="submit" class="btn btn-primary btn-lg"  a href="produtos.html">Logar</button></a>
+                    <button type="submit" class="btn btn-primary btn-lg" >Logar</button></a>
                 </div>
                 <a href="fpass.php">Esqueci a minha senha D:</a>
             </center>

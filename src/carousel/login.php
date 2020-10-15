@@ -17,7 +17,7 @@ $row = mysqli_num_rows ($result);
 if ($row ==1){
     $_SESSION['email'] = $email;
     $_SESSION['senha'] = $senha;
-    header ('Location: produtos.html');
+    header ('Location: produtos.php');
     exit ();
 }
 else {  
