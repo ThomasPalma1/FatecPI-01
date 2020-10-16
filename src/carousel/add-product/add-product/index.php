@@ -6,16 +6,14 @@ include_once("conexao.php");
 <html lang="pt-br">
 	<head>
 		<meta charset="utf-8">
-		<title>Produtos</title>		
+		<title>Produtos</title>
 	</head>
-	<body>
 		<h1>Produtos</h1>
 		<?php
 		if(isset($_SESSION['msg'])){
 			echo $_SESSION['msg'];
 			unset($_SESSION['msg']);
-		}
-		
+		}	
 		echo "Português <br> <hr>";
 		$result_usuarios = "SELECT * FROM arquivos WHERE disciplina = 'Português'";
 		$resultado_usuarios = mysqli_query($conexao, $result_usuarios);
@@ -88,6 +86,7 @@ include_once("conexao.php");
 			echo "Descrição: " . $row_usuario['descricao'] . "<br>";
 			echo "Preço: " . $row_usuario['preco'] . "<br> <br>";
 		}
+
 		?>		
 	</body>
 </html>

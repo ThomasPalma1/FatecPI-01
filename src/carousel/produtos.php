@@ -65,7 +65,6 @@ include_once("conexao.php");
 									<li class="nav-item"><a class="nav-link" href=".html">Relatório de Vendas</a></li>
 								</ul>
 							</li>
-							<li class="nav-item"><a class="nav-link" href="#">Favoritos</a></li>
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
 							<li class="nav-item"><a href="#" class="cart"><span class="lnr lnr-cart"></span></a></li>

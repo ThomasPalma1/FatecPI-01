@@ -62,8 +62,6 @@
 									<li class="nav-item"><a class="nav-link" href="html">Meus pedidos</a></li>
 									<li class="nav-item"><a class="nav-link" href=".html">Minha carteira</a></li>
 								</ul>
-							</li>
-							<li class="nav-item"><a class="nav-link" href="#">Favoritos</a></li>
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
 							<li class="nav-item"><a href="#" class="cart"><span class="lnr lnr-cart"></span></a></li>
@@ -122,9 +120,8 @@
 						<h2>R$29,99</h2>
 						<ul class="list">
 							<li><a class="active" href="#"><span>Categoria</span>: Línguas Estrangeiras</a></li>
-							<li><a href="#"><span>Disponibilidade</span> : Em estoque</a></li>
 						</ul>
-						<p>No material de inglês básico, os alunos desenvolvem suas habilidades comunicativas no novo idioma, encontram desafios e alcançam grandes conquistas através de video aula, jogos e muito mais.</p>
+						<br><br><br><br><br>
 						<div class="card_area d-flex align-items-center">
 							<a class="primary-btn" href="#">Comprar</a>
 							
