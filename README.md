@@ -13,7 +13,7 @@ Nosso primeiro projeto é uma plataforma de estudos. Basicamente é um site, ond
 Nosso objetivo como empresa, é criar um ambiente acessível e intuitivo para que estudantes e professores possam consultar nossa plataforma em busca de conhecimento.
 
 
-<h2>Nossa equipe</h2>
+<h2>Nossa equipe 👧👦</h2>
            
  - [Thomas Palma](https://www.linkedin.com/in/thomas-palma-0764b81b3/) <i>(Scrum Master)</i>
 
