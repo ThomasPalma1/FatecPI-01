@@ -26,24 +26,24 @@ Nosso projeto é criar uma plataforma de estudos onde o usuario pode entrar e en
  - [Rogério Camargo](https://www.linkedin.com/in/rogério-camargo-3a01191a5) <i>(Development Team)</i>
  
  <h2>Cronograma do projeto</h2>
- <img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/imagens/Cronograma%20-%20PI%20.png">
+ <img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/imagens/Sprint_PI.png">
 
 <h2>Backlog</h2>
 
-<p>- 1ª Sprint – 17/10/2020<br>
-O projeto será dividido em 4 sprints, considerando a sprint 0, onde tivemos a avaliação do cliente sobre o que lhe foi apresentado. De acordo com as exigências do cliente, desenvolvemos as primeiras telas sendo as de cadastro do administrador, e a tela de cadastro de produtos, demostrando uma visão de como vai ser feito o upload dos materiais didáticos.</p>
-<img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/imagens/Capturar.PNG"  width="550px" height="300px" style="max-width:100%">
+- 1ª Sprint – 17/10/2020<br>
+O projeto será dividido em 4 sprints, considerando a sprint 0, onde tivemos a avaliação do cliente sobre o que lhe foi apresentado. De acordo com as exigências do cliente, desenvolvemos as primeiras telas sendo as de cadastro do administrador, e a tela de cadastro de produtos, demostrando uma visão de como vai ser feito o upload dos materiais didáticos.
+<img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/imagens/Capturar.PNG  width="550px" height="300px" style="max-width:100%">
 
-<p>-2ª Sprint – 08/11/2020<br>
-Nessa segunda sprint iremos apresentar ao cliente a parte da edição do perfil do administrador e estudante, a opção de o usuário adicionar produtos ao carrinho e a tela final de apresentação do produto.</p>
+ - 2ª Sprint – 08/11/2020<br>
+Nessa segunda sprint iremos apresentar ao cliente a parte da edição do perfil do administrador e estudante, a opção de o usuário adicionar produtos ao carrinho e a tela final de apresentação do produto.
 <img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/imagens/Capturar2.PNG"  width="550px" height="300px" style="max-width:100%">
 
-<p>-3ª Sprint – 29/11/2020<br>
-Para 3ª sprint iremos desenvolver as telas de cadastros de informações importantes, como cartão do usuário para compra e os dados financeiros do administrador da plataforma para gerenciamento das vendas, e desenvolvimento dos conteúdos didáticos e criação do game.</p>
+ - 3ª Sprint – 29/11/2020<br>
+Para 3ª sprint iremos desenvolver as telas de cadastros de informações importantes, como cartão do usuário para compra e os dados financeiros do administrador da plataforma para gerenciamento das vendas, e desenvolvimento dos conteúdos didáticos e criação do game.
 <img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/imagens/Capturar3.PNG"  width="550px" height="300px" style="max-width:100%">
 
-<p>Apresentação Final – 06/12/2020<br>
-Finalização do site; nessa sprint vamos verificar se tudo está de acordo com o planejado. Detalhes extras que forem necessários serão adicionados para o aperfeiçoamento e otimização da plataforma.</p>
+ - Apresentação Final – 06/12/2020<br>
+Finalização do site; nessa sprint vamos verificar se tudo está de acordo com o planejado. Detalhes extras que forem necessários serão adicionados para o aperfeiçoamento e otimização da plataforma.
 <img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/imagens/Capturar4.PNG"  width="550px" height="300px" style="max-width:100%">
 
 
