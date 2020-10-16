@@ -1,3 +1,6 @@
+<img src="https://img.shields.io/badge/PHP-7.4.4-blue"> <img src="https://img.shields.io/badge/Apache-2.4.41%20(Win64)-blue"> <img src="https://img.shields.io/badge/phpMyAdmin-5.0.2-brightgreen"> <img src="https://img.shields.io/badge/Bootstrap-v4.5.3-brightgreen">
+
+
 <h1 align="center">Mr. Academy 📖🦉</h1>
 
 <h2>Descrição do projeto</h2>
@@ -9,14 +12,7 @@ O projeto se trata de um _website_ para vendas de conteúdo didáticos.
 Nosso primeiro projeto é uma plataforma de estudos. Basicamente é um site, onde estudantes poderão entrar e encontrar materiais que auxiliem seu aprendizado, todo o conteúdo será revisado por professores.
 Nosso objetivo como empresa, é criar um ambiente acessível e intuitivo para que estudantes e professores possam consultar nossa plataforma em busca de conhecimento.
 
-<h2>Ferramentas utilizadas</h2>
-           
- - <b>Banco de dados: </b>MySQL
 
- - <b>Backend: </b>PHP
-
- - <b>Frontend: </b>HTML, CSS & Bootstrap 4
-           
 <h2>Nossa equipe</h2>
            
  - [Thomas Palma](https://www.linkedin.com/in/thomas-palma-0764b81b3/) <i>(Scrum Master)</i>
@@ -35,18 +31,20 @@ Nosso objetivo como empresa, é criar um ambiente acessível e intuitivo para qu
  <img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/Cronograma%20-%20PI%20.png">
  
  <h2>Progresso do projeto</h2>
-<p>•Tela inicial (ao entrar no site) :white_check_mark:</p>
-<p>•Tela cadastro :white_check_mark:</p>
-<p>•Tela login :white_check_mark:</p>
-<p>•Tela pós login (cara do site)</p>
-<p>•Adicionar produto(Adm.) :white_check_mark:</p> 
-<p>•Tela produto (conteúdo)</p>
-<p>•Perfil cliente</p>
-<p>•Carrinho de compras</p> 
-<p>•Checkout de pagamento</p>
-<p>•Relatório de vendas</p>
-<p>•Perfil administrador</p>
+ 
+- [x] Index
+- [x] Cadastro de usuário 
+- [x] Login
+- [x] Homepage
+- [x] Incluir produto
+- [x] Conteúdo disponível 
+- [ ] Descrição do conteúdo 
+- [ ] Perfil do usuário
+- [ ] Perfil do administrador
+- [ ] Carrinho de compras
+- [ ] Checkout de pagamento
+- [ ] Relatório de vendas
 
-<h2>Apresentação das telas</h2>
-<p>• Tela de login > Tela de produtos > Tela de cadastro</p>
+
+<h2>Fluxo da plataforma: cadastro de material didático</h2>
 <img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/videoteste.gif">
