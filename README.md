@@ -9,9 +9,7 @@ O projeto se trata de um _website_ para vendas de conteúdo didáticos.
 
 <h2>Objetivo do Projeto</h2>
 
-Nosso primeiro projeto é uma plataforma de estudos. Basicamente é um site, onde estudantes poderão entrar e encontrar materiais que auxiliem seu aprendizado, todo o conteúdo será revisado por professores.
-Nosso objetivo como empresa, é criar um ambiente acessível e intuitivo para que estudantes e professores possam consultar nossa plataforma em busca de conhecimento.
-
+Nosso projeto é criar uma plataforma de estudos onde o usuario pode entrar e encontar materiais didaticos que auxiliem seu aprendizado. Com um conteudo elaborado de forma simples e explicativa, em um ambiente acessível e intuitivo para que estudantes e professores possam consultar nossa plataforma em busca de conhecimento.
 
 <h2>Nossa equipe 👧👦</h2>
            
@@ -29,7 +27,10 @@ Nosso objetivo como empresa, é criar um ambiente acessível e intuitivo para qu
  
  <h2>Cronograma do projeto</h2>
  <img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/imagens/Cronograma%20-%20PI%20.png">
- 
+
+<h3> Backlog</h3>
+
+
  <h2>Progresso do projeto</h2>
  
 - [x] Index
