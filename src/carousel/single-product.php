@@ -119,14 +119,12 @@
 						<h3>Inglês Básico</h3>
 						<h2>R$29,99</h2>
 						<ul class="list">
-							<li><a class="active" href="#"><span>Categoria</span>: Línguas Estrangeiras</a></li>
-						</ul>
-						<br><br><br><br><br>
-						<div class="card_area d-flex align-items-center">
-							<a class="primary-btn" href="#">Comprar</a>
-							
-							<a class="icon_btn" href="#"><i class="lnr lnr-heart"></i></a>
-							<a class="icon_btn" href="#"><i class="ti-bag"></i></a>
+							<li><a class="active" href="#"><span>Categoria:</span>Línguas Estrangeiras</a></li>					
+							<br>
+							<div class="card_area d-flex align-items-center">
+								<a class="primary-btn" href="#">Comprar</a>
+								<a class="icon_btn" href="#"><i class="ti-bag"></i></a>
+							</ul>
 						</div>
 					</div>
 				</div>

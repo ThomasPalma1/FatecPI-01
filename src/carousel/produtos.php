@@ -252,11 +252,7 @@ include_once("conexao.php");
 										<span class="ti-bag"></span>
 										<p class="hover-text">adicionar</p>
 									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Favoritos</p>
-									</a>
-									</a>
+									
 									<a href="" class="social-info">
 										<span class="lnr lnr-move"></span>
 										<p class="hover-text">Ver Mais</p>
@@ -287,11 +283,7 @@ include_once("conexao.php");
 										<span class="ti-bag"></span>
 										<p class="hover-text">adicionar</p>
 									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Favoritos</p>
-									</a>
-									</a>
+									
 									<a href="" class="social-info">
 										<span class="lnr lnr-move"></span>
 										<p class="hover-text">Ver Mais</p>
@@ -322,11 +314,7 @@ include_once("conexao.php");
 										<span class="ti-bag"></span>
 										<p class="hover-text">adicionar</p>
 									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Favoritos</p>
-									</a>
-									</a>
+									
 									<a href="" class="social-info">
 										<span class="lnr lnr-move"></span>
 										<p class="hover-text">Ver Mais</p>
@@ -357,11 +345,7 @@ include_once("conexao.php");
 										<span class="ti-bag"></span>
 										<p class="hover-text">adicionar</p>
 									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Favoritos</p>
-									</a>
-									</a>
+									
 									<a href="" class="social-info">
 										<span class="lnr lnr-move"></span>
 										<p class="hover-text">Ver Mais</p>
@@ -392,11 +376,7 @@ include_once("conexao.php");
 										<span class="ti-bag"></span>
 										<p class="hover-text">adicionar</p>
 									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Favoritos</p>
-									</a>
-									</a>
+									
 									<a href="" class="social-info">
 										<span class="lnr lnr-move"></span>
 										<p class="hover-text">Ver Mais</p>
@@ -427,11 +407,7 @@ include_once("conexao.php");
 										<span class="ti-bag"></span>
 										<p class="hover-text">adicionar</p>
 									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Favoritos</p>
-									</a>
-									</a>
+									
 									<a href="" class="social-info">
 										<span class="lnr lnr-move"></span>
 										<p class="hover-text">Ver Mais</p>
@@ -463,11 +439,7 @@ include_once("conexao.php");
 										<span class="ti-bag"></span>
 										<p class="hover-text">adicionar</p>
 									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Favoritos</p>
-									</a>
-									</a>
+								
 									<a href="" class="social-info">
 										<span class="lnr lnr-move"></span>
 										<p class="hover-text">Ver Mais</p>
