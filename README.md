@@ -28,7 +28,7 @@ Nosso objetivo como empresa, é criar um ambiente acessível e intuitivo para qu
  - [Rogério Camargo](https://www.linkedin.com/in/rogério-camargo-3a01191a5) <i>(Development Team)</i>
  
  <h2>Cronograma do projeto</h2>
- <img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/Cronograma%20-%20PI%20.png">
+ <img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/imagens/Cronograma%20-%20PI%20.png">
  
  <h2>Progresso do projeto</h2>
  
