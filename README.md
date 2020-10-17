@@ -28,11 +28,11 @@ Nosso projeto é criar uma plataforma de estudos onde o usuario pode entrar e en
  <h2>Cronograma do projeto</h2>
  <img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/imagens/Sprint_PI.png">
 
-<h2>Backlog</h2>
+<h2>Entregas</h2>
 
 - 1ª Sprint – 17/10/2020<br>
 O projeto será dividido em 4 sprints, considerando a sprint 0, onde tivemos a avaliação do cliente sobre o que lhe foi apresentado. De acordo com as exigências do cliente, desenvolvemos as primeiras telas sendo as de cadastro do administrador, e a tela de cadastro de produtos, demostrando uma visão de como vai ser feito o upload dos materiais didáticos.
-<img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/imagens/Capturar.PNG  width="550px" height="300px" style="max-width:100%">
+<img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/imagens/Capturar.PNG"  width="550px" height="300px" style="max-width:100%">
 
  - 2ª Sprint – 08/11/2020<br>
 Nessa segunda sprint iremos apresentar ao cliente a parte da edição do perfil do administrador e estudante, a opção de o usuário adicionar produtos ao carrinho e a tela final de apresentação do produto.
@@ -46,6 +46,17 @@ Para 3ª sprint iremos desenvolver as telas de cadastros de informações import
 Finalização do site; nessa sprint vamos verificar se tudo está de acordo com o planejado. Detalhes extras que forem necessários serão adicionados para o aperfeiçoamento e otimização da plataforma.
 <img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/imagens/Capturar4.PNG"  width="550px" height="300px" style="max-width:100%">
 
+<h2>Backlog</h2>
+
+- Tela inicial (ao entrar no site)
+  - Apresentação da plataforma (sobre a plataforma e como funciona. *atrair o cliente)
+  - Botões:
+    - Login (O administrador terá seu Login cadastrado e será redirecionado para a página do Admin)
+    - Cadastro
+    - Contato (presente em todo o site)
+    - Sobre nós 
+    
+
 
 
  <h2>Progresso do projeto</h2>
@@ -56,7 +67,7 @@ Finalização do site; nessa sprint vamos verificar se tudo está de acordo com 
 - [x] Homepage
 - [x] Incluir produto
 - [x] Conteúdo disponível 
-- [ ] Descrição do conteúdo 
+- [x] Descrição do conteúdo 
 - [ ] Perfil do usuário
 - [ ] Perfil do administrador
 - [ ] Carrinho de compras
