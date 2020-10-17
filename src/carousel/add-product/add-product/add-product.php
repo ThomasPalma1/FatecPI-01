@@ -18,30 +18,24 @@
     <!-- Main CSS-->
     <link href="css/main.css" rel="stylesheet" media="all">
      <link href="css/header.css" rel="stylesheet" media="all">
+
+
 </head>
 
 
 <header class="header">
-  <a href="" class="logo"><img src="../../imagens/logo.png" width="120px"></a>
+  <a href="../../produtos.php" class="logo"><img src="../../imagens/logo.png" width="120px"></a>
   <input class="menu-btn" type="checkbox" id="menu-btn" />
   <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
   <ul class="menu">
-    <li><a href="../../produtos.php">Inicio</a></li>
-    <li><a href="#">Editar Perfil</a></li>
+    <!-- <li><a href="../../produtos.php">Inicio</a></li> -->
+    <!-- <li><a href="#">Editar Perfil</a></li>
     <li><a href="#add-product.php">Cadastrar Material</a></li>
-    <li><a href="#">Relatório de Vendas</a></li>
+    <li><a href="#">Relatório de Vendas</a></li> -->
   </ul>
 </header>
 
 <body>
-<style>
-body {
-  background-image: url('Kashmir.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 100%;
-}
-</style>
     <div class="page-wrapper bg-dark p-t-100 p-b-50">
         <div class="wrapper wrapper--w900">
             <div class="card card-6">
@@ -77,7 +71,7 @@ body {
                             <div class="name">Descrição do produto</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <textarea class="textarea--style-6" name="descricao" placeholder="Faça uma breve descrição do seu produto, dizendo o que ele contém."></textarea>
+                                    <textarea maxlength="250" class="textarea--style-6" name="descricao" id="descricao" placeholder="Faça uma breve descrição do seu produto, dizendo o que ele contém."></textarea>
                                 </div>
                             </div>
                         </div>
@@ -104,14 +98,10 @@ body {
             </div>
         </div>
     </div>
-    <!-- Jquery JS-->
+
     <script src="vendor/jquery/jquery.min.js"></script>
-
-
-    <!-- Main JS-->
     <script src="js/global.js"></script>
 
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</body>
 
 </html>
-<!-- end document-->

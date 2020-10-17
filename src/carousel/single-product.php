@@ -1,3 +1,11 @@
+<?php
+	include("conexao.php");
+
+	$id = $_REQUEST['id'];
+	$result_produtos = "SELECT * FROM arquivos WHERE id = $id";
+	$resultado_produtos = mysqli_query($conexao, $result_produtos);
+	$infos_produto = mysqli_fetch_assoc($resultado_produtos);
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -30,7 +38,7 @@
 			<nav class="navbar navbar-expand-lg navbar-light main_box">
 				<div class="container">
 					<!-- Brand and toggle get grouped for better mobile display -->
-					<a class="navbar-brand logo_h" href="index.html"><img src="imagens/logo.png" width="150px"></a>
+					<a class="navbar-brand logo_h" href="produtos.php"><img src="imagens/logo.png" width="150px"></a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="icon-bar"></span>
@@ -40,9 +48,9 @@
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 						<ul class="nav navbar-nav menu_nav ml-auto">
-							<li class="nav-item active"><a class="nav-link" href="index.html">Início</a></li>
+							<li class="nav-item active"><a class="nav-link" href="produtos.php">Início</a></li>
 							<li class="nav-item submenu dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+								<!-- <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
 								 aria-expanded="false">Materiais didáticos</a>
 								<ul class="dropdown-menu">
 									<li class="nav-item"><a class="nav-link" href="">Português</a></li>
@@ -52,7 +60,7 @@
 									<li class="nav-item"><a class="nav-link" href="">Administração Geral</a></li>
 									<li class="nav-item"><a class="nav-link" href="">Algoritmos e Lógica de Programação</a></li>
 									<li class="nav-item"><a class="nav-link" href="">Arquitetura e Organização de Computadores</a></li>
-								</ul>
+								</ul> -->
 							</li>
 							<li class="nav-item submenu dropdown">
 								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
@@ -101,25 +109,37 @@
 	<div class="product_image_area">
 		<div class="container">
 			<div class="row s_product_inner">
-				<div class="col-lg-6">
-					<div class="s_Product_carousel">
-						<div class="single-prd-item">
-							<img class="img-fluid" src="img/product/1.png" alt="">
-						</div>
-						<div class="single-prd-item">
-							<img class="img-fluid" src="img/product/2.jpg" alt="">
-						</div>
-						<div class="single-prd-item">
-							<img class="img-fluid" src="img/product/3.jpg" alt="">
-						</div>
-					</div>
-				</div>
+				<?php
+				if ($infos_produto["disciplina"] == "Português") {
+					echo '<img src="imagens/produtos/p7.jpg" alt="">';
+				}
+				else if ($infos_produto["disciplina"] == "Inglês") {
+					echo '<img src="imagens/produtos/p1.jpg" alt="">';
+				}
+				else if ($infos_produto["disciplina"] == "Matemática Discreta") {
+					echo '<img src="imagens/produtos/p6.jpg" alt="">';
+				}
+				else if ($infos_produto["disciplina"] == "Laboratório de Hardware") {
+					echo '<img src="imagens/produtos/p4.jpg" alt="">';
+				}
+				else if ($infos_produto["disciplina"] == "Administração Geral") {
+					echo '<img src="imagens/produtos/p3.jpg" alt="">';
+				}
+				else if ($infos_produto["disciplina"] == "Algoritmos e Lógica de Programação") {
+					echo '<img src="imagens/produtos/p2.jpg" alt="">';
+				}
+				else {
+					echo '<img src="imagens/produtos/p8.jpg" alt="">';
+				}
+
+
+				?>
 				<div class="col-lg-5 offset-lg-1">
 					<div class="s_product_text">
-						<h3>Inglês Básico</h3>
-						<h2>R$29,99</h2>
+						<h3><?php echo($infos_produto["titulo_produto"]); ?></h3>
+						<h2><?php echo($infos_produto["preco"]); ?></h2>
 						<ul class="list">
-							<li><a class="active" href="#"><span>Categoria:</span>Línguas Estrangeiras</a></li>					
+							<li><a class="active" href="#"><span>Categoria:</span><?php echo($infos_produto["disciplina"]); ?></a></li>					
 							<br>
 							<div class="card_area d-flex align-items-center">
 								<a class="primary-btn" href="#">Comprar</a>
@@ -144,11 +164,7 @@
 			</ul>
 			<div class="tab-content" id="myTabContent">
 				<div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
-					<p>Nosso principal objetivo é desenvolver as habilidades fundamentais para a comunicação total do aluno: compreensão auditiva, leitura e escrita. Essa meta é alcançada através do material didático exclusivo, da plataforma virtual de aprendizagem, Mr. Academy, e de profissionais altamente qualificados e treinados para desenvolver esse material. Nosso metodo de material didático conta com jogos educativos, video aulas e texto educativo.</p>
-					<p><center><h4>Contém</h4><p>
-					<p>- Material didático "Inglês básico".pdf<br>
-					   - Video Aulas <br>
-					   - Games interativos</p></center>
+				<?php echo($infos_produto["descricao"]); ?>
 				</div>
 				
 				</div>

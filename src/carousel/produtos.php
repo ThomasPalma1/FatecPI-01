@@ -32,7 +32,7 @@ include_once("conexao.php");
 			<nav class="navbar navbar-expand-lg navbar-light main_box">
 				<div class="container">
 					<!-- Brand and toggle get grouped for better mobile display -->
-					<a class="navbar-brand logo_h" href="index.html"><img src="imagens/logo.png" width="150px"></a>
+					<a class="navbar-brand logo_h" href=" "><img src="imagens/logo.png" width="150px"></a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="icon-bar"></span>
@@ -42,9 +42,9 @@ include_once("conexao.php");
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 						<ul class="nav navbar-nav menu_nav ml-auto">
-							<li class="nav-item active"><a class="nav-link" href="index.html">Inicio</a></li>
+							<!-- <li class="nav-item active"><a class="nav-link" href="index.html">Inicio</a></li> -->
 							  <li class="nav-item submenu dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+								<!-- <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
 								 aria-expanded="false">Materiais didáticos</a>
 								<ul class="dropdown-menu">
 									<li class="nav-item"><a class="nav-link" href="">Português</a></li>
@@ -55,14 +55,14 @@ include_once("conexao.php");
 									<li class="nav-item"><a class="nav-link" href="">Algoritmos e Lógica de Programação</a></li>
 									<li class="nav-item"><a class="nav-link" href="">Arquitetura e Organização de Computadores</a></li>
 								</ul>
-							</li>
+							</li> -->
 							<li class="nav-item submenu dropdown">
 								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
 								 aria-expanded="false">Meu Perfil</a>
 								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="#">Editar Perfil</a></li>
+									<li class="nav-item"><a class="nav-link" href=" ">Editar Perfil</a></li>
 									<li class="nav-item"><a class="nav-link" href="add-product/add-product/add-product.php">Cadastrar Material</a></li>
-									<li class="nav-item"><a class="nav-link" href=".html">Relatório de Vendas</a></li>
+									<!-- <li class="nav-item"><a class="nav-link" href=".html">Relatório de Vendas</a></li> -->
 								</ul>
 							</li>
 						</ul>
@@ -253,7 +253,7 @@ include_once("conexao.php");
 										<p class="hover-text">adicionar</p>
 									</a>
 									
-									<a href="" class="social-info">
+									<a href="single-product.php?id='.$row_usuario["id"].'" class="social-info">
 										<span class="lnr lnr-move"></span>
 										<p class="hover-text">Ver Mais</p>
 									</a>
@@ -284,7 +284,7 @@ include_once("conexao.php");
 										<p class="hover-text">adicionar</p>
 									</a>
 									
-									<a href="" class="social-info">
+									<a href="single-product.php?id='.$row_usuario["id"].'" class="social-info">
 										<span class="lnr lnr-move"></span>
 										<p class="hover-text">Ver Mais</p>
 									</a>
@@ -315,7 +315,7 @@ include_once("conexao.php");
 										<p class="hover-text">adicionar</p>
 									</a>
 									
-									<a href="" class="social-info">
+									<a href="single-product.php?id='.$row_usuario["id"].'" class="social-info">
 										<span class="lnr lnr-move"></span>
 										<p class="hover-text">Ver Mais</p>
 									</a>
@@ -346,7 +346,7 @@ include_once("conexao.php");
 										<p class="hover-text">adicionar</p>
 									</a>
 									
-									<a href="" class="social-info">
+									<a href="single-product.php?id='.$row_usuario["id"].'" class="social-info">
 										<span class="lnr lnr-move"></span>
 										<p class="hover-text">Ver Mais</p>
 									</a>
@@ -377,7 +377,7 @@ include_once("conexao.php");
 										<p class="hover-text">adicionar</p>
 									</a>
 									
-									<a href="" class="social-info">
+									<a href="single-product.php?id='.$row_usuario["id"].'" class="social-info">
 										<span class="lnr lnr-move"></span>
 										<p class="hover-text">Ver Mais</p>
 									</a>
@@ -408,7 +408,7 @@ include_once("conexao.php");
 										<p class="hover-text">adicionar</p>
 									</a>
 									
-									<a href="" class="social-info">
+									<a href="single-product.php?id='.$row_usuario["id"].'" class="social-info">
 										<span class="lnr lnr-move"></span>
 										<p class="hover-text">Ver Mais</p>
 									</a>
@@ -440,7 +440,7 @@ include_once("conexao.php");
 										<p class="hover-text">adicionar</p>
 									</a>
 								
-									<a href="" class="social-info">
+									<a href="single-product.php?id='.$row_usuario["id"].'" class="social-info">
 										<span class="lnr lnr-move"></span>
 										<p class="hover-text">Ver Mais</p>
 									</a>
