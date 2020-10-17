@@ -165,4 +165,4 @@ Finalização do site; nessa sprint vamos verificar se tudo está de acordo com 
 
 
 <h2>Fluxo da plataforma: cadastro de material didático</h2>
-<img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/videoteste.gif">
+<img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/testevideo1.gif">
