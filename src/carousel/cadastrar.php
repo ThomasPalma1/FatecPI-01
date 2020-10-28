@@ -19,7 +19,7 @@ if($row == 1) {
 }
 
 if ($senha === $senhaconfirm){
-    $sql = "INSERT INTO usuario (email, senha, nome, nickname) VALUES ('$email','$senha','$nome','$usuario')";
+    $sql = "INSERT INTO usuario (email, senha, nome, nickname, tipo_usuario) VALUES ('$email','$senha','$nome','$usuario', 'user')";
 
     if ($conexao->query($sql) === true) {
         $_SESSION ['status_cadastro'] = true;

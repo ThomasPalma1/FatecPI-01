@@ -61,7 +61,12 @@ include_once("conexao.php");
 								 aria-expanded="false">Meu Perfil</a>
 								<ul class="dropdown-menu">
 									<li class="nav-item"><a class="nav-link" href=" ">Editar Perfil</a></li>
-									<li class="nav-item"><a class="nav-link" href="add-product/add-product/add-product.php">Cadastrar Material</a></li>
+									<?php
+										if (isset($_SESSION['tipo_usuario']) && $_SESSION['tipo_usuario'] == "admin") {
+											echo '<li class="nav-item"><a class="nav-link" href="add-product/add-product/add-product.php">Cadastrar Material</a></li>';
+										}
+									?>
+									<li class="nav-item"><a class="nav-link" href="deslogar.php">Logout</a></li>
 									<!-- <li class="nav-item"><a class="nav-link" href=".html">Relatório de Vendas</a></li> -->
 								</ul>
 							</li>
