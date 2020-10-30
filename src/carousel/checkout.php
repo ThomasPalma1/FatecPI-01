@@ -32,12 +32,12 @@ include 'conexao.php'
 <body>
 
 	<!-- Start Header Area -->
-	<header class="header_area sticky-header">
+<header class="header_area sticky-header">
 		<div class="main_menu">
 			<nav class="navbar navbar-expand-lg navbar-light main_box">
 				<div class="container">
 					<!-- Brand and toggle get grouped for better mobile display -->
-					<a class="navbar-brand logo_h" href="produtos.php"><img src="imagens/logo.png" width="150px"></a>
+					<a class="navbar-brand logo_h" href=" "><img src="imagens/logo.png" width="150px"></a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="icon-bar"></span>
@@ -47,9 +47,9 @@ include 'conexao.php'
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 						<ul class="nav navbar-nav menu_nav ml-auto">
-							<li class="nav-item active"><a class="nav-link" href="produtos.php">Início</a></li>
-							<li class="nav-item submenu dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+							<li class="nav-item active"><a class="nav-link" href="produtos.php">Inicio</a></li>
+							  <!--<li class="nav-item submenu dropdown">
+								 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
 								 aria-expanded="false">Materiais didáticos</a>
 								<ul class="dropdown-menu">
 									<li class="nav-item"><a class="nav-link" href="">Português</a></li>
@@ -59,21 +59,22 @@ include 'conexao.php'
 									<li class="nav-item"><a class="nav-link" href="">Administração Geral</a></li>
 									<li class="nav-item"><a class="nav-link" href="">Algoritmos e Lógica de Programação</a></li>
 									<li class="nav-item"><a class="nav-link" href="">Arquitetura e Organização de Computadores</a></li>
-								</ul> 
-							</li>
+								</ul>
+							</li> -->
 							<li class="nav-item submenu dropdown">
 								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
 								 aria-expanded="false">Meu Perfil</a>
 								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href=".html">Editar Perfil</a></li>
+									<li class="nav-item"><a class="nav-link" href="perfiluser.php">Editar Perfil</a></li>
 									<?php
 										if (isset($_SESSION['tipo_usuario']) && $_SESSION['tipo_usuario'] == "admin") {
 											echo '<li class="nav-item"><a class="nav-link" href="add-product/add-product/add-product.php">Cadastrar Material</a></li>';
 										}
 									?>
-									<li class="nav-item"><a class="nav-link" href="html">Meus pedidos</a></li>
-									<li class="nav-item"><a class="nav-link" href=".html">Minha carteira</a></li>
+									<li class="nav-item"><a class="nav-link" href="deslogar.php">Logout</a></li>
+									<!-- <li class="nav-item"><a class="nav-link" href=".html">Relatório de Vendas</a></li> -->
 								</ul>
+							</li>
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
 							<li class="nav-item"><a href="#" class="cart"><span class="lnr lnr-cart"></span></a></li>
@@ -85,7 +86,7 @@ include 'conexao.php'
 				</div>
 			</nav>
 		</div>
-		<div class="search_input" id="search_input_box">
+		<div class="search_input" id="search_input_box" style="height: 45px;">
 			<div class="container">
 				<form class="d-flex justify-content-between">
 					<input type="text" class="form-control" id="search_input" placeholder="O que você procura?">
@@ -143,6 +144,11 @@ include 'conexao.php'
 						</div> ');
                    }
                    ?>
+
+                   <div class="button-group-area mt-40">
+						<a href="#" class="genric-btn primary small">Editar</a></div>
+
+						
 
                    <br>
  
@@ -210,13 +216,14 @@ include 'conexao.php'
 						</div>
 						até <b>12x </b>sem juros.
 
+						<br>
+
+						<div class="button-group-area mt-40">
+						<a href="#" class="genric-btn primary small">Editar</a></div>
 
 
 
-
-
-
-				<div class="form-group">
+			<!--	<div class="form-group">
 						  	 <div class="form-check">
 						      <input class="form-check-input" type="checkbox" id="gridCheck">
 						      <label class="form-check-label" for="gridCheck">
@@ -227,7 +234,7 @@ include 'conexao.php'
 						    </div>
 
 						  </div>
-						  <!--<button>Pagar com outro cartão</button>-->
+						  <button>Pagar com outro cartão</button>-->
 						 </form>
 						 <hr/> 
 
@@ -290,7 +297,7 @@ include 'conexao.php'
           <div class="col-xs-6 col-md-3">
             <h6>Equipe</h6>
             <ul class="footer-links">
-   			  <li><a href="https://www.linkedin.com/in/bryan-santos-77b53317b/" target="_blank">Bryan Santos</a></li>
+   			  <!--<li><a href="https://www.linkedin.com/in/bryan-santos-77b53317b/" target="_blank">Bryan Santos</a></li> -->
               <li><a href="https://www.linkedin.com/in/juliane-freitas-9b6287163/" target="_blank">Juliane Freitas</a></li>
               <li><a href="https://www.linkedin.com/in/leticia-amorim-4761b1185/" target="_blank">Leticia Amorim</a></li>
               <li><a href="https://www.linkedin.com/in/pedro-ferreira-6a8417190/" target="_blank">Pedro Ferreira</a></li>
