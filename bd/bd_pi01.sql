@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 29-Out-2020 às 00:40
--- Versão do servidor: 10.4.11-MariaDB
--- versão do PHP: 7.4.4
+-- Tempo de geração: 01-Nov-2020 às 17:30
+-- Versão do servidor: 10.4.14-MariaDB
+-- versão do PHP: 7.4.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -61,6 +61,19 @@ CREATE TABLE `contato` (
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `pedidos`
+--
+
+CREATE TABLE `pedidos` (
+  `id_pedido` int(11) NOT NULL,
+  `id_arquivo` int(11) NOT NULL,
+  `titulo_produto` varchar(100) NOT NULL,
+  `preco` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `usuario`
 --
 
@@ -96,6 +109,12 @@ ALTER TABLE `contato`
   ADD PRIMARY KEY (`nome`);
 
 --
+-- Índices para tabela `pedidos`
+--
+ALTER TABLE `pedidos`
+  ADD PRIMARY KEY (`id_pedido`);
+
+--
 -- Índices para tabela `usuario`
 --
 ALTER TABLE `usuario`
@@ -110,6 +129,12 @@ ALTER TABLE `usuario`
 --
 ALTER TABLE `arquivos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+
+--
+-- AUTO_INCREMENT de tabela `pedidos`
+--
+ALTER TABLE `pedidos`
+  MODIFY `id_pedido` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
