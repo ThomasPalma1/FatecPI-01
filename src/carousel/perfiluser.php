@@ -63,7 +63,12 @@ include 'conexao.php'
 								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
 								 aria-expanded="false">Meu Perfil</a>
 								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="perfiluser.php">Editar Perfil</a></li>
+									<?php
+										if (isset($_SESSION['tipo_usuario']) && $_SESSION['tipo_usuario'] == "user") {
+											echo '<li class="nav-item"><a class="nav-link" href="perfiluser.php">Editar Perfil</a></li>';
+										}
+									?>
+									
 									<?php
 										if (isset($_SESSION['tipo_usuario']) && $_SESSION['tipo_usuario'] == "admin") {
 											echo '<li class="nav-item"><a class="nav-link" href="add-product/add-product/add-product.php">Cadastrar Material</a></li>';
@@ -157,10 +162,9 @@ include 'conexao.php'
 
                    <div class="button-group-area mt-40">
 					<a href="#" class="genric-btn primary small">Editar</a><a href="#" class="genric-btn primary small">Salvar</a></div>
-					    
-					
 					</form>
 				</div>
+
 				<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 				<p>em construção...</p>	
 				</div>
@@ -168,42 +172,102 @@ include 'conexao.php'
 
 				<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
 					
-					 <form>
+					<h4>Meu saldo</h4>
+					
+					<h5><b>R$: 50,00</b></h5>			
+					
+					<hr/>
+				
+					  <form action="cadastrocard.php" method="post">
 						  <div class="form-row">
-						    
+						    <h4>Cadastrar novo cartão:</h4>
+						    <br>
 						  </div>
-						  <div class="form-group">
+						  		<?php
+							if(isset($_SESSION['msg'])){
+								echo $_SESSION['msg'];
+								unset($_SESSION['msg']);
+							}
+							?>
+							<div class="form-group">
 						    <label for="inputAddress">Titular do cartão</label>
-						    <input type="text" class="form-control" id="inputAddress" name="" placeholder="Nome impresso no cartão" style="width: 400px">
+						    <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Nome impresso no cartão" style="width: 400px">
 						  </div>
 						  <div class="form-group">
 						    <label for="inputAddress2">Número do cartão</label>
-						    <input type="text" class="form-control" id="numerocard" name="numerocard" maxlength="16" placeholder="0000 0000 0000 0000" style="width: 400px">
+						    <input type="text" class="form-control" id="numero" name="numero" maxlength="16" placeholder="0000 0000 0000 0000" style="width: 400px">
 						  </div>
-
-						  
-						  
 						   <div class="input-group mb-3">
 							<div class="row">
 							  <div class="col-md-4 col-xs-4">
 							    <div class="form-group">
 							      <label for="volumeBolsa">Validade</label>
-							      <input type="text" class="form-control" name="Validade" placeholder="MM / AA" maxlength="4">
+							      <input type="text" class="form-control" id="validade" name="validade" placeholder="MM / AA" maxlength="4">
 							    
 							    </div>
 							  </div>
 							  <div class="col-md-4 col-xs-4">
 							    <div class="form-group">
 							      <label for="volumeBolsa">CVV</label>
-							      <input type="text" class="form-control" name="cvv" placeholder="CVV" maxlength="4">
+							      <input type="text" class="form-control" name="cvv" id="cvv" placeholder="CVV" maxlength="4">
 							    </div>
 							  </div>
 						</div>
 					</div>
-						<div class="button-group-area mt-40">
-						<a href="#" class="genric-btn primary small">Salvar</a><a href="#" class="genric-btn primary small">Remover</a></div>
+						
+					
+							<button type="submit" value="submit" class="">Cadastrar</button>
+						
 						 
 					 </form>
+					 <br>
+					<hr/>
+					 
+					 <br>
+
+			  	<form name="cartao">
+			  		<div class="form-row">
+					<h4>Cartões cadastrados:</h4>
+			  		<?php
+					$result_contato = "SELECT * FROM cartao";
+					$resultado_contato = mysqli_query($conexao, $result_contato);
+					while($row_contato = mysqli_fetch_assoc($resultado_contato)){
+                   echo ('<br>
+						  </div>
+						  <div class="form-group">
+						    <label for="inputAddress">Titular do cartão</label>
+						    <input type="text" class="form-control"  name="titulo" style="width: 400px" value="'.$row_contato['titulo'].'">
+						  </div>
+						  <div class="form-group">
+						    <label for="inputAddress2">Número do cartão</label>
+						    <input type="text" class="form-control" name="numerocard"  style="width: 400px" value="'.$row_contato['numero'].'">
+						  </div>
+						   <div class="input-group mb-3">
+							<div class="row">
+							  <div class="col-md-4 col-xs-4">
+							    <div class="form-group">
+							      <label for="volumeBolsa">Validade</label>
+							      <input type="text" class="form-control" name="Validade" maxlength="4" value="'.$row_contato['validade'].'">
+							    
+							    </div>
+							  </div>
+							  <div class="col-md-4 col-xs-4">
+							    <div class="form-group">
+							      <label for="volumeBolsa">CVV</label>
+							      <input type="text" class="form-control" name="cvv" maxlength="4" value="'.$row_contato['cvv'].'">
+							    </div>
+							  </div>
+						</div>
+					</div>	<div class="button-group-area mt-40">
+						<a href="#" class="genric-btn primary small">Remover</a></div>');
+               }
+               ?>
+					<br>
+						 
+					 </form>
+
+
+
 				</div>
 	</section>
 	<!--================End Product Description Area =================-->
