@@ -33,12 +33,12 @@
 <body>
 
 	<!-- Start Header Area -->
-<header class="header_area sticky-header">
+	<header class="header_area sticky-header">
 		<div class="main_menu">
 			<nav class="navbar navbar-expand-lg navbar-light main_box">
 				<div class="container">
 					<!-- Brand and toggle get grouped for better mobile display -->
-					<a class="navbar-brand logo_h" href=" "><img src="imagens/logo.png" width="150px"></a>
+					<a class="navbar-brand logo_h" href="produtos.php"><img src="imagens/logo.png" width="150px"></a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="icon-bar"></span>
@@ -48,9 +48,9 @@
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 						<ul class="nav navbar-nav menu_nav ml-auto">
-							<li class="nav-item active"><a class="nav-link" href="produtos.php">Inicio</a></li>
-							  <!--<li class="nav-item submenu dropdown">
-								 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+							<li class="nav-item active"><a class="nav-link" href="produtos.php">Início</a></li>
+							<li class="nav-item submenu dropdown">
+								<!-- <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
 								 aria-expanded="false">Materiais didáticos</a>
 								<ul class="dropdown-menu">
 									<li class="nav-item"><a class="nav-link" href="">Português</a></li>
@@ -60,22 +60,16 @@
 									<li class="nav-item"><a class="nav-link" href="">Administração Geral</a></li>
 									<li class="nav-item"><a class="nav-link" href="">Algoritmos e Lógica de Programação</a></li>
 									<li class="nav-item"><a class="nav-link" href="">Arquitetura e Organização de Computadores</a></li>
-								</ul>
-							</li> -->
+								</ul> -->
+							</li>
 							<li class="nav-item submenu dropdown">
 								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
 								 aria-expanded="false">Meu Perfil</a>
 								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="perfiluser.php">Editar Perfil</a></li>
-									<?php
-										if (isset($_SESSION['tipo_usuario']) && $_SESSION['tipo_usuario'] == "admin") {
-											echo '<li class="nav-item"><a class="nav-link" href="add-product/add-product/add-product.php">Cadastrar Material</a></li>';
-										}
-									?>
-									<li class="nav-item"><a class="nav-link" href="deslogar.php">Logout</a></li>
-									<!-- <li class="nav-item"><a class="nav-link" href=".html">Relatório de Vendas</a></li> -->
+									<li class="nav-item"><a class="nav-link" href=".html">Editar Perfil</a></li>
+									<li class="nav-item"><a class="nav-link" href="html">Meus pedidos</a></li>
+									<li class="nav-item"><a class="nav-link" href=".html">Minha carteira</a></li>
 								</ul>
-							</li>
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
 							<li class="nav-item"><a href="#" class="cart"><span class="lnr lnr-cart"></span></a></li>
@@ -87,7 +81,7 @@
 				</div>
 			</nav>
 		</div>
-		<div class="search_input" id="search_input_box" style="height: 45px;">
+		<div class="search_input" id="search_input_box">
 			<div class="container">
 				<form class="d-flex justify-content-between">
 					<input type="text" class="form-control" id="search_input" placeholder="O que você procura?">
@@ -148,7 +142,7 @@
 							<li><a class="active" href="#"><span>Categoria:</span><?php echo($infos_produto["disciplina"]); ?></a></li>					
 							<br>
 							<div class="card_area d-flex align-items-center">
-								<a class="primary-btn" href="Shopping cart.html">Comprar</a>
+								<a class="primary-btn" href="#">Comprar</a>
 								<a class="icon_btn" href="#"><i class="ti-bag"></i></a>
 							</ul>
 						</div>

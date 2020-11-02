@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 01-Nov-2020 às 17:30
--- Versão do servidor: 10.4.14-MariaDB
--- versão do PHP: 7.4.10
+-- Tempo de geração: 03-Nov-2020 às 00:44
+-- Versão do servidor: 10.4.11-MariaDB
+-- versão do PHP: 7.4.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -30,6 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `arquivos` (
   `id` int(11) NOT NULL,
   `nome_arquivo` varchar(100) NOT NULL,
+  `caminho` varchar(255) NOT NULL,
   `disciplina` varchar(100) NOT NULL,
   `descricao` text NOT NULL,
   `extensao_arquivo` varchar(5) NOT NULL,
@@ -41,9 +42,22 @@ CREATE TABLE `arquivos` (
 -- Extraindo dados da tabela `arquivos`
 --
 
-INSERT INTO `arquivos` (`id`, `nome_arquivo`, `disciplina`, `descricao`, `extensao_arquivo`, `titulo_produto`, `preco`) VALUES
-(22, 'RESUMÃO.pdf', 'Algoritmos e Lógica de Programação', 'Strings em Python', 'pdf', 'Strings - Python', 'R$50,00'),
-(23, 'RESUMÃO.pdf', 'Matemática Discreta', 'você irá aprender sobre a teoria de conjuntos.', 'pdf', 'teoria de conjuntos', 'R$50,00');
+INSERT INTO `arquivos` (`id`, `nome_arquivo`, `caminho`, `disciplina`, `descricao`, `extensao_arquivo`, `titulo_produto`, `preco`) VALUES
+(29, 'RESUMÃO.pdf', 'arquivos/RESUMÃO.pdf', 'Administração Geral', 'Estrutura do balanço patrimonial', 'pdf', 'Estrutura do balanço patrimonial', 'R$50,00');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `cartao`
+--
+
+CREATE TABLE `cartao` (
+  `email_usuario` varchar(250) NOT NULL,
+  `titulo` varchar(150) NOT NULL,
+  `numero` varchar(50) NOT NULL,
+  `validade` varchar(50) NOT NULL,
+  `cvv` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -56,19 +70,6 @@ CREATE TABLE `contato` (
   `email` varchar(50) NOT NULL,
   `assunto` varchar(50) NOT NULL,
   `mensagem` varchar(240) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `pedidos`
---
-
-CREATE TABLE `pedidos` (
-  `id_pedido` int(11) NOT NULL,
-  `id_arquivo` int(11) NOT NULL,
-  `titulo_produto` varchar(100) NOT NULL,
-  `preco` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -90,7 +91,8 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`tipo_usuario`, `email`, `senha`, `nome`, `nickname`) VALUES
-('admin', 'admin@root.com', '21232f297a57a5a743894a0e4a801fc3', 'Antonio Egydio', 'EgydioADM');
+('admin', 'admin@root.com', '21232f297a57a5a743894a0e4a801fc3', 'Antonio Egydio', 'EgydioADM'),
+('user', 'thomas.palma@gmail.com', '847964fbc7047329a01f22ceb773bf92', 'Thomas dos Santos Palma', 'thomaspalma');
 
 --
 -- Índices para tabelas despejadas
@@ -103,16 +105,16 @@ ALTER TABLE `arquivos`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Índices para tabela `cartao`
+--
+ALTER TABLE `cartao`
+  ADD KEY `email_usuario` (`email_usuario`);
+
+--
 -- Índices para tabela `contato`
 --
 ALTER TABLE `contato`
   ADD PRIMARY KEY (`nome`);
-
---
--- Índices para tabela `pedidos`
---
-ALTER TABLE `pedidos`
-  ADD PRIMARY KEY (`id_pedido`);
 
 --
 -- Índices para tabela `usuario`
@@ -128,13 +130,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de tabela `arquivos`
 --
 ALTER TABLE `arquivos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
-
---
--- AUTO_INCREMENT de tabela `pedidos`
---
-ALTER TABLE `pedidos`
-  MODIFY `id_pedido` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

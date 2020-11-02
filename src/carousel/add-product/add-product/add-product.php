@@ -79,7 +79,7 @@
                             <div class="name">Upload do material</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input type="file" name="file_cv[]" multiple>
+                                    <input type="file" name="file_cv">
                                 </div>
                                 <div class="label--desc">Faça o upload do material didático. As extensões permitidas são: <b><i>pdf, doc e docx</i></b></div>
                             </div>
