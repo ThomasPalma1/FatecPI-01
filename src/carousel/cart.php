@@ -1,3 +1,10 @@
+<?php
+
+session_start();
+include("conexao.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -113,23 +120,36 @@
     <label class="product-line-price">Total</label>
   </div>
 
-  <div class="product">
+
+<?php
+
+
+  $conexao = new PDO('mysql:host=localhost;dbname=bd_pi01',"root","");
+  $select = $conexao->prepare("SELECT * FROM arquivos");
+  $select->execute();
+  $fetch = $select->fetchALL();
+  
+  foreach($fetch as $arquivos){
+echo ('<div class="product">
     <div class="product-image">
       <img src="https://s.cdpn.io/3/dingo-dog-bones.jpg">
     </div>
     <div class="product-details">
-      <div class="product-title">Dingo Dog Bones</div>
+      <div class="product-title">'.$arquivos['titulo_produto'].'</div>
     </div>
-    <div class="product-price">12.99</div>
+    <div class="product-price">'.$arquivos['preco'].'</div>
     <div class="product-removal">
       <button class="remove-product">
         Remover
       </button>
     </div>
-    <div class="product-line-price">12.99</div>
-  </div>
+    <div class="product-line-price">'.$arquivos['preco'].'</div>
+  </div>');
+}
+?>
 
-  <div class="product">
+
+<!--<div class="product">
     <div class="product-image">
       <img src="https://s.cdpn.io/3/large-NutroNaturalChoiceAdultLambMealandRiceDryDogFood.png">
     </div>
@@ -143,7 +163,7 @@
       </button>
     </div>
     <div class="product-line-price">45.99</div>
-  </div>
+  </div> -->
   <div class="totals">
     <div class="totals-item totals-item-total">
       <label>Total:</label>
@@ -153,7 +173,7 @@
   </div>
      <a href="checkout.php" button class="checkout"><p>Checkout de pagamento</p></a></button>
        <button class="continue" ><p>Adicionar novos produtos<p></button>
-</div>
+</div> 
 
 <br><br><br><br><br><br>
     <!--================End Cart Area =================-->
