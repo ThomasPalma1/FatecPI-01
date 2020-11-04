@@ -1,6 +1,6 @@
 <?php
-session_start();
-include_once("conexao.php");
+	session_start();
+	include_once("conexao.php");
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -259,9 +259,16 @@ include_once("conexao.php");
 									</a>
 									
 									<a href="single-product.php?id='.$row_usuario["id"].'" class="social-info">
-										<span class="lnr lnr-move"></span>
+										<span class="lnr lnr-arrow-right-circle"></span>
 										<p class="hover-text">Ver Mais</p>
 									</a>
+									');
+									if (isset($_SESSION["tipo_usuario"]) && $_SESSION["tipo_usuario"] == "admin")
+										echo ("<a href='add-product/add-product/change-product.php?id=".$row_usuario['id']."' class='social-info'>
+											<span class='lnr lnr-cog'></span>
+											<p class='hover-text'>Editar</p>
+										</a>");
+									echo ('
 								</div>
 							</div>
 						</div>
@@ -290,9 +297,16 @@ include_once("conexao.php");
 									</a>
 									
 									<a href="single-product.php?id='.$row_usuario["id"].'" class="social-info">
-										<span class="lnr lnr-move"></span>
+										<span class="lnr lnr-arrow-right-circle"></span>
 										<p class="hover-text">Ver Mais</p>
 									</a>
+									');
+									if (isset($_SESSION["tipo_usuario"]) && $_SESSION["tipo_usuario"] == "admin")
+										echo ("<a href='add-product/add-product/change-product.php?id=".$row_usuario['id']."' class='social-info'>
+											<span class='lnr lnr-cog'></span>
+											<p class='hover-text'>Editar</p>
+										</a>");
+									echo ('
 								</div>
 							</div>
 						</div>
@@ -321,9 +335,16 @@ include_once("conexao.php");
 									</a>
 									
 									<a href="single-product.php?id='.$row_usuario["id"].'" class="social-info">
-										<span class="lnr lnr-move"></span>
+										<span class="lnr lnr-arrow-right-circle"></span>
 										<p class="hover-text">Ver Mais</p>
 									</a>
+									');
+									if (isset($_SESSION["tipo_usuario"]) && $_SESSION["tipo_usuario"] == "admin")
+										echo ("<a href='add-product/add-product/change-product.php?id=".$row_usuario['id']."' class='social-info'>
+											<span class='lnr lnr-cog'></span>
+											<p class='hover-text'>Editar</p>
+										</a>");
+									echo ('
 								</div>
 							</div>
 						</div>
@@ -352,9 +373,16 @@ include_once("conexao.php");
 									</a>
 									
 									<a href="single-product.php?id='.$row_usuario["id"].'" class="social-info">
-										<span class="lnr lnr-move"></span>
+										<span class="lnr lnr-arrow-right-circle"></span>
 										<p class="hover-text">Ver Mais</p>
 									</a>
+									');
+									if (isset($_SESSION["tipo_usuario"]) && $_SESSION["tipo_usuario"] == "admin")
+										echo ("<a href='add-product/add-product/change-product.php?id=".$row_usuario['id']."' class='social-info'>
+											<span class='lnr lnr-cog'></span>
+											<p class='hover-text'>Editar</p>
+										</a>");
+									echo ('
 								</div>
 							</div>
 						</div>
@@ -379,13 +407,20 @@ include_once("conexao.php");
 
 									<a href="" class="social-info">
 										<span class="ti-bag"></span>
-										<p class="hover-text">adicionar</p>
+										<p class="hover-text">Adicionar</p>
 									</a>
 									
 									<a href="single-product.php?id='.$row_usuario["id"].'" class="social-info">
-										<span class="lnr lnr-move"></span>
+										<span class="lnr lnr-arrow-right-circle"></span>
 										<p class="hover-text">Ver Mais</p>
 									</a>
+									');
+									if (isset($_SESSION["tipo_usuario"]) && $_SESSION["tipo_usuario"] == "admin")
+										echo ("<a href='add-product/add-product/change-product.php?id=".$row_usuario['id']."' class='social-info'>
+											<span class='lnr lnr-cog'></span>
+											<p class='hover-text'>Editar</p>
+										</a>");
+									echo ('
 								</div>
 							</div>
 						</div>
@@ -414,9 +449,16 @@ include_once("conexao.php");
 									</a>
 									
 									<a href="single-product.php?id='.$row_usuario["id"].'" class="social-info">
-										<span class="lnr lnr-move"></span>
+										<span class="lnr lnr-arrow-right-circle"></span>
 										<p class="hover-text">Ver Mais</p>
 									</a>
+									');
+									if (isset($_SESSION["tipo_usuario"]) && $_SESSION["tipo_usuario"] == "admin")
+										echo ("<a href='add-product/add-product/change-product.php?id=".$row_usuario['id']."' class='social-info'>
+											<span class='lnr lnr-cog'></span>
+											<p class='hover-text'>Editar</p>
+										</a>");
+									echo ('
 								</div>
 							</div>
 						</div>
@@ -446,9 +488,16 @@ include_once("conexao.php");
 									</a>
 								
 									<a href="single-product.php?id='.$row_usuario["id"].'" class="social-info">
-										<span class="lnr lnr-move"></span>
+										<span class="lnr lnr-arrow-right-circle"></span>
 										<p class="hover-text">Ver Mais</p>
 									</a>
+									');
+									if (isset($_SESSION["tipo_usuario"]) && $_SESSION["tipo_usuario"] == "admin")
+										echo ("<a href='add-product/add-product/change-product.php?id=".$row_usuario['id']."' class='social-info'>
+											<span class='lnr lnr-cog'></span>
+											<p class='hover-text'>Editar</p>
+										</a>");
+									echo ('
 								</div>
 							</div>
 						</div>
@@ -472,7 +521,6 @@ include_once("conexao.php");
           <div class="col-xs-6 col-md-3">
             <h6>Equipe</h6>
             <ul class="footer-links">
-   			  <li><a href="https://www.linkedin.com/in/bryan-santos-77b53317b/" target="_blank">Bryan Santos</a></li>
               <li><a href="https://www.linkedin.com/in/juliane-freitas-9b6287163/" target="_blank">Juliane Freitas</a></li>
               <li><a href="https://www.linkedin.com/in/leticia-amorim-4761b1185/" target="_blank">Leticia Amorim</a></li>
               <li><a href="https://www.linkedin.com/in/pedro-ferreira-6a8417190/" target="_blank">Pedro Ferreira</a></li>
