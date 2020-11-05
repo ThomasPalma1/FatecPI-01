@@ -164,8 +164,6 @@ Finalização do site; nessa sprint vamos verificar se tudo está de acordo com 
 
  - [Leticia Amorim](https://www.linkedin.com/in/leticia-amorim-4761b1185/ "Linkedin") <i>(Development Team)</i>
 
- - [Bryan Santos](https://www.linkedin.com/in/bryan-santos-77b53317b "Linkedin") <i>(Development Team)</i>
-
  - [Pedro Ferreira](https://www.linkedin.com/in/pedro-ferreira-6a8417190/ "Linkedin") <i>(Development Team)</i>
 
  - [Rogério Camargo](https://www.linkedin.com/in/rogério-camargo-3a01191a5 "Linkedin") <i>(Development Team)</i>
