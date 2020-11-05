@@ -11,6 +11,9 @@ O projeto se trata de um _website_ para vendas de conteúdo didáticos.
 
 Nosso projeto é criar uma plataforma de estudos onde o usuario pode entrar e encontar materiais didaticos que auxiliem seu aprendizado. Com um conteudo elaborado de forma simples e explicativa, em um ambiente acessível e intuitivo para que estudantes e professores possam consultar nossa plataforma em busca de conhecimento.
 
+<br>[Backlog](#backlog)
+<br>[Progresso do projeto](#progresso-do-projeto)
+<br>[Membros da Equipe](#nossa-equipe)
  
  <h2>Cronograma do projeto</h2>
  <img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/imagens/entregas.png">
@@ -159,7 +162,7 @@ Finalização do site; nessa sprint vamos verificar se tudo está de acordo com 
 - [ ] Relatório de vendas
 
 
-<h2>Nossa equipe 👧👦</h2>
+<h2>Nossa equipe</h2><h2>:girl::boy:</h2>
            
  - [Thomas Palma](https://www.linkedin.com/in/thomas-palma-0764b81b3/ "Linkedin") <i>(Scrum Master)</i>
 
