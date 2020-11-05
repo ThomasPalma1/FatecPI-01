@@ -11,22 +11,9 @@ O projeto se trata de um _website_ para vendas de conteúdo didáticos.
 
 Nosso projeto é criar uma plataforma de estudos onde o usuario pode entrar e encontar materiais didaticos que auxiliem seu aprendizado. Com um conteudo elaborado de forma simples e explicativa, em um ambiente acessível e intuitivo para que estudantes e professores possam consultar nossa plataforma em busca de conhecimento.
 
-<h2>Nossa equipe 👧👦</h2>
-           
- - [Thomas Palma](https://www.linkedin.com/in/thomas-palma-0764b81b3/) <i>(Scrum Master)</i>
-
- - [Juliane Freitas](https://www.linkedin.com/in/juliane-freitas-9b6287163) <i>(Development Team)</i>
-
- - [Leticia Amorim](https://www.linkedin.com/in/leticia-amorim-4761b1185/) <i>(Development Team)</i>
-
- - [Bryan Santos](https://www.linkedin.com/in/bryan-santos-77b53317b) <i>(Development Team)</i>
-
- - [Pedro Ferreira](https://www.linkedin.com/in/pedro-ferreira-6a8417190/) <i>(Development Team)</i>
-
- - [Rogério Camargo](https://www.linkedin.com/in/rogério-camargo-3a01191a5) <i>(Development Team)</i>
  
  <h2>Cronograma do projeto</h2>
- <img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/imagens/Sprint_PI.png">
+ <img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/imagens/entregas.png">
 
 <h2>Entregas</h2>
 
@@ -162,6 +149,21 @@ Finalização do site; nessa sprint vamos verificar se tudo está de acordo com 
 - [ ] Carrinho de compras
 - [ ] Checkout de pagamento
 - [ ] Relatório de vendas
+
+
+<h2>Nossa equipe 👧👦</h2>
+           
+ - [Thomas Palma](https://www.linkedin.com/in/thomas-palma-0764b81b3/) <i>(Scrum Master)</i>
+
+ - [Juliane Freitas](https://www.linkedin.com/in/juliane-freitas-9b6287163) <i>(Development Team)</i>
+
+ - [Leticia Amorim](https://www.linkedin.com/in/leticia-amorim-4761b1185/) <i>(Development Team)</i>
+
+ - [Bryan Santos](https://www.linkedin.com/in/bryan-santos-77b53317b) <i>(Development Team)</i>
+
+ - [Pedro Ferreira](https://www.linkedin.com/in/pedro-ferreira-6a8417190/) <i>(Development Team)</i>
+
+ - [Rogério Camargo](https://www.linkedin.com/in/rogério-camargo-3a01191a5) <i>(Development Team)</i>
 
 
 <h2>Fluxo da plataforma: cadastro de material didático</h2>
