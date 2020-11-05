@@ -20,8 +20,8 @@ Nosso projeto é criar uma plataforma de estudos onde o usuario pode entrar e en
 - -[x] __1ª Sprint – 17/10/2020__<br>
 O projeto será dividido em 4 sprints, considerando a sprint 0, onde tivemos a avaliação do cliente sobre o que lhe foi apresentado. De acordo com as exigências do cliente, desenvolvemos as primeiras telas sendo as de cadastro do administrador, e a tela de cadastro de produtos, demostrando uma visão de como vai ser feito o upload dos materiais didáticos.
 <p float="left">
-  <img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/imagens/Slide1.PNG" width="470" />
-  <img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/testevideo1.gif" width="470" /> 
+  <img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/imagens/Slide1.PNG" width="460" />
+  <img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/testevideo1.gif" width="460" /> 
 
  - -[x]  __2ª Sprint – 08/11/2020__<br>
 Nessa segunda sprint iremos apresentar ao cliente a parte da edição do perfil do administrador e estudante, a opção de o usuário adicionar produtos ao carrinho e a tela final de apresentação do produto.
