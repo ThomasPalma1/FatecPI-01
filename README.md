@@ -153,17 +153,17 @@ Finalização do site; nessa sprint vamos verificar se tudo está de acordo com 
 
 <h2>Nossa equipe 👧👦</h2>
            
- - [Thomas Palma](https://www.linkedin.com/in/thomas-palma-0764b81b3/) <i>(Scrum Master)</i>
+ - [Thomas Palma](https://www.linkedin.com/in/thomas-palma-0764b81b3/ "Linkedin") <i>(Scrum Master)</i>
 
- - [Juliane Freitas](https://www.linkedin.com/in/juliane-freitas-9b6287163) <i>(Development Team)</i>
+ - [Juliane Freitas](https://www.linkedin.com/in/juliane-freitas-9b6287163 "Linkedin") <i>(Development Team)</i>
 
- - [Leticia Amorim](https://www.linkedin.com/in/leticia-amorim-4761b1185/) <i>(Development Team)</i>
+ - [Leticia Amorim](https://www.linkedin.com/in/leticia-amorim-4761b1185/ "Linkedin") <i>(Development Team)</i>
 
- - [Bryan Santos](https://www.linkedin.com/in/bryan-santos-77b53317b) <i>(Development Team)</i>
+ - [Bryan Santos](https://www.linkedin.com/in/bryan-santos-77b53317b "Linkedin") <i>(Development Team)</i>
 
- - [Pedro Ferreira](https://www.linkedin.com/in/pedro-ferreira-6a8417190/) <i>(Development Team)</i>
+ - [Pedro Ferreira](https://www.linkedin.com/in/pedro-ferreira-6a8417190/ "Linkedin") <i>(Development Team)</i>
 
- - [Rogério Camargo](https://www.linkedin.com/in/rogério-camargo-3a01191a5) <i>(Development Team)</i>
+ - [Rogério Camargo](https://www.linkedin.com/in/rogério-camargo-3a01191a5 "Linkedin") <i>(Development Team)</i>
 
 
 <h2>Fluxo da plataforma: cadastro de material didático</h2>
