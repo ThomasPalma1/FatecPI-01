@@ -1,7 +1,7 @@
 <img src="https://img.shields.io/badge/PHP-7.4.4-blue"> <img src="https://img.shields.io/badge/Apache-2.4.41%20(Win64)-blue"> <img src="https://img.shields.io/badge/phpMyAdmin-5.0.2-brightgreen"> <img src="https://img.shields.io/badge/Bootstrap-v4.5.3-brightgreen">
 
 
-<h1 align="center">Mr. Academy 📖🦉</h1>
+<h1 align="center">Mr. Academy <img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/logotipo_marca/coruja.jpg" width="48"></h1>
 
 <h2>Descrição do projeto</h2>
 
