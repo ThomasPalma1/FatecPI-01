@@ -1,8 +1,10 @@
 <?php
+  include("conexao.php");
 
-session_start();
-include("conexao.php");
-
+  $id = $_REQUEST['id'];
+  $result_produtos = "SELECT * FROM arquivos WHERE id = $id";
+  $resultado_produtos = mysqli_query($conexao, $result_produtos);
+  $infos_produto = mysqli_fetch_assoc($resultado_produtos);
 ?>
 
 <!DOCTYPE html>
@@ -120,35 +122,46 @@ include("conexao.php");
     <label class="product-line-price">Total</label>
   </div>
 
-
-<?php
-
-
-  $conexao = new PDO('mysql:host=localhost;dbname=bd_pi01',"root","");
-  $select = $conexao->prepare("SELECT * FROM arquivos");
-  $select->execute();
-  $fetch = $select->fetchALL();
-  
-  foreach($fetch as $arquivos){
-echo ('<div class="product">
+<div class="product">
     <div class="product-image">
-      <img src="https://s.cdpn.io/3/dingo-dog-bones.jpg">
+
+      <?php
+        if ($infos_produto["disciplina"] == "Português") {
+          echo '<img src="imagens/produtos/p7.jpg" alt="">';
+        }
+        else if ($infos_produto["disciplina"] == "Inglês") {
+          echo '<img src="imagens/produtos/p1.jpg" alt="">';
+        }
+        else if ($infos_produto["disciplina"] == "Matemática Discreta") {
+          echo '<img src="imagens/produtos/p6.jpg" alt="">';
+        }
+        else if ($infos_produto["disciplina"] == "Laboratório de Hardware") {
+          echo '<img src="imagens/produtos/p4.jpg" alt="">';
+        }
+        else if ($infos_produto["disciplina"] == "Administração Geral") {
+          echo '<img src="imagens/produtos/p3.jpg" alt="">';
+        }
+        else if ($infos_produto["disciplina"] == "Algoritmos e Lógica de Programação") {
+          echo '<img src="imagens/produtos/p2.jpg" alt="">';
+        }
+        else {
+          echo '<img src="imagens/produtos/p8.jpg" alt="">';
+        }
+        ?>
+</div>
+<div class="product-details">
+      <div class="product-title"><?php echo($infos_produto["titulo_produto"]); ?></div>
     </div>
-    <div class="product-details">
-      <div class="product-title">'.$arquivos['titulo_produto'].'</div>
-    </div>
-    <div class="product-price">'.$arquivos['preco'].'</div>
+    <div class="product-price"><?php echo($infos_produto["preco"]); ?></div>
+    
     <div class="product-removal">
       <button class="remove-product">
         Remover
       </button>
     </div>
-    <div class="product-line-price">'.$arquivos['preco'].'</div>
-  </div>');
-}
-?>
-
-
+    <div class="product-line-price"><?php echo($infos_produto["preco"]); ?></div>
+  </div>
+ 
 <!--<div class="product">
     <div class="product-image">
       <img src="https://s.cdpn.io/3/large-NutroNaturalChoiceAdultLambMealandRiceDryDogFood.png">
@@ -166,13 +179,13 @@ echo ('<div class="product">
   </div> -->
   <div class="totals">
     <div class="totals-item totals-item-total">
-      <label>Total:</label>
-      <div class="totals-value" id="cart-total">58.98</div>
+      <label>Total: 50</label>
+      <div class="totals-value" id="cart-total"></div>
     </div>
 
   </div>
      <a href="checkout.php" button class="checkout"><p>Checkout de pagamento</p></a></button>
-       <button class="continue" ><p>Adicionar novos produtos<p></button>
+       <button class="continue" ><p style="color: #FFFFFF;"><a href="produtos.php">Adicionar novos produtos</a></p></button>
 </div> 
 
 <br><br><br><br><br><br>
