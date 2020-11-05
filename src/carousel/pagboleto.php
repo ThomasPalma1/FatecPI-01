@@ -1,11 +1,3 @@
-<?php
-	include("conexao.php");
-
-	$id = $_REQUEST['id'];
-	$result_produtos = "SELECT * FROM arquivos WHERE id = $id";
-	$resultado_produtos = mysqli_query($conexao, $result_produtos);
-	$infos_produto = mysqli_fetch_assoc($resultado_produtos);
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -26,14 +18,10 @@
   <link href="carousel.css" rel="stylesheet">
 </head>
 
-
-
-
-	<!-- Start Header Area -->
 <body>
 
 	<!-- Start Header Area -->
-	<header class="header_area sticky-header">
+<header class="header_area sticky-header">
 		<div class="main_menu">
 			<nav class="navbar navbar-expand-lg navbar-light main_box">
 				<div class="container">
@@ -48,9 +36,9 @@
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 						<ul class="nav navbar-nav menu_nav ml-auto">
-							<!-- <li class="nav-item active"><a class="nav-link" href="index.html">Inicio</a></li> -->
-							  <li class="nav-item submenu dropdown">
-								<!-- <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+							<li class="nav-item active"><a class="nav-link" href="produtos.php">Inicio</a></li>
+							  <!--<li class="nav-item submenu dropdown">
+								 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
 								 aria-expanded="false">Materiais didáticos</a>
 								<ul class="dropdown-menu">
 									<li class="nav-item"><a class="nav-link" href="">Português</a></li>
@@ -66,15 +54,7 @@
 								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
 								 aria-expanded="false">Meu Perfil</a>
 								<ul class="dropdown-menu">
-									<?php
-									if (isset($_SESSION["tipo_usuario"]) && $_SESSION["tipo_usuario"] == "user") {
-										echo ('<li class="nav-item"><a class="nav-link" href="perfiluser.php">Editar Perfil</a></li>');
-									}	
-									else { 
-										echo ('<li class="nav-item"><a class="nav-link" href=".php">Editar Perfil</a></li>');
-									}						
-								?>
-									
+									<li class="nav-item"><a class="nav-link" href="perfiluser.php">Editar Perfil</a></li>
 									<?php
 										if (isset($_SESSION['tipo_usuario']) && $_SESSION['tipo_usuario'] == "admin") {
 											echo '<li class="nav-item"><a class="nav-link" href="add-product/add-product/add-product.php">Cadastrar Material</a></li>';
@@ -112,81 +92,119 @@
 		<div class="container">
 			<div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
 				<div class="col-first">
-					<h1>Detalhes do Produto</h1>
+					<h1>Confirmação</h1>
 				</div>
 			</div>
 		</div>
 	</section>
 	<!-- End Banner Area -->
 
-	<!--================Single Product Area =================-->
-	<div class="product_image_area">
+	<!--================Order Details Area =================-->
+	<section class="order_details section_gap">
 		<div class="container">
-			<div class="row s_product_inner">
-				<?php
-				if ($infos_produto["disciplina"] == "Português") {
-					echo '<img src="imagens/produtos/p7.jpg" alt="">';
-				}
-				else if ($infos_produto["disciplina"] == "Inglês") {
-					echo '<img src="imagens/produtos/p1.jpg" alt="">';
-				}
-				else if ($infos_produto["disciplina"] == "Matemática Discreta") {
-					echo '<img src="imagens/produtos/p6.jpg" alt="">';
-				}
-				else if ($infos_produto["disciplina"] == "Laboratório de Hardware") {
-					echo '<img src="imagens/produtos/p4.jpg" alt="">';
-				}
-				else if ($infos_produto["disciplina"] == "Administração Geral") {
-					echo '<img src="imagens/produtos/p3.jpg" alt="">';
-				}
-				else if ($infos_produto["disciplina"] == "Algoritmos e Lógica de Programação") {
-					echo '<img src="imagens/produtos/p2.jpg" alt="">';
-				}
-				else {
-					echo '<img src="imagens/produtos/p8.jpg" alt="">';
-				}
-
-
-				?>
-				<div class="col-lg-5 offset-lg-1">
-					<div class="s_product_text">
-						<h3><?php echo($infos_produto["titulo_produto"]); ?></h3>
-						<h2><?php echo($infos_produto["preco"]); ?></h2>
+			<h3 class="title_confirmation">Seu pedido foi processado! agora estamos só aguradando a confirmação de pagamento :D</h3>
+			<div class="row order_d_inner">
+				<div class="col-lg-4">
+					<div class="details_item">
+						<h4>Informação do Pedido</h4>
 						<ul class="list">
-							<li><a class="active" href="#"><span>Categoria:</span><?php echo($infos_produto["disciplina"]); ?></a></li>					
-							<br>
-							<div class="card_area d-flex align-items-center">
-								<a class="primary-btn" href="#">Comprar</a>
-								<a class="icon_btn" href="#"><i class="ti-bag"></i></a>
-							</ul>
-						</div>
+							<li><a href="#"><span>Numero do Pedido</span> : 60235</a></li>
+							<li><a href="#"><span>Data</span> : 20/10/2020</a></li>
+							<li><a href="#"><span>Total</span> : R$ 2210</a></li>
+							<li><a href="#"><span>Método de pagamento</span>: Cartão de Crédito</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="details_item">
+						<!--<h4>Billing Address</h4>
+						<ul class="list">
+							<li><a href="#"><span>Street</span> : 56/8</a></li>
+							<li><a href="#"><span>City</span> : Los Angeles</a></li>
+							<li><a href="#"><span>Country</span> : United States</a></li>
+							<li><a href="#"><span>Postcode </span> : 36952</a></li>
+						</ul>-->
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="details_item">
+					<!-- <h4>Shipping Address</h4>
+						<ul class="list">
+							<li><a href="#"><span>Street</span> : 56/8</a></li>
+							<li><a href="#"><span>City</span> : Los Angeles</a></li>
+							<li><a href="#"><span>Country</span> : United States</a></li>
+							<li><a href="#"><span>Postcode </span> : 36952</a></li>
+						</ul> -->
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-	<!--================End Single Product Area =================-->
+			<div class="order_details_table">
+				<h2>Detalhes do pedido</h2>
+				<div class="table-responsive">
+					<table class="table">
+						<thead>
+							<tr>
+								<th scope="col">Produto</th>
+								
+								<th scope="col">Total</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<p>Matemática discreta</p>
+								</td>
+								
+								<td>
+									<p>R$720.00</p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p>Inglês básico</p>
+								</td>
+								
+								<td>
+									<p>R$720.00</p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p>Python</p>
+								</td>
+								
+								<td>
+									<p>R$720.00</p>
+								</td>
+							</tr>
+							<tr>
+						
+							<tr>
+								
+								<td>
+									<h5></h5>
+								</td>
+								<td>
+									<p>R$2210.00</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
 
-	<!--================Product Description Area =================-->
-	<section class="product_description_area">
-		<div class="container">
-			<ul class="nav nav-tabs" id="myTab" role="tablist">
-				<li class="nav-item">
-					<a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Descrição</a>
-				</li>
-				
-			</ul>
-			<div class="tab-content" id="myTabContent">
-				<div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
-				<?php echo($infos_produto["descricao"]); ?>
-				</div>
-				
 				</div>
 			</div>
-		</section>
+		</div>
+		<br>
+		<center> 
 
+			
+			<div class="button-group-area mt-40">
+			<a href="#" class="genric-btn primary small" onClick="window.print()">Continuar comprando</a><a class="genric-btn primary small small" href="perfiluser.php">Imprimir Boleto</a></div>
 
-<!-- Site footer -->
+	</section>
+	<!--================End Order Details Area =================-->
+
+	<!-- Site footer -->
     <footer class="site-footer">
       <div class="container">
         <div class="row">

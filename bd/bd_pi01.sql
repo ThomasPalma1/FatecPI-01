@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 03-Nov-2020 às 14:19
+-- Tempo de geração: 05-Nov-2020 às 12:51
 -- Versão do servidor: 10.4.14-MariaDB
--- versão do PHP: 7.4.10
+-- versão do PHP: 7.4.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -43,7 +43,7 @@ CREATE TABLE `arquivos` (
 --
 
 INSERT INTO `arquivos` (`id`, `nome_arquivo`, `caminho`, `disciplina`, `descricao`, `extensao_arquivo`, `titulo_produto`, `preco`) VALUES
-(29, 'RESUMÃO.pdf', 'arquivos/RESUMÃO.pdf', 'Administração Geral', 'Estrutura do balanço patrimonial', 'pdf', 'Estrutura do balanço patrimonial', 'R$50,00');
+(29, 'RESUMÃO.pdf', 'arquivos/RESUMÃO.pdf', 'Administração Geral', 'Estrutura do balanço ', 'pdf', 'Estrutura do balanço ', 'R$50,00');
 
 -- --------------------------------------------------------
 
@@ -82,8 +82,16 @@ CREATE TABLE `pedidos` (
   `id_pedido` int(11) NOT NULL,
   `id_arquivo` int(11) NOT NULL,
   `titulo_produto` varchar(100) NOT NULL,
-  `preco` int(11) NOT NULL
+  `preco` int(11) NOT NULL,
+  `parcelas` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `pedidos`
+--
+
+INSERT INTO `pedidos` (`id_pedido`, `id_arquivo`, `titulo_produto`, `preco`, `parcelas`) VALUES
+(9, 0, '', 0, 4);
 
 -- --------------------------------------------------------
 
@@ -105,7 +113,7 @@ CREATE TABLE `usuario` (
 
 INSERT INTO `usuario` (`tipo_usuario`, `email`, `senha`, `nome`, `nickname`) VALUES
 ('admin', 'admin@root.com', '21232f297a57a5a743894a0e4a801fc3', 'Antonio Egydio', 'EgydioADM'),
-('user', 'thomas.palma@gmail.com', '847964fbc7047329a01f22ceb773bf92', 'Thomas dos Santos Palma', 'thomaspalma');
+('user', 'juliane.freitas1@hotmail.com', '202cb962ac59075b964b07152d234b70', 'juliane.freitas1@hotmail.com', 'jujuba');
 
 --
 -- Índices para tabelas despejadas
@@ -155,7 +163,7 @@ ALTER TABLE `arquivos`
 -- AUTO_INCREMENT de tabela `pedidos`
 --
 ALTER TABLE `pedidos`
-  MODIFY `id_pedido` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_pedido` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

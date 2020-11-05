@@ -60,7 +60,15 @@
 								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
 								 aria-expanded="false">Meu Perfil</a>
 								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href=" ">Editar Perfil</a></li>
+									<?php
+									if (isset($_SESSION["tipo_usuario"]) && $_SESSION["tipo_usuario"] == "user") {
+										echo ('<li class="nav-item"><a class="nav-link" href="perfiluser.php">Editar Perfil</a></li>');
+									}	
+									else { 
+										echo ('<li class="nav-item"><a class="nav-link" href=".php">Editar Perfil</a></li>');
+									}						
+								?>
+									
 									<?php
 										if (isset($_SESSION['tipo_usuario']) && $_SESSION['tipo_usuario'] == "admin") {
 											echo '<li class="nav-item"><a class="nav-link" href="add-product/add-product/add-product.php">Cadastrar Material</a></li>';
