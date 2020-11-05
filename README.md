@@ -135,6 +135,9 @@ Finalização do site; nessa sprint vamos verificar se tudo está de acordo com 
    - Consulta do saldo de crédito do Cliente 
    
    
+ <h2>Diagrama do site</h2>
+ <img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/imagens/diagrama2.PNG">
+   
  <h2>Progresso do projeto</h2>
  
 - [x] Index
