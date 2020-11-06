@@ -3,25 +3,24 @@
 
 <h1 align="center">Mr. Academy <img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/logotipo_marca/coruja.jpg" width="48"></h1>
 
-<h2>Descrição</h2>
+<h2 align="center">Descrição</h2>
 
-O projeto se trata de um _website_ para vendas de conteúdo didáticos.
+O presente projeto trata-se de um website para vendas e posterior disponibilização de materiais didáticos para curso de Ensino Superior de Análise de Sistemas, atuando enquanto uma plataforma e-commerce.
 
-<h2>Objetivo do Projeto</h2>
+<h2 align="center">Objetivo do Projeto</h2>
 
-Nosso projeto é criar uma plataforma de estudos onde o usuario pode entrar e encontar materiais didaticos que auxiliem seu aprendizado. Com um conteudo elaborado de forma simples e explicativa, em um ambiente acessível e intuitivo para que estudantes e professores possam consultar nossa plataforma em busca de conhecimento.
+O objetivo geral deste projeto é a criação de uma plataforma de estudos, onde o usuário poderá ter acesso à materiais didáticos que o auxiliem em seu aprendizado, em especial destaque, alunos de Ensino Superior do curso de Análise de Sistema. O material a ser disponibilizado é referente às matérias de Matemática Discreta, Inglês, Português, Algoritmos de Programação, Laboratório de Hardware e Arquitetura e Organização de Computadores (AOC). 
+Enquanto objetivos específicos, identificam-se a elaboração de conteúdos de forma simples e explicativa, organizando-os através de um ambiente acessível intuitivo - tanto para alunos, quanto professores -, facilitando sua consulta na plataforma em sua busca de conhecimento.
 
-<br>[Backlog](#backlog)
-<br>[Progresso do projeto](#progresso-do-projeto)
-<br>[Membros da Equipe](#nossa-equipe)
  
- <h2>Cronograma do projeto</h2>
+ <h2 align="center">Cronograma do Projeto</h2>
  <img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/imagens/entregas.png">
 
-<h2>Entregas</h2>
+<h2 align="center">Entregas</h2>
 
 - -[x] __1ª Sprint – 17/10/2020__<br>
-O projeto será dividido em 4 sprints, considerando a sprint 0, onde tivemos a avaliação do cliente sobre o que lhe foi apresentado. De acordo com as exigências do cliente, desenvolvemos as primeiras telas sendo as de cadastro do administrador, e a tela de cadastro de produtos, demostrando uma visão de como vai ser feito o upload dos materiais didáticos.
+O projeto foi dividido em quatro Sprints, considerando a Sprint 0, onde obteve-se a avaliação do cliente/usuário de acordo com o que lhe foi apresentado. Considerando tais exigêngias, os desenvolvedores construíram as primeiras telas, sendo elas as de cadastro e login na plataforma para administradores e outra cadastral para os produtos disponibilizados, a fim de demonstrar como são realizados os uploads dos materiais didáticos.<br/>
+
 
 <table>
   <tr>
@@ -30,36 +29,31 @@ O projeto será dividido em 4 sprints, considerando a sprint 0, onde tivemos a a
   </tr>
   <tr>
     <td><img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/sprint1/Slide1.PNG" width=460 height=280></td>
-    <td><img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/sprint1/testevideo1.gif" width=460 height=280></td>
+    <td><img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/pi-01gif.gif" width=460 height=280></td>
   </tr>
  </table>
  
-[![Watch the video](https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/sprint1/playerYT.PNG)](https://youtu.be/3kgJ9zw80Ps)
+ <p><a href="https://youtu.be/3kgJ9zw80Ps">Vídeo no YouTube</a></p>
 
 
 
  - -[x]  __2ª Sprint – 08/11/2020__<br>
 Nessa segunda sprint iremos apresentar ao cliente a parte de editar/ alterar informações referentes ao material didático adicionado pelo administrador; botão do carrinho de compras que é onde o  usuário adiciona os produtos ao carrinho; checkout de matérias sendo a página na qual é disponibilizada a forma de pagamento, os dados cadastrados do usuário e o produto selecionado; no perfil de estudante encontra-se também a carteira que consiste em adicionar a  forma de pagamento.
-
-<table>
-  <tr>
-    <td>Detalhes</td>
-     <td>Burndown da Sprint</td>
-  </tr>
-  <tr>
-    <td><img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/imagens/Slide2.PNG" width=460 height=280></td>
-    <td><img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/sprint1/burndown.png" width=460 height=280></td>
-  </tr>
- </table>
-
+<img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/imagens/Slide2.PNG"  width="550px" height="300px" style="max-width:100%">
+<br>
+<br>
 
  - -[ ] __3ª Sprint – 29/11/2020__<br>
 Para 3ª sprint iremos desenvolver as telas gerenciais referentes ao perfil de administrador, sendo elas a exibição dos históricos de venda, permitindo a extração de relatórios de vendas. A criação de um game capaz de auxiliar o aprendizado de matérias especificas. A disponibilização do material didático simplificado solicitado pelo cliente. Caso necessário, melhorias serão feitas. 
 <img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/imagens/Slide3.PNG"  width="550px" height="300px" style="max-width:100%">
+<br>
+<br>
 
  - -[ ] __Apresentação Final – 06/12/2020__<br>
 Finalização do site; nessa sprint vamos verificar se tudo está de acordo com o planejado. Detalhes extras que forem necessários serão adicionados para o aperfeiçoamento e otimização da plataforma.
 <img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/imagens/Slide4.PNG"  width="550px" height="300px" style="max-width:100%">
+<br>
+<br>
 
 <h2>Backlog</h2>
 
