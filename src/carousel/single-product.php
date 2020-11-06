@@ -156,8 +156,7 @@
 							<li><a class="active" href="#"><span>Categoria:</span><?php echo($infos_produto["disciplina"]); ?></a></li>					
 							<br>
 							<div class="card_area d-flex align-items-center">
-								<a class="primary-btn" href="#">Comprar</a>
-								<a class="icon_btn" href="#"><i class="ti-bag"></i></a>
+								<a class="primary-btn" href="cart.php?id=<?php echo($infos_produto['id']); ?>">Comprar</a>
 							</ul>
 						</div>
 					</div>

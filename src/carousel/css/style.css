@@ -55,9 +55,7 @@ Side note: I know that this style of nesting in SASS doesn't result in the most 
 
 /* Apply clearfix in a few places */
 /* Apply dollar signs */
-.product .product-price:before, .product .product-line-price:before, .totals-value:before {
-  content: '$';
-}
+.product .product-price:before, .product .product-line-price:before, .totals-value:before {}
 
 /* Body/Header stuff */
 body {position: absolute;
@@ -239,9 +237,7 @@ label {
     margin-top: 10px;
   }
 
-   .product .product-line-price:before {
-    content: 'Item Total: $';
-  }
+   
 
 
   .totals .totals-item label {

@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 05-Nov-2020 às 12:51
+-- Tempo de geração: 06-Nov-2020 às 21:32
 -- Versão do servidor: 10.4.14-MariaDB
--- versão do PHP: 7.4.9
+-- versão do PHP: 7.4.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -80,18 +80,19 @@ CREATE TABLE `contato` (
 
 CREATE TABLE `pedidos` (
   `id_pedido` int(11) NOT NULL,
-  `id_arquivo` int(11) NOT NULL,
-  `titulo_produto` varchar(100) NOT NULL,
-  `preco` int(11) NOT NULL,
-  `parcelas` int(11) NOT NULL
+  `id` int(11) NOT NULL,
+  `titulo_produto` varchar(250) NOT NULL,
+  `preco` varchar(100) NOT NULL,
+  `parcelas` int(11) NOT NULL,
+  `metodopag` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `pedidos`
 --
 
-INSERT INTO `pedidos` (`id_pedido`, `id_arquivo`, `titulo_produto`, `preco`, `parcelas`) VALUES
-(9, 0, '', 0, 4);
+INSERT INTO `pedidos` (`id_pedido`, `id`, `titulo_produto`, `preco`, `parcelas`, `metodopag`) VALUES
+(90, 29, 'Estrutura do balanço ', 'R$50,00', 0, 'boleto');
 
 -- --------------------------------------------------------
 
@@ -163,7 +164,7 @@ ALTER TABLE `arquivos`
 -- AUTO_INCREMENT de tabela `pedidos`
 --
 ALTER TABLE `pedidos`
-  MODIFY `id_pedido` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_pedido` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

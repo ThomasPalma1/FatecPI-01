@@ -181,12 +181,12 @@
   <div class="totals">
     <div class="totals-item totals-item-total">
       <label>Total:</label>
-      <div class="totals-value" id="cart-total"></div>
+      <div class="totals-value" id="cart-total"><?php echo($infos_produto["preco"]); ?></div>
     </div>
 
   </div>
-     <?php echo('<a href="checkout.php?id='.$id.'" button class="checkout"><p>Checkout de pagamento</p></a></button>'); ?> <!-- passei o id do produto no botão -->
-       <button class="continue" ><p style="color: #FFFFFF;"><a href="produtos.php">Adicionar novos produtos</a></p></button>
+     <?php echo('<a href="checkout.php?id='.$id.'"><button class="checkout"><p>Checkout de pagamento</p></button></a>'); ?> <!-- passei o id do produto no botão -->
+       <a href="produtos.php"><button class="continue" ><p>Adicionar novos produtos</p></button></a>
 </div> 
 
 <br><br><br><br><br><br>
