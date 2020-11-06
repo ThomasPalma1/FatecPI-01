@@ -34,7 +34,7 @@ O projeto será dividido em 4 sprints, considerando a sprint 0, onde tivemos a a
   </tr>
  </table>
  
- [![Vídeo no Youtube](https://youtu.be/3kgJ9zw80Ps)
+[![Watch the video](https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/sprint1/playerYT.PNG)](https://youtu.be/3kgJ9zw80Ps)
 
 
 
