@@ -1,6 +1,7 @@
 <?php
 session_start();
-include 'conexao.php'
+include 'conexao.php';
+$id =intval($_REQUEST['id']); // peguei o id que eu passei no botão
 
 ?>
 
@@ -182,18 +183,32 @@ include 'conexao.php'
 					</div>
 				 </div>
 					</form>
-					
+								
 				<div class="product_count">
-							<form action="pedido.php" method="post" name="pedido">
+
+<?php
+					  
+					  
+					  
+					  $result_produtos = "SELECT * FROM arquivos WHERE id = $id";
+					  $resultado_produtos = mysqli_query($conexao, $result_produtos);
+					  $infos_produto = mysqli_fetch_assoc($resultado_produtos);
+
+
+					  echo('<form action="pedido.php?id='.$infos_produto["id"].'" method="post" name="pedido">'); 
+					?>	
+
+							
 							<label for="Parcelas">Parcelas</label>
-							<input class="foo" type="number" min="1" max="12" maxlength="4" value="parcelas" id="parcelas" name="parcelas">
+							<input class="foo" type="number" min="1" max="12" maxlength="4" value="1" id="parcelas" name="parcelas">
 							<!-- <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;" class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
 							<button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;" class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button> -->
 
 						</div>
 						até <b>12x </b>sem juros.
-					</form>
+					
 						<br>
+						
 
 					<div class="button-group-area mt-40">
 						<a href="#" class="genric-btn primary small">Usar outro cartão</a></div>
@@ -202,23 +217,40 @@ include 'conexao.php'
 
                     <div class="col-lg-4">
                         <div class="order_box">
+                        		  
                             <h2>Seu pedido</h2>
-                            <ul class="list">
-                                <li><a href="#">Produto<span>Total</span></a></li>
-                                <li><a href="#">Inglês básico<span class="last">R$720.00</span></a></li>
-                                <li><a href="#">Matemática discreta<span class="last">R$720.00</span></a></li>
-                                <li><a href="#">Administração Geral<span class="last">R$720.00</span></a></li>
-                            </ul>
-                            <ul class="list list_2">
-                            <li><a href="#">Total <span>R$2210.00</span></a></li>
-                            </ul>
+                            <div>
+							  <div class="form-group row">
+							  	<input type="hidden" name="id" value="<?php echo(intval($infos_produto['id'])); ?>">
+							  	
+							    <label for="staticEmail" class="col-sm-2 col-form-label">Item:</label>
+							    <div class="col-sm-10">
+							      <input type="text" readonly class="form-control-plaintext" id="titulo_produto" name="titulo_produto" value="<?php echo($infos_produto['titulo_produto']); ?>">
+							    </div>
+							  </div>
+							  <div class="form-group row">
+							    <label for="staticEmail" class="col-sm-2 col-form-label">Preço:</label>
+							    <div class="col-sm-10">
+							      <input type="text" readonly class="form-control-plaintext" id="preco" name="preco" value="<?php echo($infos_produto['preco']); ?>">
+							    </div>
+							  </div>
+							  <hr/>
+							</div>
+							<input type="hidden" name="metodopag" id="metodopag" value="cartao">
+							
+							<input type="submit" name="Enviar" style="width: 250px;">
+						</form>
                         
                           <!--  <div class="creat_account">
                                 <input type="checkbox" id="f-option4" name="selector">
                                 <label for="f-option4">Eu li e aceito os</label>
                                 <a href="#">termos e condições*</a>
                             </div> -->
-                            <a class="primary-btn" href="javascript:pedido.submit()">Finalizar compra</a>
+                            
+
+							
+
+                            
                         </div>
                     </div>
 
@@ -246,7 +278,7 @@ include 'conexao.php'
                <div class="row">
 
                 
-
+               	<!---------------boleto--------------->
                             
                 <?php
 
@@ -283,26 +315,42 @@ include 'conexao.php'
 					
 
                     </div>
-
+					   <?php
+					  
+					  
+					  $result_produtos = "SELECT * FROM arquivos where id=$id";
+					  $resultado_produtos = mysqli_query($conexao, $result_produtos);
+					  $infos_produto = mysqli_fetch_assoc($resultado_produtos);
+					?>
                     <div class="col-lg-4">
                         <div class="order_box">
                             <h2>Seu pedido</h2>
-                            <ul class="list">
-                                <li><a href="#">Produto<span>Total</span></a></li>
-                                <li><a href="#">Inglês básico<span class="last">R$720.00</span></a></li>
-                                <li><a href="#">Matemática discreta<span class="last">R$720.00</span></a></li>
-                                <li><a href="#">Administração Geral<span class="last">R$720.00</span></a></li>
-                            </ul>
-                            <ul class="list list_2">
-                            <li><a href="#">Total <span>R$2210.00</span></a></li>
-                            </ul>
-                        
-                          <!--  <div class="creat_account">
-                                <input type="checkbox" id="f-option4" name="selector">
-                                <label for="f-option4">Eu li e aceito os</label>
-                                <a href="#">termos e condições*</a>
-                            </div> -->
-                            <a class="primary-btn" href="pagboleto.php">Finalizar compra</a>
+                            <form method="POST" action="pedido.php">
+                            	<div>
+							  <div class="form-group row">
+							  	<input type="hidden" name="id" value="<?php echo($infos_produto['id']); ?>">
+
+							    <label for="staticEmail" class="col-sm-2 col-form-label">Item:</label>
+							    <div class="col-sm-10">
+							      <input type="text" readonly class="form-control-plaintext" id="titulo_produto" name="titulo_produto" value="<?php echo($infos_produto['titulo_produto']); ?>">
+							    </div>
+							  </div>
+							  <div class="form-group row">
+							    <label for="staticEmail" class="col-sm-2 col-form-label">Preço:</label>
+							    <div class="col-sm-10">
+							      <input type="text" readonly class="form-control-plaintext" id="preco" name="preco" value="<?php echo($infos_produto['preco']); ?>">
+							      <hr/>
+							    </div>
+							  </div>
+							</div>
+							<input type="hidden" name="metodopag" id="metodopag" value="boleto">
+							<input type="submit" name="Enviar" style="width: 250px;">
+							
+							  </form>
+							
+
+
+                    
                         </div>
                     </div>
 

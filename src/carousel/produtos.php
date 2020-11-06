@@ -261,7 +261,7 @@
 								</div>
 								<div class="prd-bottom"> 
 
-									<a href="" class="social-info">
+									<a href="cart.php?id='.$row_usuario['id'].'" class="social-info">
 										<span class="ti-bag"></span>
 										<p class="hover-text">adicionar</p>
 									</a>
@@ -299,7 +299,7 @@
 								</div>
 								<div class="prd-bottom"> 
 
-									<a href="" class="social-info">
+									<a href="cart.php?id='.$row_usuario["id"].'" class="social-info">
 										<span class="ti-bag"></span>
 										<p class="hover-text">adicionar</p>
 									</a>
@@ -337,7 +337,7 @@
 								</div>
 								<div class="prd-bottom"> 
 
-									<a href="" class="social-info">
+									<a href="cart.php?id='.$row_usuario["id"].'" class="social-info">
 										<span class="ti-bag"></span>
 										<p class="hover-text">adicionar</p>
 									</a>
@@ -375,11 +375,10 @@
 								</div>
 								<div class="prd-bottom"> 
 
-									<a href="" class="social-info">
+									<a href="cart.php?id='.$row_usuario["id"].'" class="social-info">
 										<span class="ti-bag"></span>
 										<p class="hover-text">adicionar</p>
 									</a>
-									
 									<a href="single-product.php?id='.$row_usuario["id"].'" class="social-info">
 										<span class="lnr lnr-arrow-right-circle"></span>
 										<p class="hover-text">Ver Mais</p>
@@ -413,9 +412,9 @@
 								</div>
 								<div class="prd-bottom"> 
 
-									<a href="" class="social-info">
+									<a href="cart.php?id='.$row_usuario["id"].'" class="social-info">
 										<span class="ti-bag"></span>
-										<p class="hover-text">Adicionar</p>
+										<p class="hover-text">adicionar</p>
 									</a>
 									
 									<a href="single-product.php?id='.$row_usuario["id"].'" class="social-info">
@@ -451,7 +450,7 @@
 								</div>
 								<div class="prd-bottom"> 
 
-									<a href="" class="social-info">
+									<a href="cart.php?id='.$row_usuario["id"].'" class="social-info">
 										<span class="ti-bag"></span>
 										<p class="hover-text">adicionar</p>
 									</a>
@@ -490,7 +489,7 @@
 								</div>
 								<div class="prd-bottom"> 
 
-									<a href="" class="social-info">
+									<a href="cart.php?id='.$row_usuario["id"].'" class="social-info">
 										<span class="ti-bag"></span>
 										<p class="hover-text">adicionar</p>
 									</a>
