@@ -3,20 +3,20 @@
 
 <h1 align="center">Mr. Academy <img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/logotipo_marca/coruja.jpg" width="48"></h1>
 
-<h2 align="center">Descrição</h2>
+<h2>Descrição</h2>
 
 O presente projeto trata-se de um website para vendas e posterior disponibilização de materiais didáticos para curso de Ensino Superior de Análise de Sistemas, atuando enquanto uma plataforma e-commerce.
 
-<h2 align="center">Objetivo do Projeto</h2>
+<h2>Objetivo do Projeto</h2>
 
 O objetivo geral deste projeto é a criação de uma plataforma de estudos, onde o usuário poderá ter acesso à materiais didáticos que o auxiliem em seu aprendizado, em especial destaque, alunos de Ensino Superior do curso de Análise de Sistema. O material a ser disponibilizado é referente às matérias de Matemática Discreta, Inglês, Português, Algoritmos de Programação, Laboratório de Hardware e Arquitetura e Organização de Computadores (AOC). 
 Enquanto objetivos específicos, identificam-se a elaboração de conteúdos de forma simples e explicativa, organizando-os através de um ambiente acessível intuitivo - tanto para alunos, quanto professores -, facilitando sua consulta na plataforma em sua busca de conhecimento.
 
  
- <h2 align="center">Cronograma do Projeto</h2>
+ <h2>Cronograma do Projeto</h2>
  <img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/imagens/entregas.png">
 
-<h2 align="center">Entregas</h2>
+<h2>Entregas</h2>
 
 - -[x] __1ª Sprint – 17/10/2020__<br>
 O projeto foi dividido em quatro Sprints, considerando a Sprint 0, onde obteve-se a avaliação do cliente/usuário de acordo com o que lhe foi apresentado. Considerando tais exigêngias, os desenvolvedores construíram as primeiras telas, sendo elas as de cadastro e login na plataforma para administradores e outra cadastral para os produtos disponibilizados, a fim de demonstrar como são realizados os uploads dos materiais didáticos.<br/>
