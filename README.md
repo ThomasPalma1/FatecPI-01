@@ -30,11 +30,11 @@ O projeto será dividido em 4 sprints, considerando a sprint 0, onde tivemos a a
 
 
  - -[x]  __2ª Sprint – 08/11/2020__<br>
-Nessa segunda sprint iremos apresentar ao cliente a parte da edição do perfil do administrador e estudante, a opção de o usuário adicionar produtos ao carrinho e a tela final de apresentação do produto.
+Nessa segunda sprint iremos apresentar ao cliente a parte de editar/ alterar informações referentes ao material didático adicionado pelo administrador; botão do carrinho de compras que é onde o  usuário adiciona os produtos ao carrinho; checkout de matérias sendo a página na qual é disponibilizada a forma de pagamento, os dados cadastrados do usuário e o produto selecionado; no perfil de estudante encontra-se também a carteira que consiste em adicionar a  forma de pagamento.
 <img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/imagens/Slide2.PNG"  width="550px" height="300px" style="max-width:100%">
 
  - -[ ] __3ª Sprint – 29/11/2020__<br>
-Para 3ª sprint iremos desenvolver as telas de cadastros de informações importantes, como cartão do usuário para compra e os dados financeiros do administrador da plataforma para gerenciamento das vendas, e desenvolvimento dos conteúdos didáticos e criação do game.
+Para 3ª sprint iremos desenvolver as telas gerenciais referentes ao perfil de administrador, sendo elas a exibição dos históricos de venda, permitindo a extração de relatórios de vendas. A criação de um game capaz de auxiliar o aprendizado de matérias especificas. A disponibilização do material didático simplificado solicitado pelo cliente. Caso necessário, melhorias serão feitas. 
 <img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/imagens/Slide3.PNG"  width="550px" height="300px" style="max-width:100%">
 
  - -[ ] __Apresentação Final – 06/12/2020__<br>
