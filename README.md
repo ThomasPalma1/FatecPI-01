@@ -29,7 +29,7 @@ O projeto foi dividido em quatro Sprints, considerando a Sprint 0, onde obteve-s
   </tr>
   <tr>
     <td><img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/sprint1/Slide1.PNG" width=460 height=280></td>
-    <td><img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/pi-01gif.gif" width=460 height=280></td>
+    <td><img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/pi01.gif" width=460 height=280></td>
   </tr>
  </table>
  
