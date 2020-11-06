@@ -1,9 +1,9 @@
 <img src="https://img.shields.io/badge/PHP-7.4.4-blue"> <img src="https://img.shields.io/badge/Apache-2.4.41%20(Win64)-blue"> <img src="https://img.shields.io/badge/phpMyAdmin-5.0.2-brightgreen"> <img src="https://img.shields.io/badge/Bootstrap-v4.5.3-brightgreen">
 
 
-<h1 align="center">Mr. Academy <img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/logotipo_marca/coruja.jpg" width="48"></h1>
+<h1 align="center">Mr. Academy 📖🦉</h1>
 
-<h2>Descrição</h2>
+<h2>Descrição do projeto</h2>
 
 O projeto se trata de um _website_ para vendas de conteúdo didáticos.
 
@@ -11,35 +11,40 @@ O projeto se trata de um _website_ para vendas de conteúdo didáticos.
 
 Nosso projeto é criar uma plataforma de estudos onde o usuario pode entrar e encontar materiais didaticos que auxiliem seu aprendizado. Com um conteudo elaborado de forma simples e explicativa, em um ambiente acessível e intuitivo para que estudantes e professores possam consultar nossa plataforma em busca de conhecimento.
 
-<br>[Backlog](#backlog)
-<br>[Progresso do projeto](#progresso-do-projeto)
-<br>[Membros da Equipe](#nossa-equipe)
+<h2>Nossa equipe 👧👦</h2>
+           
+ - [Thomas Palma](https://www.linkedin.com/in/thomas-palma-0764b81b3/) <i>(Scrum Master)</i>
+
+ - [Juliane Freitas](https://www.linkedin.com/in/juliane-freitas-9b6287163) <i>(Development Team)</i>
+
+ - [Leticia Amorim](https://www.linkedin.com/in/leticia-amorim-4761b1185/) <i>(Development Team)</i>
+
+ - [Bryan Santos](https://www.linkedin.com/in/bryan-santos-77b53317b) <i>(Development Team)</i>
+
+ - [Pedro Ferreira](https://www.linkedin.com/in/pedro-ferreira-6a8417190/) <i>(Development Team)</i>
+
+ - [Rogério Camargo](https://www.linkedin.com/in/rogério-camargo-3a01191a5) <i>(Development Team)</i>
  
  <h2>Cronograma do projeto</h2>
- <img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/imagens/entregas.png">
+ <img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/imagens/Sprint_PI.png">
 
 <h2>Entregas</h2>
 
-- -[x] __1ª Sprint – 17/10/2020__<br>
+- __1ª Sprint – 17/10/2020__<br>
 O projeto será dividido em 4 sprints, considerando a sprint 0, onde tivemos a avaliação do cliente sobre o que lhe foi apresentado. De acordo com as exigências do cliente, desenvolvemos as primeiras telas sendo as de cadastro do administrador, e a tela de cadastro de produtos, demostrando uma visão de como vai ser feito o upload dos materiais didáticos.
-<p float="left">
-  <img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/imagens/Slide1.PNG" width="460" />
-  <img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/testevideo1.gif" width="460" /><br>
- [![Vídeo no Youtube](https://youtu.be/3kgJ9zw80Ps)
+<img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/imagens/Capturar.PNG"  width="550px" height="300px" style="max-width:100%">
 
+ - __2ª Sprint – 08/11/2020__<br>
+Nessa segunda sprint iremos apresentar ao cliente a parte da edição do perfil do administrador e estudante, a opção de o usuário adicionar produtos ao carrinho e a tela final de apresentação do produto.
+<img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/imagens/Capturar2.PNG"  width="550px" height="300px" style="max-width:100%">
 
+ - __3ª Sprint – 29/11/2020__<br>
+Para 3ª sprint iremos desenvolver as telas de cadastros de informações importantes, como cartão do usuário para compra e os dados financeiros do administrador da plataforma para gerenciamento das vendas, e desenvolvimento dos conteúdos didáticos e criação do game.
+<img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/imagens/Capturar3.PNG"  width="550px" height="300px" style="max-width:100%">
 
- - -[x]  __2ª Sprint – 08/11/2020__<br>
-Nessa segunda sprint iremos apresentar ao cliente a parte de editar/ alterar informações referentes ao material didático adicionado pelo administrador; botão do carrinho de compras que é onde o  usuário adiciona os produtos ao carrinho; checkout de matérias sendo a página na qual é disponibilizada a forma de pagamento, os dados cadastrados do usuário e o produto selecionado; no perfil de estudante encontra-se também a carteira que consiste em adicionar a  forma de pagamento.
-<img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/imagens/Slide2.PNG"  width="550px" height="300px" style="max-width:100%">
-
- - -[ ] __3ª Sprint – 29/11/2020__<br>
-Para 3ª sprint iremos desenvolver as telas gerenciais referentes ao perfil de administrador, sendo elas a exibição dos históricos de venda, permitindo a extração de relatórios de vendas. A criação de um game capaz de auxiliar o aprendizado de matérias especificas. A disponibilização do material didático simplificado solicitado pelo cliente. Caso necessário, melhorias serão feitas. 
-<img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/imagens/Slide3.PNG"  width="550px" height="300px" style="max-width:100%">
-
- - -[ ] __Apresentação Final – 06/12/2020__<br>
+ - __Apresentação Final – 06/12/2020__<br>
 Finalização do site; nessa sprint vamos verificar se tudo está de acordo com o planejado. Detalhes extras que forem necessários serão adicionados para o aperfeiçoamento e otimização da plataforma.
-<img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/imagens/Slide4.PNG"  width="550px" height="300px" style="max-width:100%">
+<img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/imagens/Capturar4.PNG"  width="550px" height="300px" style="max-width:100%">
 
 <h2>Backlog</h2>
 
@@ -143,9 +148,6 @@ Finalização do site; nessa sprint vamos verificar se tudo está de acordo com 
    - Consulta do saldo de crédito do Cliente 
    
    
- <h2>Diagrama do site</h2>
- <img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/imagens/diagrama2.PNG">
-   
  <h2>Progresso do projeto</h2>
  
 - [x] Index
@@ -157,19 +159,10 @@ Finalização do site; nessa sprint vamos verificar se tudo está de acordo com 
 - [x] Descrição do conteúdo 
 - [ ] Perfil do usuário
 - [ ] Perfil do administrador
-- [x] Carrinho de compras
-- [x] Checkout de pagamento
+- [ ] Carrinho de compras
+- [ ] Checkout de pagamento
 - [ ] Relatório de vendas
 
 
-<h2>Nossa equipe</h2><h2>:girl::boy:</h2>
-           
- - [Thomas Palma](https://www.linkedin.com/in/thomas-palma-0764b81b3/ "Linkedin") <i>(Scrum Master)</i>
-
- - [Juliane Freitas](https://www.linkedin.com/in/juliane-freitas-9b6287163 "Linkedin") <i>(Development Team)</i>
-
- - [Leticia Amorim](https://www.linkedin.com/in/leticia-amorim-4761b1185/ "Linkedin") <i>(Development Team)</i>
-
- - [Pedro Ferreira](https://www.linkedin.com/in/pedro-ferreira-6a8417190/ "Linkedin") <i>(Development Team)</i>
-
- - [Rogério Camargo](https://www.linkedin.com/in/rogério-camargo-3a01191a5 "Linkedin") <i>(Development Team)</i>
+<h2>Fluxo da plataforma: cadastro de material didático</h2>
+<img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/testevideo1.gif">
