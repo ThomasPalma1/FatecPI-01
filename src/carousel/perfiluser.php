@@ -24,6 +24,22 @@ include 'conexao.php'
   <link rel="stylesheet" href="css/main.css">
   <link href="carousel.css" rel="stylesheet">
   <link href="select.css" rel="stylesheet">
+
+
+
+<style> 
+ input[type=submit] {
+  background-color: #9677D9;
+  border: none;
+  color: white;
+  padding: 3px 25px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+
+
 </head>
 
 
@@ -132,20 +148,19 @@ include 'conexao.php'
 
 			</ul>
 			  	<?php
-
-				$query = "select * from usuario";
+			  	$email = $_SESSION['email'];
+				$query = "select * from usuario where email = '$email'";
 			    $result = mysqli_query ($conexao, $query);
 			    $row = mysqli_num_rows ($result);
 			    $user = mysqli_fetch_assoc($result);
 
-				while($user = mysqli_fetch_assoc($result)){
 		echo('<div class="tab-content" id="myTabContent">
 				<div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
 					<form>
 					   <div class="form-row">
 						    <div class="form-group col-md-6">
 						      <label for="inputCity">Nome completo</label>
-						      <input type="text" class="form-control" id="inputCity" value="'.$_SESSION['nome'].'">
+						      <input type="text" class="form-control" id="inputCity" value="'.$user['nome'].'">
 						    </div>
 						   
 						     <div class="form-group col-md-6">
@@ -157,7 +172,6 @@ include 'conexao.php'
 						      <input type="text" class="form-control" id="inputCity" value="'.$_SESSION['email'].'">
 						   </div>
 						</div>');
-						  }
                    ?>
 
                    <div class="button-group-area mt-40">
@@ -183,12 +197,14 @@ include 'conexao.php'
 						    <h4>Cadastrar novo cartão:</h4>
 						    <br>
 						  </div>
-						  		<?php
-							if(isset($_SESSION['msg'])){
-								echo $_SESSION['msg'];
-								unset($_SESSION['msg']);
-							}
-							?>
+						  		  	<?php
+			  	$email = $_SESSION['email'];
+				$query = "select * from usuario where email = '$email'";
+			    $result = mysqli_query ($conexao, $query);
+			    $row = mysqli_num_rows ($result);
+			    $user = mysqli_fetch_assoc($result);
+
+							echo('<input type="hidden" name="email_usuario" value="'.$_SESSION['email'].'">'); ?>
 							<div class="form-group">
 						    <label for="inputAddress">Titular do cartão</label>
 						    <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Nome impresso no cartão" style="width: 400px">
@@ -216,7 +232,7 @@ include 'conexao.php'
 					</div>
 
 
-							<button type="submit" value="submit" class="">Cadastrar</button>
+							<input type="submit" value="cadastrar"></input>
 
 
 					 </form>
@@ -228,39 +244,43 @@ include 'conexao.php'
 			  	<form name="cartao">
 			  		<div class="form-row">
 					<h4>Cartões cadastrados:</h4>
-			  		<?php
-					$result_contato = "SELECT * FROM cartao";
-					$resultado_contato = mysqli_query($conexao, $result_contato);
-					while($row_contato = mysqli_fetch_assoc($resultado_contato)){
-                   echo ('<br>
+					  	<?php
+					  	$email = $_SESSION['email'];
+						$query = "select * from cartao where email_usuario = '$email'";
+					    $result = mysqli_query ($conexao, $query);
+					    $row = mysqli_num_rows ($result);
+					    $user = mysqli_fetch_assoc($result);
+
+						echo('<br>
 						  </div>
 						  <div class="form-group">
+						  	<input type="hidden" name="id" value="'.$_SESSION['email'].'">
 						    <label for="inputAddress">Titular do cartão</label>
-						    <input type="text" class="form-control"  name="titulo" style="width: 400px" value="'.$row_contato['titulo'].'">
+						    <input type="text" class="form-control"  name="titulo" style="width: 400px" value="'.$user['titulo'].'">
 						  </div>
 						  <div class="form-group">
 						    <label for="inputAddress2">Número do cartão</label>
-						    <input type="text" class="form-control" name="numerocard"  style="width: 400px" value="'.$row_contato['numero'].'">
+						    <input type="text" class="form-control" name="numerocard"  style="width: 400px" value="'.$user['numero'].'">
 						  </div>
 						   <div class="input-group mb-3">
 							<div class="row">
 							  <div class="col-md-4 col-xs-4">
 							    <div class="form-group">
 							      <label for="volumeBolsa">Validade</label>
-							      <input type="text" class="form-control" name="Validade" maxlength="4" value="'.$row_contato['validade'].'">
+							      <input type="text" class="form-control" name="Validade" maxlength="4" value="'.$user['validade'].'">
 							    
 							    </div>
 							  </div>
 							  <div class="col-md-4 col-xs-4">
 							    <div class="form-group">
 							      <label for="volumeBolsa">CVV</label>
-							      <input type="text" class="form-control" name="cvv" maxlength="4" value="'.$row_contato['cvv'].'">
+							      <input type="text" class="form-control" name="cvv" maxlength="4" value="'.$user['cvv'].'">
 							    </div>
 							  </div>
 						</div>
 					</div>	<div class="button-group-area mt-40">
 						<a href="#" class="genric-btn primary small">Remover</a></div>');
-               }
+               
                ?>
 					<br>
 				

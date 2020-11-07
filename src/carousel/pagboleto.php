@@ -1,3 +1,9 @@
+<?php
+session_start();
+include 'conexao.php'
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -106,12 +112,17 @@
 			<div class="row order_d_inner">
 				<div class="col-lg-4">
 					<div class="details_item">
+						<?php					  
+					  $result_produtos = "SELECT * FROM pedidos";
+					  $resultado_produtos = mysqli_query($conexao, $result_produtos);
+					  $infos_produto = mysqli_fetch_assoc($resultado_produtos);
+					?>	
 						<h4>Informação do Pedido</h4>
 						<ul class="list">
-							<li><a href="#"><span>Numero do Pedido</span> : 60235</a></li>
-							<li><a href="#"><span>Data</span> : 20/10/2020</a></li>
-							<li><a href="#"><span>Total</span> : R$ 2210</a></li>
-							<li><a href="#"><span>Método de pagamento</span>: Cartão de Crédito</a></li>
+							<li><a href="#"><span>Numero do Pedido</span> : <?php echo ($infos_produto['id_pedido']) ?></a></li>
+							<li><a href="#"><span>Data</span> : 00/00/0000</a></li>
+							<li><a href="#"><span>Total</span> : R$ </a></li>
+							
 						</ul>
 					</div>
 				</div>
@@ -152,40 +163,20 @@
 						<tbody>
 							<tr>
 								<td>
-									<p>Matemática discreta</p>
+									<p><?php echo($infos_produto["titulo_produto"]); ?></p>
 								</td>
 								
 								<td>
-									<p>R$720.00</p>
+									<p><?php echo($infos_produto["preco"]); ?></p>
 								</td>
-							</tr>
-							<tr>
-								<td>
-									<p>Inglês básico</p>
-								</td>
-								
-								<td>
-									<p>R$720.00</p>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<p>Python</p>
-								</td>
-								
-								<td>
-									<p>R$720.00</p>
-								</td>
-							</tr>
-							<tr>
-						
+							</tr>						
 							<tr>
 								
 								<td>
 									<h5></h5>
 								</td>
 								<td>
-									<p>R$2210.00</p>
+									<p>R$</p>
 								</td>
 							</tr>
 						</tbody>

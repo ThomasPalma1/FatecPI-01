@@ -25,6 +25,21 @@ $id =intval($_REQUEST['id']); // peguei o id que eu passei no botão
   <link rel="stylesheet" href="css/main.css">
   <link href="carousel.css" rel="stylesheet">
   <link href="select.css" rel="stylesheet">
+
+
+<style> 
+ input[type=submit] {
+  background-color: #5B2CBF;
+  border: none;
+  color: white;
+  padding: 5px 5px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+
+
 </head>
 
 
@@ -280,18 +295,18 @@ $id =intval($_REQUEST['id']); // peguei o id que eu passei no botão
                 
                	<!---------------boleto--------------->
                             
-                <?php
+              	<?php
+					  	$email = $_SESSION['email'];
+						$query = "select * from cartao where email_usuario = '$email'";
+					    $result = mysqli_query ($conexao, $query);
+					    $row = mysqli_num_rows ($result);
+					    $user = mysqli_fetch_assoc($result);
 
-				$query = "select * from usuario";
-   				$result = mysqli_query ($conexao, $query);
-    			$row = mysqli_num_rows ($result);
-    			$user = mysqli_fetch_assoc($result);
-					
-				while($user = mysqli_fetch_assoc($result)){
-                   echo(' <div class="col-lg-8">
+						echo('<div class="col-lg-8">
                         <h3>Boleto</h3>
                          <div class="form-row">
 						    <div class="form-group col-md-6">
+						      <input type="hidden" name="id" value="'.$_SESSION['email'].'">
 						      <label for="inputCity">Nome completo</label>
 						      <input type="text" class="form-control" id="inputCity" value="'.$_SESSION['nome'].'">
 						    </div>
@@ -305,7 +320,7 @@ $id =intval($_REQUEST['id']); // peguei o id que eu passei no botão
 						      <input type="text" class="form-control" id="inputCity" value="'.$_SESSION['email'].'">
 						    </div>
 						</div> ');
-                   }
+                  
                    ?>
 
                    <div class="button-group-area mt-40">

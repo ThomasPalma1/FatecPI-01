@@ -123,6 +123,7 @@ include 'conexao.php'
 							<li><a href="#"><span>Data</span> : 20/10/2020</a></li>
 							<li><a href="#"><span>Total</span> : R$ </a></li>
 							<li><a href="#"><span>Método de pagamento</span> : <?php echo ($infos_produto['metodopag']) ?></a></li>
+							<li><a href="#"><span>Parcelado em</span> : <?php echo ($infos_produto['parcelas']) ?>x</a></li>
 						</ul>
 					</div>
 				</div>

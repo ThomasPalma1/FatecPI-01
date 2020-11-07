@@ -22,10 +22,10 @@ else {
 	$result_contato = "INSERT INTO pedidos (id, titulo_produto, preco, metodopag) VALUES ('$id', '$titulo_produto', '$preco', '$metodopag')" ;
 }
 
-if ($conexao->query($result_contato) == TRUE) {
+if ($conexao->query($result_contato) == TRUE && $metodopag=="cartao") {
      header("Location: pagcartao.php");
  }
  else{
-     header("Location: checkout.php");
+     header("Location: pagboleto.php");
 }
 ?>
