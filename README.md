@@ -12,6 +12,19 @@ O presente projeto trata-se de um website para vendas e posterior disponibiliza�
 O objetivo geral deste projeto é a criação de uma plataforma de estudos, onde o usuário poderá ter acesso à materiais didáticos que o auxiliem em seu aprendizado, em especial destaque, alunos de Ensino Superior do curso de Análise de Sistema. O material a ser disponibilizado é referente às matérias de Matemática Discreta, Inglês, Português, Algoritmos de Programação, Laboratório de Hardware e Arquitetura e Organização de Computadores (AOC). 
 Enquanto objetivos específicos, identificam-se a elaboração de conteúdos de forma simples e explicativa, organizando-os através de um ambiente acessível intuitivo - tanto para alunos, quanto professores -, facilitando sua consulta na plataforma em sua busca de conhecimento.
 
+
+<h2>Nossa equipe :girl::boy:</h2>
+           
+ - [Thomas Palma](https://www.linkedin.com/in/thomas-palma-0764b81b3/ "Linkedin") <i>(Scrum Master)</i>
+
+ - [Juliane Freitas](https://www.linkedin.com/in/juliane-freitas-9b6287163 "Linkedin") <i>(Development Team)</i>
+
+ - [Leticia Amorim](https://www.linkedin.com/in/leticia-amorim-4761b1185/ "Linkedin") <i>(Development Team)</i>
+
+ - [Pedro Ferreira](https://www.linkedin.com/in/pedro-ferreira-6a8417190/ "Linkedin") <i>(Development Team)</i>
+
+ - [Rogério Camargo](https://www.linkedin.com/in/rogério-camargo-3a01191a5 "Linkedin") <i>(Development Team)</i>
+
  
  <h2>Cronograma do Projeto</h2>
  <img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/imagens/entregas.png">
@@ -19,7 +32,7 @@ Enquanto objetivos específicos, identificam-se a elaboração de conteúdos de 
 <h2>Entregas</h2>
 
 - -[x] __1ª Sprint – 17/10/2020__<br>
-O projeto foi dividido em quatro Sprints, considerando a Sprint 0, onde obteve-se a avaliação do cliente/usuário de acordo com o que lhe foi apresentado. Considerando tais exigêngias, os desenvolvedores construíram as primeiras telas, sendo elas as de cadastro e login na plataforma para administradores e outra cadastral para os produtos disponibilizados, a fim de demonstrar como são realizados os uploads dos materiais didáticos.<br/>
+O projeto foi dividido em quatro Sprints, considerando a Sprint 0, onde obteve-se a avaliação do cliente/usuário de acordo com o que lhe foi apresentado. Considerando tais exigências, os desenvolvedores construíram as primeiras telas, sendo elas as de cadastro e login na plataforma para administradores e estudantes e outra cadastral para os produtos disponibilizados, a fim de demonstrar como são realizados os uploads dos materiais didáticos.<br/>
 
 
 <table>
@@ -50,7 +63,7 @@ Para 3ª sprint iremos desenvolver as telas gerenciais referentes ao perfil de a
 <br>
 
  - -[ ] __Apresentação Final – 06/12/2020__<br>
-Finalização do site; nessa sprint vamos verificar se tudo está de acordo com o planejado. Detalhes extras que forem necessários serão adicionados para o aperfeiçoamento e otimização da plataforma.
+A quarta e última Sprint refere-se à finalização do website, onde irá se verificar se o objetivo geral e os específicos foram desenvolvidos de acordo com a proposta e o planejamento. Dessa forma, será observado se detalhes extras que forem considerados necessários, serão adicionados para o aperfeiçoamento e a otimização da plataforma. Garantindo, dessa forma, melhor experiência para o cliente/usuário.
 <img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/imagens/Slide4.PNG"  width="550px" height="300px" style="max-width:100%">
 <br>
 <br>
@@ -174,16 +187,3 @@ Finalização do site; nessa sprint vamos verificar se tudo está de acordo com 
 - [x] Carrinho de compras
 - [x] Checkout de pagamento
 - [ ] Relatório de vendas
-
-
-<h2>Nossa equipe</h2><h2>:girl::boy:</h2>
-           
- - [Thomas Palma](https://www.linkedin.com/in/thomas-palma-0764b81b3/ "Linkedin") <i>(Scrum Master)</i>
-
- - [Juliane Freitas](https://www.linkedin.com/in/juliane-freitas-9b6287163 "Linkedin") <i>(Development Team)</i>
-
- - [Leticia Amorim](https://www.linkedin.com/in/leticia-amorim-4761b1185/ "Linkedin") <i>(Development Team)</i>
-
- - [Pedro Ferreira](https://www.linkedin.com/in/pedro-ferreira-6a8417190/ "Linkedin") <i>(Development Team)</i>
-
- - [Rogério Camargo](https://www.linkedin.com/in/rogério-camargo-3a01191a5 "Linkedin") <i>(Development Team)</i>
