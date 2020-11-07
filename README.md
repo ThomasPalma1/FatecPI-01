@@ -28,6 +28,9 @@ Enquanto objetivos específicos, identificam-se a elaboração de conteúdos de 
  
  <h2>Cronograma do Projeto</h2>
  <img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/imagens/entregas.png">
+ 
+ <h2>Diagrama do site</h2>
+ <img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/imagens/diagrama2.PNG">
 
 <h2>Entregas</h2>
 
@@ -170,8 +173,7 @@ A quarta e última Sprint refere-se à finalização do website, onde irá se ve
    - Consulta do saldo de crédito do Cliente 
    
    
- <h2>Diagrama do site</h2>
- <img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/imagens/diagrama2.PNG">
+
    
  <h2>Progresso do projeto</h2>
  
@@ -182,8 +184,8 @@ A quarta e última Sprint refere-se à finalização do website, onde irá se ve
 - [x] Incluir produto
 - [x] Conteúdo disponível 
 - [x] Descrição do conteúdo 
-- [ ] Perfil do usuário
-- [ ] Perfil do administrador
 - [x] Carrinho de compras
 - [x] Checkout de pagamento
 - [ ] Relatório de vendas
+- [ ] Perfil do usuário
+- [ ] Perfil do administrador
