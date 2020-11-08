@@ -56,7 +56,16 @@ O projeto foi dividido em quatro Sprints, considerando a Sprint 0, onde obteve-s
  - -[x]  __2ª Sprint – 08/11/2020__<br>
 Nessa segunda sprint iremos apresentar ao cliente a parte de editar/ alterar informações referentes ao material didático adicionado pelo administrador; botão do carrinho de compras que é onde o  usuário adiciona os produtos ao carrinho; checkout de matérias sendo a página na qual é disponibilizada a forma de pagamento, os dados cadastrados do usuário e o produto selecionado; no perfil de estudante encontra-se também a carteira que consiste em adicionar a  forma de pagamento.<br/>
 
-<img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/imagens/Slide2.PNG"  width="550px" height="300px" style="max-width:100%">
+<table>
+  <tr>
+    <td>Detalhes</td>
+     <td>Burndown da Sprint</td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/imagens/Slide2.PNG" width=460 height=280></td>
+    <td><img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/sprint1/burndown.png" width=460 height=280></td>
+  </tr>
+ </table>
 
 <table>
   <tr>
