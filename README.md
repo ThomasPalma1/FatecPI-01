@@ -49,7 +49,7 @@ O projeto foi dividido em quatro Sprints, considerando a Sprint 0, onde obteve-s
   </tr>
  </table>
  
- <p><a href="https://youtu.be/3kgJ9zw80Ps">Vídeo no YouTube</a></p>
+ <p>para mais detalhes, veja: <a href="https://youtu.be/3kgJ9zw80Ps">Vídeo no YouTube</a></p>
 
 
 
@@ -57,7 +57,7 @@ O projeto foi dividido em quatro Sprints, considerando a Sprint 0, onde obteve-s
 Nessa segunda sprint iremos apresentar ao cliente a parte de editar/ alterar informações referentes ao material didático adicionado pelo administrador; botão do carrinho de compras que é onde o  usuário adiciona os produtos ao carrinho; checkout de matérias sendo a página na qual é disponibilizada a forma de pagamento, os dados cadastrados do usuário e o produto selecionado; no perfil de estudante encontra-se também a carteira que consiste em adicionar a  forma de pagamento.<br/>
 
 <img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/imagens/Slide2.PNG"  width="550px" height="300px" style="max-width:100%">
-(clique no Gif para melhor vizualização)
+
 <table>
   <tr>
     <td>Tela Administrador</td>
@@ -69,7 +69,7 @@ Nessa segunda sprint iremos apresentar ao cliente a parte de editar/ alterar inf
   </tr>
  </table>
 
-<p><a href="https://youtu.be/Z7nFDO1azE8">Vídeo no YouTube</a></p>
+<p>para mais detalhes, veja: <a href="https://youtu.be/Z7nFDO1azE8">Vídeo no YouTube</a></p>
 
 
  - -[ ] __3ª Sprint – 29/11/2020__<br>
