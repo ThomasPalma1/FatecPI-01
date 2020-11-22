@@ -32,7 +32,7 @@ include 'conexao.php'
 			<nav class="navbar navbar-expand-lg navbar-light main_box">
 				<div class="container">
 					<!-- Brand and toggle get grouped for better mobile display -->
-					<a class="navbar-brand logo_h" href=" "><img src="imagens/logo.png" width="150px"></a>
+					<a class="navbar-brand logo_h" href="produtos.php"><img src="imagens/logo.png" width="150px"></a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="icon-bar"></span>
@@ -61,6 +61,12 @@ include 'conexao.php'
 								 aria-expanded="false">Meu Perfil</a>
 								<ul class="dropdown-menu">
 									<li class="nav-item"><a class="nav-link" href="perfiluser.php">Editar Perfil</a></li>
+									<?php
+										if (isset($_SESSION['tipo_usuario']) && $_SESSION['tipo_usuario'] == "user") {
+											echo '<li class="nav-item"><a class="nav-link" href="perfiluser.php">Editar Perfil</a></li>';
+										}
+									?>
+
 									<?php
 										if (isset($_SESSION['tipo_usuario']) && $_SESSION['tipo_usuario'] == "admin") {
 											echo '<li class="nav-item"><a class="nav-link" href="add-product/add-product/add-product.php">Cadastrar Material</a></li>';
@@ -112,16 +118,20 @@ include 'conexao.php'
 			<div class="row order_d_inner">
 				<div class="col-lg-4">
 					<div class="details_item">
-						<?php					  
-					  $result_produtos = "SELECT * FROM pedidos";
-					  $resultado_produtos = mysqli_query($conexao, $result_produtos);
+						<?php		
+						 $id_pedido = $_REQUEST['id'];
+					  		  
+					  $result_produtos = "SELECT * FROM pedidos where id_pedido = '$id_pedido'";
+				 	  $resultado_produtos = mysqli_query($conexao, $result_produtos);
 					  $infos_produto = mysqli_fetch_assoc($resultado_produtos);
-					?>	
-						<h4>Informação do Pedido</h4>
+					
+						echo('<h4>Informação do Pedido</h4>
 						<ul class="list">
-							<li><a href="#"><span>Numero do Pedido</span> : <?php echo ($infos_produto['id_pedido']) ?></a></li>
-							<li><a href="#"><span>Data</span> : 00/00/0000</a></li>
+
+							<li><a href="#"><span>Numero do Pedido</span> : '.$_REQUEST['id'].'</a></li>
+							<li><a href="#"><span>Data</span> : 20/10/2020</a></li>
 							<li><a href="#"><span>Total</span> : R$ </a></li>
+							<li><a href="#"><span>Método de pagamento</span> : '.$infos_produto["metodopag"].'</a></li>
 							
 						</ul>
 					</div>
@@ -163,11 +173,11 @@ include 'conexao.php'
 						<tbody>
 							<tr>
 								<td>
-									<p><?php echo($infos_produto["titulo_produto"]); ?></p>
+									<p>'.$infos_produto["titulo_produto"].'</p>
 								</td>
 								
 								<td>
-									<p><?php echo($infos_produto["preco"]); ?></p>
+									<p>'.$infos_produto["preco"].'</p>
 								</td>
 							</tr>						
 							<tr>
@@ -180,8 +190,8 @@ include 'conexao.php'
 								</td>
 							</tr>
 						</tbody>
-					</table>
-
+					</table>');
+?>	
 				</div>
 			</div>
 		</div>
@@ -190,7 +200,7 @@ include 'conexao.php'
 
 			
 			<div class="button-group-area mt-40">
-			<a href="#" class="genric-btn primary small" onClick="window.print()">Continuar comprando</a><a class="genric-btn primary small small" href="perfiluser.php">Imprimir Boleto</a></div>
+			<a href="produtos.php" class="genric-btn primary small">Continuar comprando</a><a class="genric-btn primary small small" href="boleto.php">Imprimir Boleto</a></div>
 
 	</section>
 	<!--================End Order Details Area =================-->
@@ -207,7 +217,7 @@ include 'conexao.php'
           <div class="col-xs-6 col-md-3">
             <h6>Equipe</h6>
             <ul class="footer-links">
-   			  <li><a href="https://www.linkedin.com/in/bryan-santos-77b53317b/" target="_blank">Bryan Santos</a></li>
+   			  
               <li><a href="https://www.linkedin.com/in/juliane-freitas-9b6287163/" target="_blank">Juliane Freitas</a></li>
               <li><a href="https://www.linkedin.com/in/leticia-amorim-4761b1185/" target="_blank">Leticia Amorim</a></li>
               <li><a href="https://www.linkedin.com/in/pedro-ferreira-6a8417190/" target="_blank">Pedro Ferreira</a></li>

@@ -51,7 +51,7 @@ $id =intval($_REQUEST['id']); // peguei o id que eu passei no botão
 			<nav class="navbar navbar-expand-lg navbar-light main_box">
 				<div class="container">
 					<!-- Brand and toggle get grouped for better mobile display -->
-					<a class="navbar-brand logo_h" href=" "><img src="imagens/logo.png" width="150px"></a>
+					<a class="navbar-brand logo_h" href="prdutos.php"><img src="imagens/logo.png" width="150px"></a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="icon-bar"></span>
@@ -79,7 +79,12 @@ $id =intval($_REQUEST['id']); // peguei o id que eu passei no botão
 								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
 								 aria-expanded="false">Meu Perfil</a>
 								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href=" ">Editar Perfil</a></li>
+									<?php
+										if (isset($_SESSION['tipo_usuario']) && $_SESSION['tipo_usuario'] == "user") {
+											echo '<li class="nav-item"><a class="nav-link" href="perfiluser.php">Editar Perfil</a></li>';
+										}
+									?>
+
 									<?php
 										if (isset($_SESSION['tipo_usuario']) && $_SESSION['tipo_usuario'] == "admin") {
 											echo '<li class="nav-item"><a class="nav-link" href="add-product/add-product/add-product.php">Cadastrar Material</a></li>';
@@ -164,34 +169,48 @@ $id =intval($_REQUEST['id']); // peguei o id que eu passei no botão
 				</div>
 
 						  	<?php
-					$result_contato = "SELECT * FROM cartao";
-					$resultado_contato = mysqli_query($conexao, $result_contato);
-					while($row_contato = mysqli_fetch_assoc($resultado_contato)){
-                   echo ('<br>
+
+					  	$email = $_SESSION['email'];
+						$query = "select * from cartao where email_usuario = '$email'";
+						$result = mysqli_query ($conexao, $query);
+					    $row = mysqli_num_rows ($result);
+					    $user = mysqli_fetch_assoc($result);
+
+						$result = mysqli_query($conexao, $query); 
+						 if (mysqli_num_rows($result) !=0) {
+						 	$email = $_SESSION['email'];
+							
+					   echo('<br>
 						  
 						  <div class="form-group">
 						    <label for="inputAddress">Titular do cartão</label>
-						    <input type="text" class="form-control"  name="titulo" style="width: 400px" value="'.$row_contato['titulo'].'">
+						    <input type="text" class="form-control"  name="titulo" style="width: 400px" value="'.$user['titulo'].'">
 						  </div>
 						  <div class="form-group">
 						    <label for="inputAddress2">Número do cartão</label>
-						    <input type="text" class="form-control" name="numerocard"  style="width: 400px" value="'.$row_contato['numero'].'">
+						    <input type="text" class="form-control" name="numerocard"  style="width: 400px" value="'.$user['numero'].'">
 						  </div>
 						   <div class="input-group mb-3">
 							<div class="row">
 							  <div class="col-md-4 col-xs-4">
 							    <div class="form-group">
 							      <label for="volumeBolsa">Validade</label>
-							      <input type="text" class="form-control" name="Validade" maxlength="4" value="'.$row_contato['validade'].'">
+							      <input type="text" class="form-control" name="Validade" maxlength="4" value="'.$user['validade'].'">
 							    
 							    </div>
 							  </div>
 							  <div class="col-md-4 col-xs-4">
 							    <div class="form-group">
 							      <label for="volumeBolsa">CVV</label>
-							      <input type="text" class="form-control" name="cvv" maxlength="4" value="'.$row_contato['cvv'].'">
+							      <input type="text" class="form-control" name="cvv" maxlength="4" value="'.$user['cvv'].'">
 							    </div>
 							  </div>');
+               }
+               else {
+               	
+               	 echo ('Você não tem nenhum cartão cadastrado :(
+               	 	<a href="cadastrar.php" class="genric-btn primary small">cadastrar cartão</a>');
+
                }
                ?>
 							     
@@ -204,7 +223,7 @@ $id =intval($_REQUEST['id']); // peguei o id que eu passei no botão
 <?php
 					  
 					  
-					  
+					  $email = $_SESSION['email'];
 					  $result_produtos = "SELECT * FROM arquivos WHERE id = $id";
 					  $resultado_produtos = mysqli_query($conexao, $result_produtos);
 					  $infos_produto = mysqli_fetch_assoc($resultado_produtos);
@@ -225,10 +244,10 @@ $id =intval($_REQUEST['id']); // peguei o id que eu passei no botão
 						<br>
 						
 
-					<div class="button-group-area mt-40">
-						<a href="#" class="genric-btn primary small">Usar outro cartão</a></div>
+					<!--<div class="button-group-area mt-40">
+						<a href="#" class="genric-btn primary small">Usar outro cartão</a></div>-->
 
-                    </div>
+                    </div> 
 
                     <div class="col-lg-4">
                         <div class="order_box">
@@ -236,6 +255,7 @@ $id =intval($_REQUEST['id']); // peguei o id que eu passei no botão
                             <h2>Seu pedido</h2>
                             <div>
 							  <div class="form-group row">
+							  	 <input type="hidden" name="email_usuario" id="email_usuario" value="<?php echo($_SESSION['email']); ?>">
 							  	<input type="hidden" name="id" value="<?php echo(intval($infos_produto['id'])); ?>">
 							  	
 							    <label for="staticEmail" class="col-sm-2 col-form-label">Item:</label>
@@ -297,7 +317,7 @@ $id =intval($_REQUEST['id']); // peguei o id que eu passei no botão
                             
               	<?php
 					  	$email = $_SESSION['email'];
-						$query = "select * from cartao where email_usuario = '$email'";
+						$query = "select * from usuario where email = '$email'";
 					    $result = mysqli_query ($conexao, $query);
 					    $row = mysqli_num_rows ($result);
 					    $user = mysqli_fetch_assoc($result);
@@ -306,25 +326,22 @@ $id =intval($_REQUEST['id']); // peguei o id que eu passei no botão
                         <h3>Boleto</h3>
                          <div class="form-row">
 						    <div class="form-group col-md-6">
-						      <input type="hidden" name="id" value="'.$_SESSION['email'].'">
-						      <label for="inputCity">Nome completo</label>
-						      <input type="text" class="form-control" id="inputCity" value="'.$_SESSION['nome'].'">
+						     
+						      <label for="nome">Nome completo</label>
+						      <input type="text" class="form-control" id="nome" value="'.$_SESSION['nome'].'">
 						    </div>
 						   
-						       <div class="form-group col-md-6">
-						      <label for="inputCity">CPF</label>
-						      <input type="text" class="form-control" maxlength="11"  id="inputCity" placeholder="000.000.000-00">
-						    </div>
+						       
 						   <div class="form-group col-md-6">
-						      <label for="inputCity">E-mail</label>
-						      <input type="text" class="form-control" id="inputCity" value="'.$_SESSION['email'].'">
+						      <label for="email_usuario">E-mail</label>
+						      <input type="text" class="form-control" id="email_usuario" name="email_usuario" value="'.$_SESSION['email'].'">
 						    </div>
 						</div> ');
                   
                    ?>
 
-                   <div class="button-group-area mt-40">
-						<a href="#" class="genric-btn primary small">Editar</a></div>
+                   <!--<div class="button-group-area mt-40">
+						<a href="#" class="genric-btn primary small">Editar</a></div>-->
 			
 
 					

@@ -1,4 +1,5 @@
 <?php
+session_start();
 	include("conexao.php");
 
 	$id = $_REQUEST['id'];
@@ -24,6 +25,9 @@
   <link rel="stylesheet" href="css/owl.carousel.css">
   <link rel="stylesheet" href="css/main.css">
   <link href="carousel.css" rel="stylesheet">
+  <link href="css/star.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
 </head>
 
 
@@ -38,7 +42,7 @@
 			<nav class="navbar navbar-expand-lg navbar-light main_box">
 				<div class="container">
 					<!-- Brand and toggle get grouped for better mobile display -->
-					<a class="navbar-brand logo_h" href=" "><img src="imagens/logo.png" width="150px"></a>
+					<a class="navbar-brand logo_h" href="produtos.php"><img src="imagens/logo.png" width="150px"></a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="icon-bar"></span>
@@ -67,7 +71,7 @@
 								 aria-expanded="false">Meu Perfil</a>
 								<ul class="dropdown-menu">
 									<?php
-									if (isset($_SESSION["tipo_usuario"]) && $_SESSION["tipo_usuario"] == "admin") {
+									if (isset($_SESSION["tipo_usuario"]) && $_SESSION["tipo_usuario"] == "user") {
 										echo ('<li class="nav-item"><a class="nav-link" href=".php">Editar Perfil</a></li>');
 									}	
 									else { 
@@ -170,19 +174,133 @@
 	<section class="product_description_area">
 		<div class="container">
 			<ul class="nav nav-tabs" id="myTab" role="tablist">
+
 				<li class="nav-item">
 					<a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Descrição</a>
 				</li>
 				
+				
+				<li class="nav-item">
+					<a class="nav-link active" id="review-tab" data-toggle="tab" href="#review" role="tab" aria-controls="review"
+					 aria-selected="false">Avaliações</a>
+				</li>
 			</ul>
 			<div class="tab-content" id="myTabContent">
 				<div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
-				<?php echo($infos_produto["descricao"]); ?>
+					<?php echo($infos_produto["descricao"]); ?>
 				</div>
+
 				
+				<div class="tab-pane fade show active" id="review" role="tabpanel" aria-labelledby="review-tab">
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="row total_rate">
+								<div class="col-6">
+									
+								</div>
+							
+							
+							</div>
+							<?php
+							$id = $_REQUEST['id'];
+							$result_usuarios = "SELECT * FROM avaliacao where id_produto=$id";
+					        $resultado_usuarios = mysqli_query($conexao, $result_usuarios);
+					        while($row_usuario = mysqli_fetch_assoc($resultado_usuarios)){
+					 
+								echo('<div class="review_list">
+									<div class="review_item">
+										<div class="media">
+											<div class="d-flex">
+												
+											</div>
+											<div class="media-body">
+												<h4>'.$row_usuario['nome'].'</h4>
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star" aria-hidden="true"></i>
+											</div>
+										</div>
+										<p>'.$row_usuario['mensagem'].'</p>
+									</div>
+									</div>
+								');
+						}
+						?>
+
+
+
+
+
+
+
+					</div>
+						<div class="col-lg-6">
+							<div class="review_box">
+								<h4>Adicionar sua avaliação</h4>
+								
+								
+									
+
+
+								<form action="" method="post" class="ratized">
+								  <input id="1" type="radio" name="estrellas" value="1"><label for="1">&#9733;</label>
+
+								  <input id="2" type="radio" name="estrellas" value="2">
+								  <label for="2">&#9733;</label>
+
+								  <input id="3" type="radio" name="estrellas" value="3">
+								  <label for="3">&#9733;</label>
+
+								  <input id="4" type="radio" name="estrellas" value="4">
+								  <label for="4">&#9733;</label>
+
+								  <input id="5" type="radio" name="estrellas" value="5">
+								  <label for="5">&#9733;</label>
+
+								</form>
+								
+								
+								<?php
+								$id = $_REQUEST['id'];
+							  	$email = $_SESSION['email'];
+								$query = "select * from usuario where email = '$email'";
+							    $result = mysqli_query ($conexao, $query);
+							    $row = mysqli_num_rows ($result);
+							    $user = mysqli_fetch_assoc($result);
+								echo ('<form class="row contact_form" action="avaliacao.php" method="post">
+									<div class="col-md-12">
+									<input type="hidden" name="id_produto" value="'.$_REQUEST['id'].'">
+										<div class="form-group">
+											<input type="text" class="form-control" id="nome" name="nome"  value="'.$_SESSION['nome'].'">
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="form-group">
+											<input type="email" class="form-control" id="email" name="email" value="'.$_SESSION['email'].'">
+										</div>
+									</div>
+									
+									<div class="col-md-12">
+										<div class="form-group">
+											<textarea class="form-control" name="mensagem" id="mensagem" rows="1" placeholder="Descreva aqui sua avaliação"></textarea></textarea>
+										</div>
+									</div>
+									<div class="col-md-12 text-right">
+										<button type="submit" value="submit" class="primary-btn">Enviar</button>
+									</div>
+								</form>')
+								?>
+							</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-		</section>
+		</div>
+	</section>
+
 
 
 <!-- Site footer -->
@@ -197,7 +315,7 @@
           <div class="col-xs-6 col-md-3">
             <h6>Equipe</h6>
             <ul class="footer-links">
-   			  <li><a href="https://www.linkedin.com/in/bryan-santos-77b53317b/" target="_blank">Bryan Santos</a></li>
+   			 
               <li><a href="https://www.linkedin.com/in/juliane-freitas-9b6287163/" target="_blank">Juliane Freitas</a></li>
               <li><a href="https://www.linkedin.com/in/leticia-amorim-4761b1185/" target="_blank">Leticia Amorim</a></li>
               <li><a href="https://www.linkedin.com/in/pedro-ferreira-6a8417190/" target="_blank">Pedro Ferreira</a></li>

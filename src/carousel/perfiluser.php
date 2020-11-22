@@ -51,7 +51,7 @@ include 'conexao.php'
 			<nav class="navbar navbar-expand-lg navbar-light main_box">
 				<div class="container">
 					<!-- Brand and toggle get grouped for better mobile display -->
-					<a class="navbar-brand logo_h" href=" "><img src="imagens/logo.png" width="150px"></a>
+					<a class="navbar-brand logo_h" href="produtos.php"><img src="imagens/logo.png" width="150px"></a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="icon-bar"></span>
@@ -156,28 +156,33 @@ include 'conexao.php'
 
 		echo('<div class="tab-content" id="myTabContent">
 				<div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
-					<form>
+					<form  action="editausu.php" method="POST">
 					   <div class="form-row">
 						    <div class="form-group col-md-6">
+						    
 						      <label for="inputCity">Nome completo</label>
-						      <input type="text" class="form-control" id="inputCity" value="'.$user['nome'].'">
-						    </div>
-						   
-						     <div class="form-group col-md-6">
-						      <label for="inputCity">CPF</label>
-						      <input type="text" class="form-control" maxlength="11"  id="inputCity" placeholder="000.000.000-00">
+						      <input type="text" class="form-control" id="nome" name="nome" value="'.$user['nome'].'">
 						    </div>
 						   <div class="form-group col-md-6">
 						      <label for="inputCity">E-mail</label>
-						      <input type="text" class="form-control" id="inputCity" value="'.$_SESSION['email'].'">
+						      <input type="text" class="form-control" id="emailNovo" name="emailNovo" value="'.$_SESSION['email'].'">
 						   </div>
-						</div>');
-                   ?>
+						     <div class="form-group col-md-6">
+						      <label for="inputCity">senha</label>
+						      <input type="text" class="form-control" maxlength="11" name="senha" id="senha" value="">
+						    </div>
+						   <div class="form-group col-md-6">
+						      <label for="inputCity">Confirme sua senha</label>
+						      <input type="text" class="form-control" id="senhaconfirm" name="senhaconfirm" value="">
+						   </div>
+						</div>
 
                    <div class="button-group-area mt-40">
-					<a href="#" class="genric-btn primary small">Editar</a><a href="#" class="genric-btn primary small">Salvar</a></div>
-					</form>
+					<input type="submit" name="Editar" style="width: 250px;">
+					</form>');
+                   ?>
 				</div>
+			</div>
 
 				<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 				<p>em construção...</p>	
@@ -241,52 +246,72 @@ include 'conexao.php'
 
 					 <br>
 
-			  	<form name="cartao">
-			  		<div class="form-row">
-					<h4>Cartões cadastrados:</h4>
+
+
+					     
+
+    
+
+
+			  		<h4>Cartões cadastrados:</h4>
+						<br>
 					  	<?php
+
 					  	$email = $_SESSION['email'];
 						$query = "select * from cartao where email_usuario = '$email'";
-					    $result = mysqli_query ($conexao, $query);
+						$result = mysqli_query ($conexao, $query);
 					    $row = mysqli_num_rows ($result);
 					    $user = mysqli_fetch_assoc($result);
 
-						echo('<br>
+						$result = mysqli_query($conexao, $query); 
+						 if (mysqli_num_rows($result) !=0) {
+						 	$email = $_SESSION['email'];
+							
+					   echo(' <form action="editacartao.php" method="post">
+			  		<div class="form-row">
+					
 						  </div>
 						  <div class="form-group">
-						  	<input type="hidden" name="id" value="'.$_SESSION['email'].'">
+						  	
 						    <label for="inputAddress">Titular do cartão</label>
-						    <input type="text" class="form-control"  name="titulo" style="width: 400px" value="'.$user['titulo'].'">
+						    <input type="text" class="form-control"  name="titulo" id="titulo" style="width: 400px" value="'.$user['titulo'].'">
 						  </div>
 						  <div class="form-group">
 						    <label for="inputAddress2">Número do cartão</label>
-						    <input type="text" class="form-control" name="numerocard"  style="width: 400px" value="'.$user['numero'].'">
+						    <input type="text" class="form-control" name="numero" id="numero" style="width: 400px" value="'.$user['numero'].'">
 						  </div>
 						   <div class="input-group mb-3">
 							<div class="row">
 							  <div class="col-md-4 col-xs-4">
 							    <div class="form-group">
 							      <label for="volumeBolsa">Validade</label>
-							      <input type="text" class="form-control" name="Validade" maxlength="4" value="'.$user['validade'].'">
+							      <input type="text" class="form-control" name="validade" id="validade" maxlength="4" value="'.$user['validade'].'">
 							    
 							    </div>
 							  </div>
 							  <div class="col-md-4 col-xs-4">
 							    <div class="form-group">
 							      <label for="volumeBolsa">CVV</label>
-							      <input type="text" class="form-control" name="cvv" maxlength="4" value="'.$user['cvv'].'">
+							      <input type="text" class="form-control" name="cvv" id="cvv" maxlength="4" value="'.$user['cvv'].'">
 							    </div>
 							  </div>
 						</div>
-					</div>	<div class="button-group-area mt-40">
-						<a href="#" class="genric-btn primary small">Remover</a></div>');
-               
-               ?>
+					</div>	
+						<input type="submit" name="alterar" value="alterar"><input type="submit" name="remover" value="remover">');
+               }
+               else {
+               	
+               	 echo ('Você não tem nenhum cartão cadastrado :(');
+               }
+                      
+
+
+                             ?>
 					<br>
 				
 			</form>
 
-					 </form>
+					 
 				</div>
 	</section>
 	<!--================End Product Description Area =================-->
