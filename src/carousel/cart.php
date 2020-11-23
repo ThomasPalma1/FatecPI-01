@@ -1,10 +1,8 @@
 <?php
-  include("conexao.php");
 
-  $id = $_REQUEST['id'];
-  $result_produtos = "SELECT * FROM arquivos WHERE id = $id";
-  $resultado_produtos = mysqli_query($conexao, $result_produtos);
-  $infos_produto = mysqli_fetch_assoc($resultado_produtos);
+session_start();
+include("conexao.php");
+
 ?>
 
 <!DOCTYPE html>
@@ -122,47 +120,37 @@
     <label class="product-line-price">Total</label>
   </div>
 
-<div class="product">
-    <div class="product-image">
 
-      <?php
-        if ($infos_produto["disciplina"] == "Português") {
-          echo '<img src="imagens/produtos/p7.jpg" alt="">';
-        }
-        else if ($infos_produto["disciplina"] == "Inglês") {
-          echo '<img src="imagens/produtos/p1.jpg" alt="">';
-        }
-        else if ($infos_produto["disciplina"] == "Matemática Discreta") {
-          echo '<img src="imagens/produtos/p6.jpg" alt="">';
-        }
-        else if ($infos_produto["disciplina"] == "Laboratório de Hardware") {
-          echo '<img src="imagens/produtos/p4.jpg" alt="">';
-        }
-        else if ($infos_produto["disciplina"] == "Administração Geral") {
-          echo '<img src="imagens/produtos/p3.jpg" alt="">';
-        }
-        else if ($infos_produto["disciplina"] == "Algoritmos e Lógica de Programação") {
-          echo '<img src="imagens/produtos/p2.jpg" alt="">';
-        }
-        else {
-          echo '<img src="imagens/produtos/p8.jpg" alt="">';
-        }
-        ?>
-</div>
-<div class="product-details">
-    <input type="hidden" value="<?php echo($infos_produto["id"]); ?>">
-      <div class="product-title"><?php echo($infos_produto["titulo_produto"]); ?></div>
-    </div>
-    <div class="product-price"><?php echo($infos_produto["preco"]); ?></div>
-    
-    <div class="product-removal">
-      <button class="remove-product">
-        Remover
-      </button>
-    </div>
-    <div class="product-line-price"><?php echo($infos_produto["preco"]); ?></div>
-  </div>
- 
+<?php
+/*EXIBE NO CARRINHO*/
+if(count($_SESSION['itens'])==0){
+	echo 'Carrinho Vazio<br><a href="produtos.php">Adicionar itens</a>';
+}
+else{
+	// $_SESSION['itens']
+	$_SESSION['dados'] = array();
+	$conexao = new PDO ('mysql:host=localhost;dbname=bd_pi01',"root","");
+	foreach($_SESSION['itens'] as $idArquivos=>$quantidade)
+	{
+		$select = $conexao->prepare("SELECT * FROM arquivos WHERE id=?");
+		$select->bindParam(1,$idArquivos);
+		$select->execute();
+		$arquivos = $select->fetchALL();
+		echo
+		'Nome: '.$arquivos[0]["titulo_produto"].'
+		Preço: '.$arquivos[0]["preco"].'
+		<a href="remover.php?remover=carrinho&id='.$idArquivos.'">Remover</a><hr/>'
+		;
+		array_push($_SESSION['dados'],
+		array('id_arquivos' => $idArquivos,
+		'titulo_produto'=> $arquivos[0]['titulo_produto'],
+		'preco' => $arquivos[0]['preco']));
+	}
+	echo '<a href="finalizar.php">Finalizar pedido</a>';
+}
+?>
+
+
 <!--<div class="product">
     <div class="product-image">
       <img src="https://s.cdpn.io/3/large-NutroNaturalChoiceAdultLambMealandRiceDryDogFood.png">
@@ -181,12 +169,12 @@
   <div class="totals">
     <div class="totals-item totals-item-total">
       <label>Total:</label>
-      <div class="totals-value" id="cart-total"><?php echo($infos_produto["preco"]); ?></div>
+      <div class="totals-value" id="cart-total"></div>
     </div>
 
   </div>
-     <?php echo('<a href="checkout.php?id='.$id.'"><button class="checkout"><p>Checkout de pagamento</p></button></a>'); ?> <!-- passei o id do produto no botão -->
-       <a href="produtos.php"><button class="continue" ><p>Adicionar novos produtos</p></button></a>
+     <a href="checkout.php"><button class="checkout"><p>Checkout de pagamento</p></button></a>
+      <a href="produtos.php"><button class="continue" ><p>Adicionar novos produtos</p></button></a>
 </div> 
 
 <br><br><br><br><br><br>

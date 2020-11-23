@@ -262,7 +262,7 @@
 								</div>
 								<div class="prd-bottom"> 
 
-									<a href="cart.php?id='.$row_usuario['id'].'" class="social-info">
+									<a href="carrinho.php?id='.$row_usuario["id"].'&add=carrinho" class="social-info">
 										<span class="ti-bag"></span>
 										<p class="hover-text">adicionar</p>
 									</a>
@@ -300,7 +300,7 @@
 								</div>
 								<div class="prd-bottom"> 
 
-									<a href="cart.php?id='.$row_usuario["id"].'" class="social-info">
+									<a href="carrinho.php?id='.$row_usuario["id"].'&add=carrinho" class="social-info">
 										<span class="ti-bag"></span>
 										<p class="hover-text">adicionar</p>
 									</a>
@@ -338,7 +338,7 @@
 								</div>
 								<div class="prd-bottom"> 
 
-									<a href="cart.php?id='.$row_usuario["id"].'" class="social-info">
+									<a href="carrinho.php?id='.$row_usuario["id"].'&add=carrinho" class="social-info">
 										<span class="ti-bag"></span>
 										<p class="hover-text">adicionar</p>
 									</a>
@@ -376,7 +376,7 @@
 								</div>
 								<div class="prd-bottom"> 
 
-									<a href="cart.php?id='.$row_usuario["id"].'" class="social-info">
+									<a href="carrinho.php?id='.$row_usuario["id"].'&add=carrinho" class="social-info">
 										<span class="ti-bag"></span>
 										<p class="hover-text">adicionar</p>
 									</a>
@@ -413,7 +413,7 @@
 								</div>
 								<div class="prd-bottom"> 
 
-									<a href="cart.php?id='.$row_usuario["id"].'" class="social-info">
+									<a href="carrinho.php?id='.$row_usuario["id"].'&add=carrinho" class="social-info">
 										<span class="ti-bag"></span>
 										<p class="hover-text">adicionar</p>
 									</a>
@@ -451,7 +451,7 @@
 								</div>
 								<div class="prd-bottom"> 
 
-									<a href="cart.php?id='.$row_usuario["id"].'" class="social-info">
+									<a href="carrinho.php?id='.$row_usuario["id"].'&add=carrinho" class="social-info">
 										<span class="ti-bag"></span>
 										<p class="hover-text">adicionar</p>
 									</a>
@@ -490,7 +490,7 @@
 								</div>
 								<div class="prd-bottom"> 
 
-									<a href="cart.php?id='.$row_usuario["id"].'" class="social-info">
+									<a href="carrinho.php?id='.$row_usuario["id"].'&add=carrinho" class="social-info">
 										<span class="ti-bag"></span>
 										<p class="hover-text">adicionar</p>
 									</a>
