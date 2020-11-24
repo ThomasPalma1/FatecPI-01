@@ -205,7 +205,7 @@ include 'conexao.php'
 
 			
 			<div class="button-group-area mt-40">
-			<a href="#" class="genric-btn primary small" onClick="window.print()">Imprimir</a><a class="genric-btn primary small small" href="download.php?id_pedido = '$id_pedido'">Download</a></div>
+			<a href="#" class="genric-btn primary small" onClick="window.print()">Imprimir</a><a class="genric-btn primary small small" href="perfiluser.php">Download</a></div>
 
 	</section>
 	<!--================End Order Details Area =================-->

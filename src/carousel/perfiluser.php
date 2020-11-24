@@ -145,6 +145,10 @@ include 'conexao.php'
 					<a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
 					 aria-selected="false">Minha carteira</a>
 				</li>
+				<!--<li class="nav-item">
+					<a class="nav-link active" id="review-tab" data-toggle="tab" href="#review" role="tab" aria-controls="review"
+					 aria-selected="false">Adicionar crédito</a>
+				</li>-->
 
 			</ul>
 			  	<?php
@@ -185,7 +189,28 @@ include 'conexao.php'
 			</div>
 
 				<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-				<p>em construção...</p>	
+				<p>
+					<div class="order_details_table">
+				<h2>Número do Pedido:</h2>
+
+				<table style="width:100%">
+				  <tr>
+				    <th>Produto</th>
+				   
+				    <th>Download</th>
+
+				  <hr/>
+				  </tr>
+				  <tr>
+				    <td>titulo produto</td>
+				    
+				    <td><a href="#" class="genric-btn primary small" style="padding-left: 0px; padding-right: 0px; width: 62px;">Baixar</a></td>
+				  </tr>
+				  
+				  
+				</table>
+				</div>
+				</p>	
 				</div>
 
 

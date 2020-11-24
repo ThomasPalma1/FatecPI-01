@@ -215,14 +215,15 @@ session_start();
 											</div>
 											<div class="media-body">
 												<h4>'.$row_usuario['nome'].'</h4>
+												<!--<i class="fa fa-star" aria-hidden="true"></i>
 												<i class="fa fa-star" aria-hidden="true"></i>
 												<i class="fa fa-star" aria-hidden="true"></i>
 												<i class="fa fa-star" aria-hidden="true"></i>
-												<i class="fa fa-star" aria-hidden="true"></i>
-												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star" aria-hidden="true"></i>-->
 											</div>
 										</div>
 										<p>'.$row_usuario['mensagem'].'</p>
+										<hr/>
 									</div>
 									</div>
 								');
@@ -242,34 +243,35 @@ session_start();
 								
 								
 									
-
-
-								<form action="" method="post" class="ratized">
-								  <input id="1" type="radio" name="estrellas" value="1"><label for="1">&#9733;</label>
-
-								  <input id="2" type="radio" name="estrellas" value="2">
-								  <label for="2">&#9733;</label>
-
-								  <input id="3" type="radio" name="estrellas" value="3">
-								  <label for="3">&#9733;</label>
-
-								  <input id="4" type="radio" name="estrellas" value="4">
-								  <label for="4">&#9733;</label>
-
-								  <input id="5" type="radio" name="estrellas" value="5">
-								  <label for="5">&#9733;</label>
-
-								</form>
-								
-								
-								<?php
+<?php
 								$id = $_REQUEST['id'];
 							  	$email = $_SESSION['email'];
 								$query = "select * from usuario where email = '$email'";
 							    $result = mysqli_query ($conexao, $query);
 							    $row = mysqli_num_rows ($result);
 							    $user = mysqli_fetch_assoc($result);
-								echo ('<form class="row contact_form" action="avaliacao.php" method="post">
+								echo ('
+
+								<form action="avaliacao.php" method="post" class="ratized" enctype="multipart/form-data">
+								<input type="radio" id="vazio" name="estrela" value="" checked>
+								  <input id="1" type="radio" name="estrela" value="1"><label for="1">&#9733;</label>
+
+								  <input id="2" type="radio" name="estrela" value="2">
+								  <label for="2">&#9733;</label>
+
+								  <input id="3" type="radio" name="estrela"value="3">
+								  <label for="3">&#9733;</label>
+
+								  <input id="4" type="radio" name="estrela" value="4">
+								  <label for="4">&#9733;</label>
+
+								  <input id="5" type="radio" name="estrela" value="5">
+								  <label for="5">&#9733;</label>
+
+								
+								<br>
+								
+								<br>
 									<div class="col-md-12">
 									<input type="hidden" name="id_produto" value="'.$_REQUEST['id'].'">
 										<div class="form-group">
@@ -284,7 +286,7 @@ session_start();
 									
 									<div class="col-md-12">
 										<div class="form-group">
-											<textarea class="form-control" name="mensagem" id="mensagem" rows="1" placeholder="Descreva aqui sua avaliação"></textarea></textarea>
+											<textarea class="form-control" name="mensagem" id="mensagem" rows="1" placeholder="Descreva aqui sua avaliação" style="height:214px;""></textarea>
 										</div>
 									</div>
 									<div class="col-md-12 text-right">

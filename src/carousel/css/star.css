@@ -1,9 +1,9 @@
-.ratized input[type="radio"]:checked+label:before {
+/**.ratized input[type="radio"]:checked+label:before {
     content: attr(for)  " / 5";
     position: absolute;
     top: 0;
-    right:-70px;
-}
+    right:-20px;
+**/
 
 .ratized {
     position: relative;

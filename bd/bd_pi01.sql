@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 22-Nov-2020 às 22:44
+-- Tempo de geração: 24-Nov-2020 às 17:09
 -- Versão do servidor: 10.4.14-MariaDB
 -- versão do PHP: 7.4.9
 
@@ -43,7 +43,8 @@ CREATE TABLE `arquivos` (
 --
 
 INSERT INTO `arquivos` (`id`, `nome_arquivo`, `caminho`, `disciplina`, `descricao`, `extensao_arquivo`, `titulo_produto`, `preco`) VALUES
-(29, 'RESUMÃO.pdf', 'arquivos/RESUMÃO.pdf', 'Administração Geral', 'Estrutura do balanço ', 'pdf', 'Estrutura do balanço ', 'R$50,00');
+(29, 'RESUMÃO.pdf', 'arquivos/RESUMÃO.pdf', 'Administração Geral', 'Estrutura do balanço ', 'pdf', 'Estrutura do balanço ', 'R$50,00'),
+(31, 'Resumo_Sistemas_Numeracao_Bertoldo_Schneider_Jr.pdf', 'arquivos/Resumo_Sistemas_Numeracao_Bertoldo_Schneider_Jr.pdf', 'Algoritmos e Lógica de Programação', 'lagrimas', 'pdf', 'Introdução a python', '40,00');
 
 -- --------------------------------------------------------
 
@@ -56,16 +57,18 @@ CREATE TABLE `avaliacao` (
   `id_produto` int(11) NOT NULL,
   `nome` varchar(30) NOT NULL,
   `email` varchar(30) NOT NULL,
-  `mensagem` varchar(350) NOT NULL
+  `mensagem` varchar(350) NOT NULL,
+  `qnt_estrela` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `avaliacao`
 --
 
-INSERT INTO `avaliacao` (`id`, `id_produto`, `nome`, `email`, `mensagem`) VALUES
-(25, 29, 'juliane.freitas1@hotmail.com', 'juliane.freitas1@hotmail.com', 'teste 1'),
-(31, 29, 'juliane.freitas1@hotmail.com', 'juliane.freitas1@hotmail.com', 'teste 2');
+INSERT INTO `avaliacao` (`id`, `id_produto`, `nome`, `email`, `mensagem`, `qnt_estrela`) VALUES
+(48, 29, 'juliane.freitas1@hotmail.com', 'juliane.freitas1@hotmail.com', '66666', 0),
+(49, 29, 'juliane.freitas1@hotmail.com', 'juliane.freitas1@hotmail.com', 'mt lindo', 0),
+(50, 29, 'juliane.freitas1@hotmail.com', 'juliane.freitas1@hotmail.com', 'aaaaaaaaaaaaaaaaaaa', 4);
 
 -- --------------------------------------------------------
 
@@ -119,7 +122,7 @@ CREATE TABLE `pedidos` (
   `id_pedido` int(11) NOT NULL,
   `id` int(11) NOT NULL,
   `titulo_produto` varchar(250) NOT NULL,
-  `preco` varchar(100) NOT NULL,
+  `preco` float NOT NULL,
   `parcelas` int(11) NOT NULL,
   `metodopag` varchar(50) NOT NULL,
   `email_usuario` varchar(250) NOT NULL
@@ -130,11 +133,18 @@ CREATE TABLE `pedidos` (
 --
 
 INSERT INTO `pedidos` (`id_pedido`, `id`, `titulo_produto`, `preco`, `parcelas`, `metodopag`, `email_usuario`) VALUES
-(191, 29, 'Estrutura do balanço ', 'R$50,00', 0, 'boleto', ''),
-(192, 29, 'Estrutura do balanço ', 'R$50,00', 0, 'boleto', ''),
-(193, 29, 'Estrutura do balanço ', 'R$50,00', 0, 'boleto', ''),
-(194, 29, 'Estrutura do balanço ', 'R$50,00', 1, 'cartao', 'juliane.freitas1@hotmail.com'),
-(195, 29, 'Estrutura do balanço ', 'R$50,00', 0, 'boleto', '');
+(191, 29, 'Estrutura do balanço ', 0, 0, 'boleto', ''),
+(192, 29, 'Estrutura do balanço ', 0, 0, 'boleto', ''),
+(193, 29, 'Estrutura do balanço ', 0, 0, 'boleto', ''),
+(194, 29, 'Estrutura do balanço ', 0, 1, 'cartao', 'juliane.freitas1@hotmail.com'),
+(195, 29, 'Estrutura do balanço ', 0, 0, 'boleto', ''),
+(196, 29, 'Estrutura do balanço ', 0, 1, 'cartao', 'juliane.freitas1@hotmail.com'),
+(198, 29, 'Estrutura do balanço ', 0, 1, 'cartao', 'juliane.freitas1@hotmail.com'),
+(199, 29, 'Estrutura do balanço ', 0, 0, 'boleto', ''),
+(200, 29, 'Estrutura do balanço ', 0, 1, 'cartao', 'juliane.freitas1@hotmail.com'),
+(202, 29, 'Estrutura do balanço ', 0, 1, 'cartao', 'juliane.freitas1@hotmail.com'),
+(203, 29, 'Estrutura do balanço ', 0, 1, 'cartao', 'juliane.freitas1@hotmail.com'),
+(204, 29, 'Estrutura do balanço ', 0, 1, 'cartao', 'juliane.freitas1@hotmail.com');
 
 -- --------------------------------------------------------
 
@@ -209,13 +219,13 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de tabela `arquivos`
 --
 ALTER TABLE `arquivos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT de tabela `avaliacao`
 --
 ALTER TABLE `avaliacao`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT de tabela `cartao`
@@ -227,7 +237,7 @@ ALTER TABLE `cartao`
 -- AUTO_INCREMENT de tabela `pedidos`
 --
 ALTER TABLE `pedidos`
-  MODIFY `id_pedido` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=196;
+  MODIFY `id_pedido` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=205;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
