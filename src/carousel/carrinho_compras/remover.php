@@ -5,5 +5,6 @@
 	{
 		$idArquivos = $_GET['id'];
 		unset($_SESSION['itens'][$idArquivos]);
-		echo '<META HTTP-EQUIV="REFRESH" CONTENT="0;URL=carrinho.php"/>';
+		echo '<META HTTP-EQUIV="REFRESH" CONTENT="0;URL=../cart.php"/>';
 	}
+?>

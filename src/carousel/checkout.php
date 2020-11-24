@@ -1,8 +1,8 @@
 <?php
 session_start();
 include 'conexao.php';
-$id =intval($_REQUEST['id']); // peguei o id que eu passei no botão
-
+$itens = $_SESSION['itens']; // peguei o id de cada produto comprado
+$email = $_SESSION['email'];
 ?>
 
 
@@ -161,9 +161,13 @@ $id =intval($_REQUEST['id']); // peguei o id que eu passei no botão
 
                 <div class="col-lg-8">
 
+				<?php
+print_r($_SESSION['dados']);
+				?>
+
                             <h3>Cartão de crédito</h3>
                        
-                    <form>
+                    
 						 <div class="form-row">
 						    
 				</div>
@@ -219,28 +223,31 @@ $id =intval($_REQUEST['id']); // peguei o id que eu passei no botão
 					</form>
 								
 				<div class="product_count">
+					   <br>
+					   <br>
+					<?php
 
-<?php
-					  
-					  
-					  $email = $_SESSION['email'];
-					  $result_produtos = "SELECT * FROM arquivos WHERE id = $id";
-					  $resultado_produtos = mysqli_query($conexao, $result_produtos);
-					  $infos_produto = mysqli_fetch_assoc($resultado_produtos);
+			   		$preco = 0.0;
+					$conexao = new PDO ('mysql:host=localhost;dbname=bd_pi01',"root","");
+						foreach($itens as $idArquivos=>$quantidade)
+						{
+						$select = $conexao->prepare("SELECT * FROM arquivos WHERE id=?");
+						$select->bindParam(1,$idArquivos);
+						$select->execute();
+						$arquivos = $select->fetchALL();
+						echo
+						'Nome: '.$arquivos[0]["titulo_produto"].'<br/>
+						Preço: '.$arquivos[0]["preco"].'<br/>'
+						;
 
-
-					  echo('<form action="pedido.php?id='.$infos_produto["id"].'" method="post" name="pedido">'); 
+						$preco = floatval($arquivos[0]['preco']) + $preco;
+						}
 					?>	
-
-							
-							<label for="Parcelas">Parcelas</label>
-							<input class="foo" type="number" min="1" max="12" maxlength="4" value="1" id="parcelas" name="parcelas">
 							<!-- <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;" class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
 							<button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;" class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button> -->
 
 						</div>
-						até <b>12x </b>sem juros.
-					
+						
 						<br>
 						
 
@@ -250,29 +257,50 @@ $id =intval($_REQUEST['id']); // peguei o id que eu passei no botão
                     </div> 
 
                     <div class="col-lg-4">
+					<form method="POST" action="carrinho_compras/finalizar.php">
                         <div class="order_box">
                         		  
                             <h2>Seu pedido</h2>
                             <div>
 							  <div class="form-group row">
 							  	 <input type="hidden" name="email_usuario" id="email_usuario" value="<?php echo($_SESSION['email']); ?>">
-							  	<input type="hidden" name="id" value="<?php echo(intval($infos_produto['id'])); ?>">
+							  	<input type="hidden" name="id" value="">
 							  	
-							    <label for="staticEmail" class="col-sm-2 col-form-label">Item:</label>
+							    <label for="staticEmail" class="col-sm-2 col-form-label">Itens:</label>
 							    <div class="col-sm-10">
-							      <input type="text" readonly class="form-control-plaintext" id="titulo_produto" name="titulo_produto" value="<?php echo($infos_produto['titulo_produto']); ?>">
+									<?php
+
+										$preco = 0.0;
+										$conexao = new PDO ('mysql:host=localhost;dbname=bd_pi01',"root","");
+										foreach($itens as $idArquivos=>$quantidade)
+										{
+											$select = $conexao->prepare("SELECT * FROM arquivos WHERE id=?");
+											$select->bindParam(1,$idArquivos);
+											$select->execute();
+											$arquivos = $select->fetchALL();
+											echo(
+											$arquivos[0]["titulo_produto"].'<br/>
+											'.$arquivos[0]["preco"].'<br/>')
+											;
+
+											$preco = floatval($arquivos[0]['preco']) + $preco;
+										}
+									?>	
 							    </div>
 							  </div>
 							  <div class="form-group row">
 							    <label for="staticEmail" class="col-sm-2 col-form-label">Preço:</label>
 							    <div class="col-sm-10">
-							      <input type="text" readonly class="form-control-plaintext" id="preco" name="preco" value="<?php echo($infos_produto['preco']); ?>">
+							      <input type="text" readonly class="form-control-plaintext" id="preco" name="preco" value="<?php echo($preco); ?>">
 							    </div>
 							  </div>
 							  <hr/>
 							</div>
 							<input type="hidden" name="metodopag" id="metodopag" value="cartao">
-							
+							<label for="Parcelas">Parcelas</label>
+							<input class="foo" type="number" min="1" max="12" maxlength="4" value="1" id="parcelas" name="parcelas">
+							até <b>12x </b>sem juros.
+				
 							<input type="submit" name="Enviar" style="width: 250px;">
 						</form>
                         
@@ -316,11 +344,11 @@ $id =intval($_REQUEST['id']); // peguei o id que eu passei no botão
                	<!---------------boleto--------------->
                             
               	<?php
-					  	$email = $_SESSION['email'];
-						$query = "select * from usuario where email = '$email'";
-					    $result = mysqli_query ($conexao, $query);
-					    $row = mysqli_num_rows ($result);
-					    $user = mysqli_fetch_assoc($result);
+					  	// $email = $_SESSION['email'];
+						// $query = "select * from usuario where email = '$email'";
+					    // $result = mysqli_query ($conexao, $query);
+					    // $row = mysqli_num_rows($result);
+					    // $user = mysqli_fetch_assoc($result);
 
 						echo('<div class="col-lg-8">
                         <h3>Boleto</h3>
@@ -347,38 +375,66 @@ $id =intval($_REQUEST['id']); // peguei o id que eu passei no botão
 					
 
                     </div>
-					   <?php
-					  
-					  
-					  $result_produtos = "SELECT * FROM arquivos where id=$id";
-					  $resultado_produtos = mysqli_query($conexao, $result_produtos);
-					  $infos_produto = mysqli_fetch_assoc($resultado_produtos);
-					?>
+					<?php
+
+						$preco = 0.0;
+						$conexao = new PDO ('mysql:host=localhost;dbname=bd_pi01',"root","");
+						foreach($itens as $idArquivos=>$quantidade)
+						{
+							$select = $conexao->prepare("SELECT * FROM arquivos WHERE id=?");
+							$select->bindParam(1,$idArquivos);
+							$select->execute();
+							$arquivos = $select->fetchALL();
+							echo(
+							$arquivos[0]["titulo_produto"].'<br/>
+							'.$arquivos[0]["preco"].'<br/>')
+							;
+
+							$preco = floatval($arquivos[0]['preco']) + $preco;
+						}
+?>	
+				<form action="carrinho_compras/finalizar.php" method="POST">
                     <div class="col-lg-4">
                         <div class="order_box">
                             <h2>Seu pedido</h2>
-                            <form method="POST" action="pedido.php">
+                            <form method="POST" action="carrinho_compras/finalizar.php">
                             	<div>
 							  <div class="form-group row">
-							  	<input type="hidden" name="id" value="<?php echo($infos_produto['id']); ?>">
 
-							    <label for="staticEmail" class="col-sm-2 col-form-label">Item:</label>
+							    <label for="staticEmail" class="col-sm-2 col-form-label">Itens:</label>
 							    <div class="col-sm-10">
-							      <input type="text" readonly class="form-control-plaintext" id="titulo_produto" name="titulo_produto" value="<?php echo($infos_produto['titulo_produto']); ?>">
+									<?php
+										$preco = 0.0;
+										$conexao = new PDO ('mysql:host=localhost;dbname=bd_pi01',"root","");
+										foreach($itens as $idArquivos=>$quantidade)
+										{
+											$select = $conexao->prepare("SELECT * FROM arquivos WHERE id=?");
+											$select->bindParam(1,$idArquivos);
+											$select->execute();
+											$arquivos = $select->fetchALL();
+											echo(
+											$arquivos[0]["titulo_produto"].'<br/>
+											'.$arquivos[0]["preco"].'<br/>')
+											;
+
+											$preco = floatval($arquivos[0]['preco']) + $preco;
+										}
+									?>
 							    </div>
 							  </div>
 							  <div class="form-group row">
 							    <label for="staticEmail" class="col-sm-2 col-form-label">Preço:</label>
 							    <div class="col-sm-10">
-							      <input type="text" readonly class="form-control-plaintext" id="preco" name="preco" value="<?php echo($infos_produto['preco']); ?>">
+							      <input type="text" readonly class="form-control-plaintext" id="preco" name="preco" value="<?php echo($preco); ?>">
 							      <hr/>
 							    </div>
 							  </div>
 							</div>
 							<input type="hidden" name="metodopag" id="metodopag" value="boleto">
+							<input type="hidden" name="parcelas" id="parcelas" value="1">
 							<input type="submit" name="Enviar" style="width: 250px;">
 							
-							  </form>
+				</form>
 							
 
 

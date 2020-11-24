@@ -81,7 +81,7 @@
 							</li>
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
-							<li class="nav-item"><a href="#" class="cart"><span class="lnr lnr-cart"></span></a></li>
+							<li class="nav-item"><a href="cart.php" class="cart"><span class="lnr lnr-cart"></span></a></li>
 							<li class="nav-item">
 								<button class="search"><span class="lnr lnr-magnifier" id="search"></span></button>
 							</li>
@@ -262,9 +262,9 @@
 								</div>
 								<div class="prd-bottom"> 
 
-									<a href="carrinho.php?id='.$row_usuario["id"].'&add=carrinho" class="social-info">
+									<a href="carrinho_compras/carrinho.php?add=carrinho&id='.$row_usuario["id"].'" class="social-info">
 										<span class="ti-bag"></span>
-										<p class="hover-text">adicionar</p>
+										<p class="hover-text">Adicionar</p>
 									</a>
 									
 									<a href="single-product.php?id='.$row_usuario["id"].'" class="social-info">
@@ -300,10 +300,10 @@
 								</div>
 								<div class="prd-bottom"> 
 
-									<a href="carrinho.php?id='.$row_usuario["id"].'&add=carrinho" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">adicionar</p>
-									</a>
+								<a href="carrinho_compras/carrinho.php?add=carrinho&id='.$row_usuario["id"].'" class="social-info">
+									<span class="ti-bag"></span>
+									<p class="hover-text">Adicionar</p>
+								</a>
 									
 									<a href="single-product.php?id='.$row_usuario["id"].'" class="social-info">
 										<span class="lnr lnr-arrow-right-circle"></span>
@@ -338,10 +338,10 @@
 								</div>
 								<div class="prd-bottom"> 
 
-									<a href="carrinho.php?id='.$row_usuario["id"].'&add=carrinho" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">adicionar</p>
-									</a>
+								<a href="carrinho_compras/carrinho.php?add=carrinho&id='.$row_usuario["id"].'" class="social-info">
+									<span class="ti-bag"></span>
+									<p class="hover-text">Adicionar</p>
+								</a>
 									
 									<a href="single-product.php?id='.$row_usuario["id"].'" class="social-info">
 										<span class="lnr lnr-arrow-right-circle"></span>
@@ -376,10 +376,11 @@
 								</div>
 								<div class="prd-bottom"> 
 
-									<a href="carrinho.php?id='.$row_usuario["id"].'&add=carrinho" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">adicionar</p>
-									</a>
+								<a href="carrinho_compras/carrinho.php?add=carrinho&id='.$row_usuario["id"].'" class="social-info">
+									<span class="ti-bag"></span>
+									<p class="hover-text">Adicionar</p>
+								</a>
+
 									<a href="single-product.php?id='.$row_usuario["id"].'" class="social-info">
 										<span class="lnr lnr-arrow-right-circle"></span>
 										<p class="hover-text">Ver Mais</p>
@@ -413,10 +414,10 @@
 								</div>
 								<div class="prd-bottom"> 
 
-									<a href="carrinho.php?id='.$row_usuario["id"].'&add=carrinho" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">adicionar</p>
-									</a>
+								<a href="carrinho_compras/carrinho.php?add=carrinho&id='.$row_usuario["id"].'" class="social-info">
+									<span class="ti-bag"></span>
+									<p class="hover-text">Adicionar</p>
+								</a>
 									
 									<a href="single-product.php?id='.$row_usuario["id"].'" class="social-info">
 										<span class="lnr lnr-arrow-right-circle"></span>
@@ -451,10 +452,10 @@
 								</div>
 								<div class="prd-bottom"> 
 
-									<a href="carrinho.php?id='.$row_usuario["id"].'&add=carrinho" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">adicionar</p>
-									</a>
+								<a href="carrinho_compras/carrinho.php?add=carrinho&id='.$row_usuario["id"].'" class="social-info">
+									<span class="ti-bag"></span>
+									<p class="hover-text">Adicionar</p>
+								</a>
 									
 									<a href="single-product.php?id='.$row_usuario["id"].'" class="social-info">
 										<span class="lnr lnr-arrow-right-circle"></span>
@@ -490,10 +491,10 @@
 								</div>
 								<div class="prd-bottom"> 
 
-									<a href="carrinho.php?id='.$row_usuario["id"].'&add=carrinho" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">adicionar</p>
-									</a>
+								<a href="carrinho_compras/carrinho.php?add=carrinho&id='.$row_usuario["id"].'" class="social-info">
+									<span class="ti-bag"></span>
+									<p class="hover-text">Adicionar</p>
+								</a>
 								
 									<a href="single-product.php?id='.$row_usuario["id"].'" class="social-info">
 										<span class="lnr lnr-arrow-right-circle"></span>
