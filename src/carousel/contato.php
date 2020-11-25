@@ -54,7 +54,7 @@ session_start();
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="contato.php">Contato</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Sobre Nós</a></li>
+             
             </ul>
           </div>
         </div>
@@ -201,7 +201,7 @@ session_start();
           <div class="col-xs-6 col-md-3">
             <h6>Equipe</h6>
             <ul class="footer-links">
-   			  <li><a href="https://www.linkedin.com/in/bryan-santos-77b53317b/" target="_blank">Bryan Santos</a></li>
+   			  
               <li><a href="https://www.linkedin.com/in/juliane-freitas-9b6287163/" target="_blank">Juliane Freitas</a></li>
               <li><a href="https://www.linkedin.com/in/leticia-amorim-4761b1185/" target="_blank">Leticia Amorim</a></li>
               <li><a href="https://www.linkedin.com/in/pedro-ferreira-6a8417190/" target="_blank">Pedro Ferreira</a></li>

@@ -33,7 +33,7 @@
 			<nav class="navbar navbar-expand-lg navbar-light main_box">
 				<div class="container">
 					<!-- Brand and toggle get grouped for better mobile display -->
-					<a class="navbar-brand logo_h" href="index.html"><img src="imagens/logo.png" width="150px"></a>
+					<a class="navbar-brand logo_h" href="produtos.php"><img src="imagens/logo.png" width="150px"></a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="icon-bar"></span>
@@ -43,9 +43,9 @@
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 						<ul class="nav navbar-nav menu_nav ml-auto">
-							<!-- <li class="nav-item active"><a class="nav-link" href="index.html">Inicio</a></li> -->
-							  <li class="nav-item submenu dropdown">
-								<!-- <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+							<li class="nav-item active"><a class="nav-link" href="produtos.php">Inicio</a></li>
+							  <!--<li class="nav-item submenu dropdown">
+								 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
 								 aria-expanded="false">Materiais didáticos</a>
 								<ul class="dropdown-menu">
 									<li class="nav-item"><a class="nav-link" href="">Português</a></li>
@@ -62,17 +62,21 @@
 								 aria-expanded="false">Meu Perfil</a>
 								<ul class="dropdown-menu">
 									<?php
-									if (isset($_SESSION["tipo_usuario"]) && $_SESSION["tipo_usuario"] == "user") {
-										echo ('<li class="nav-item"><a class="nav-link" href="perfiluser.php">Editar Perfil</a></li>');
-									}	
-									else { 
-										echo ('<li class="nav-item"><a class="nav-link" href=".php">Editar Perfil</a></li>');
-									}						
-								?>
-									
+										if (isset($_SESSION['tipo_usuario']) && $_SESSION['tipo_usuario'] == "user") {
+											echo '<li class="nav-item"><a class="nav-link" href="perfiluser.php">Editar Perfil</a></li>';
+										} else {
+											echo '<li class="nav-item"><a class="nav-link" href="perfiladm.php">Editar Perfil</a></li>';
+										}
+									?>
+
 									<?php
 										if (isset($_SESSION['tipo_usuario']) && $_SESSION['tipo_usuario'] == "admin") {
 											echo '<li class="nav-item"><a class="nav-link" href="add-product/add-product/add-product.php">Cadastrar Material</a></li>';
+										}
+									?>
+									<?php
+										if (isset($_SESSION['tipo_usuario']) && $_SESSION['tipo_usuario'] == "admin") {
+											echo '<li class="nav-item"><a class="nav-link" href="relatorio_vendas/report.php" target="_blank">Relatório de Vendas</a></li>';
 										}
 									?>
 									<li class="nav-item"><a class="nav-link" href="deslogar.php">Logout</a></li>
@@ -81,7 +85,7 @@
 							</li>
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
-							<li class="nav-item"><a href="cart.php" class="cart"><span class="lnr lnr-cart"></span></a></li>
+							<li class="nav-item"><a href="#" class="cart"><span class="lnr lnr-cart"></span></a></li>
 							<li class="nav-item">
 								<button class="search"><span class="lnr lnr-magnifier" id="search"></span></button>
 							</li>

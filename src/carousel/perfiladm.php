@@ -1,12 +1,10 @@
 <?php
 session_start();
-	include("conexao.php");
+include 'conexao.php'
 
-	$id = $_REQUEST['id'];
-	$result_produtos = "SELECT * FROM arquivos WHERE id = $id";
-	$resultado_produtos = mysqli_query($conexao, $result_produtos);
-	$infos_produto = mysqli_fetch_assoc($resultado_produtos);
 ?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -25,18 +23,28 @@ session_start();
   <link rel="stylesheet" href="css/owl.carousel.css">
   <link rel="stylesheet" href="css/main.css">
   <link href="carousel.css" rel="stylesheet">
-  <link href="css/star.css" rel="stylesheet">
-  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <link href="select.css" rel="stylesheet">
+
+
+
+<style> 
+ input[type=submit] {
+  background-color: #9677D9;
+  border: none;
+  color: white;
+  padding: 3px 25px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+
 
 </head>
 
 
-
-
-	<!-- Start Header Area -->
 <body>
 
-	
 	<!-- Start Header Area -->
 	<header class="header_area sticky-header">
 		<div class="main_menu">
@@ -121,192 +129,224 @@ session_start();
 		<div class="container">
 			<div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
 				<div class="col-first">
-					<h1>Detalhes do Produto</h1>
+					<h1>Meu Perfil</h1>
 				</div>
 			</div>
 		</div>
 	</section>
 	<!-- End Banner Area -->
 
-	<!--================Single Product Area =================-->
-	<div class="product_image_area">
-		<div class="container">
-			<div class="row s_product_inner">
-				<?php
-				if ($infos_produto["disciplina"] == "Português") {
-					echo '<img src="imagens/produtos/p7.jpg" alt="">';
-				}
-				else if ($infos_produto["disciplina"] == "Inglês") {
-					echo '<img src="imagens/produtos/p1.jpg" alt="">';
-				}
-				else if ($infos_produto["disciplina"] == "Matemática Discreta") {
-					echo '<img src="imagens/produtos/p6.jpg" alt="">';
-				}
-				else if ($infos_produto["disciplina"] == "Laboratório de Hardware") {
-					echo '<img src="imagens/produtos/p4.jpg" alt="">';
-				}
-				else if ($infos_produto["disciplina"] == "Administração Geral") {
-					echo '<img src="imagens/produtos/p3.jpg" alt="">';
-				}
-				else if ($infos_produto["disciplina"] == "Algoritmos e Lógica de Programação") {
-					echo '<img src="imagens/produtos/p2.jpg" alt="">';
-				}
-				else {
-					echo '<img src="imagens/produtos/p8.jpg" alt="">';
-				}
-
-
-				?>
-				<div class="col-lg-5 offset-lg-1">
-					<div class="s_product_text">
-						<h3><?php echo($infos_produto["titulo_produto"]); ?></h3>
-						<h2><?php echo($infos_produto["preco"]); ?></h2>
-						<ul class="list">
-							<li><a class="active" href="#"><span>Categoria:</span><?php echo($infos_produto["disciplina"]); ?></a></li>					
-							<br>
-							<div class="card_area d-flex align-items-center">
-								<a class="primary-btn" href="cart.php?id=<?php echo($infos_produto['id']); ?>">Comprar</a>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!--================End Single Product Area =================-->
 
 	<!--================Product Description Area =================-->
 	<section class="product_description_area">
 		<div class="container">
 			<ul class="nav nav-tabs" id="myTab" role="tablist">
-
 				<li class="nav-item">
-					<a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Descrição</a>
+					<a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Editar perfil</a>
 				</li>
-				
-				
+				<!--<li class="nav-item">
+					<a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+					 aria-selected="false">Meus materiais</a>
+				</li>-->
 				<li class="nav-item">
+					<a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
+					 aria-selected="false">Minha carteira</a>
+				</li>
+				<!--<li class="nav-item">
 					<a class="nav-link active" id="review-tab" data-toggle="tab" href="#review" role="tab" aria-controls="review"
-					 aria-selected="false">Avaliações</a>
-				</li>
+					 aria-selected="false">Adicionar crédito</a>
+				</li>-->
+
 			</ul>
-			<div class="tab-content" id="myTabContent">
+			  	<?php
+			  	$email = $_SESSION['email'];
+				$query = "select * from usuario where email = '$email'";
+			    $result = mysqli_query ($conexao, $query);
+			    $row = mysqli_num_rows ($result);
+			    $user = mysqli_fetch_assoc($result);
+
+		echo('<div class="tab-content" id="myTabContent">
 				<div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
-					<?php echo($infos_produto["descricao"]); ?>
-				</div>
-
-				
-				<div class="tab-pane fade show active" id="review" role="tabpanel" aria-labelledby="review-tab">
-					<div class="row">
-						<div class="col-lg-6">
-							<div class="row total_rate">
-								<div class="col-6">
-									
-								</div>
-							
-							
-							</div>
-							<?php
-							$id = $_REQUEST['id'];
-							$result_usuarios = "SELECT * FROM avaliacao where id_produto=$id";
-					        $resultado_usuarios = mysqli_query($conexao, $result_usuarios);
-					        while($row_usuario = mysqli_fetch_assoc($resultado_usuarios)){
-					 
-								echo('<div class="review_list">
-									<div class="review_item">
-										<div class="media">
-											<div class="d-flex">
-												
-											</div>
-											<div class="media-body">
-												<h4>'.$row_usuario['nome'].'</h4>
-												<!--<i class="fa fa-star" aria-hidden="true"></i>
-												<i class="fa fa-star" aria-hidden="true"></i>
-												<i class="fa fa-star" aria-hidden="true"></i>
-												<i class="fa fa-star" aria-hidden="true"></i>
-												<i class="fa fa-star" aria-hidden="true"></i>-->
-											</div>
-										</div>
-										<p>'.$row_usuario['mensagem'].'</p>
-										<hr/>
-									</div>
-									</div>
-								');
-						}
-						?>
-
-
-
-
-
-
-
-					</div>
-						<div class="col-lg-6">
-							<div class="review_box">
-								<h4>Adicionar sua avaliação</h4>
-								
-								
-									
-<?php
-								$id = $_REQUEST['id'];
-							  	$email = $_SESSION['email'];
-								$query = "select * from usuario where email = '$email'";
-							    $result = mysqli_query ($conexao, $query);
-							    $row = mysqli_num_rows ($result);
-							    $user = mysqli_fetch_assoc($result);
-								echo ('
-
-								<form action="avaliacao.php" method="post" class="ratized" enctype="multipart/form-data">
-								<input type="radio" id="vazio" name="estrela" value="" checked>
-								  <input id="1" type="radio" name="estrela" value="1"><label for="1">&#9733;</label>
-
-								  <input id="2" type="radio" name="estrela" value="2">
-								  <label for="2">&#9733;</label>
-
-								  <input id="3" type="radio" name="estrela"value="3">
-								  <label for="3">&#9733;</label>
-
-								  <input id="4" type="radio" name="estrela" value="4">
-								  <label for="4">&#9733;</label>
-
-								  <input id="5" type="radio" name="estrela" value="5">
-								  <label for="5">&#9733;</label>
-
-								
-								<br>
-								
-								<br>
-									<div class="col-md-12">
-									<input type="hidden" name="id_produto" value="'.$_REQUEST['id'].'">
-										<div class="form-group">
-											<input type="text" class="form-control" id="nome" name="nome"  value="'.$_SESSION['nome'].'">
-										</div>
-									</div>
-									<div class="col-md-12">
-										<div class="form-group">
-											<input type="email" class="form-control" id="email" name="email" value="'.$_SESSION['email'].'">
-										</div>
-									</div>
-									
-									<div class="col-md-12">
-										<div class="form-group">
-											<textarea class="form-control" name="mensagem" id="mensagem" rows="1" placeholder="Descreva aqui sua avaliação" style="height:214px;""></textarea>
-										</div>
-									</div>
-									<div class="col-md-12 text-right">
-										<button type="submit" value="submit" class="primary-btn">Enviar</button>
-									</div>
-								</form>')
-								?>
-							</div>
-							</div>
+					<form  action="editausu.php" method="POST">
+					   <div class="form-row">
+						    <div class="form-group col-md-6">
+						    
+						      <label for="inputCity">Nome completo</label>
+						      <input type="text" class="form-control" id="nome" name="nome" value="'.$user['nome'].'">
+						    </div>
+						   <div class="form-group col-md-6">
+						      <label for="inputCity">E-mail</label>
+						      <input type="text" class="form-control" id="emailNovo" name="emailNovo" value="'.$_SESSION['email'].'">
+						   </div>
+						     <div class="form-group col-md-6">
+						      <label for="inputCity">senha</label>
+						      <input type="text" class="form-control" maxlength="11" name="senha" id="senha" value="">
+						    </div>
+						   <div class="form-group col-md-6">
+						      <label for="inputCity">Confirme sua senha</label>
+						      <input type="text" class="form-control" id="senhaconfirm" name="senhaconfirm" value="">
+						   </div>
 						</div>
-					</div>
+
+                   <div class="button-group-area mt-40">
+					<input type="submit" name="Editar" style="width: 250px;">
+					</form>');
+                   ?>
 				</div>
 			</div>
-		</div>
+
+				<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+				<p>
+					<div class="order_details_table">
+				<h2>Número do Pedido:</h2>
+
+				<table style="width:100%">
+				  <tr>
+				    <th>Produto</th>
+				   
+				    <th>Download</th>
+
+				  <hr/>
+				  </tr>
+				  <tr>
+				    <td>titulo produto</td>
+				    
+				    <td><a href="#" class="genric-btn primary small" style="padding-left: 0px; padding-right: 0px; width: 62px;">Baixar</a></td>
+				  </tr>
+				  
+				  
+				</table>
+				</div>
+				</p>	
+				</div>
+
+
+				<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+
+					<h4>Meu saldo</h4>
+
+					<h5><b>R$: 50,00</b></h5>			
+
+					<hr/>
+
+					  <form action="cadastrocard.php" method="post">
+						  <div class="form-row">
+						    <h4>Cadastrar novo cartão:</h4>
+						    <br>
+						  </div>
+						  		  	<?php
+			  	$email = $_SESSION['email'];
+				$query = "select * from usuario where email = '$email'";
+			    $result = mysqli_query ($conexao, $query);
+			    $row = mysqli_num_rows ($result);
+			    $user = mysqli_fetch_assoc($result);
+
+							echo('<input type="hidden" name="email_usuario" value="'.$_SESSION['email'].'">'); ?>
+							<div class="form-group">
+						    <label for="inputAddress">Titular do cartão</label>
+						    <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Nome impresso no cartão" style="width: 400px">
+						  </div>
+						  <div class="form-group">
+						    <label for="inputAddress2">Número do cartão</label>
+						    <input type="text" class="form-control" id="numero" name="numero" maxlength="16" placeholder="0000 0000 0000 0000" style="width: 400px">
+						  </div>
+						   <div class="input-group mb-3">
+							<div class="row">
+							  <div class="col-md-4 col-xs-4">
+							    <div class="form-group">
+							      <label for="volumeBolsa">Validade</label>
+							      <input type="text" class="form-control" id="validade" name="validade" placeholder="MM / AA" maxlength="4">
+
+							    </div>
+							  </div>
+							  <div class="col-md-4 col-xs-4">
+							    <div class="form-group">
+							      <label for="volumeBolsa">CVV</label>
+							      <input type="text" class="form-control" name="cvv" id="cvv" placeholder="CVV" maxlength="4">
+							    </div>
+							  </div>
+						</div>
+					</div>
+
+
+							<input type="submit" value="cadastrar"></input>
+
+
+					 </form>
+					 <br>
+					<hr/>
+
+					 <br>
+
+
+
+					     
+
+    
+
+
+			  		<h4>Cartões cadastrados:</h4>
+						<br>
+					  	<?php
+
+					  	$email = $_SESSION['email'];
+						$query = "select * from cartao where email_usuario = '$email'";
+						$result = mysqli_query ($conexao, $query);
+					    $row = mysqli_num_rows ($result);
+					    $user = mysqli_fetch_assoc($result);
+
+						$result = mysqli_query($conexao, $query); 
+						 if (mysqli_num_rows($result) !=0) {
+						 	$email = $_SESSION['email'];
+							
+					   echo(' <form action="editacartao.php" method="post">
+			  		<div class="form-row">
+					
+						  </div>
+						  <div class="form-group">
+						  	
+						    <label for="inputAddress">Titular do cartão</label>
+						    <input type="text" class="form-control"  name="titulo" id="titulo" style="width: 400px" value="'.$user['titulo'].'">
+						  </div>
+						  <div class="form-group">
+						    <label for="inputAddress2">Número do cartão</label>
+						    <input type="text" class="form-control" name="numero" id="numero" style="width: 400px" value="'.$user['numero'].'">
+						  </div>
+						   <div class="input-group mb-3">
+							<div class="row">
+							  <div class="col-md-4 col-xs-4">
+							    <div class="form-group">
+							      <label for="volumeBolsa">Validade</label>
+							      <input type="text" class="form-control" name="validade" id="validade" maxlength="4" value="'.$user['validade'].'">
+							    
+							    </div>
+							  </div>
+							  <div class="col-md-4 col-xs-4">
+							    <div class="form-group">
+							      <label for="volumeBolsa">CVV</label>
+							      <input type="text" class="form-control" name="cvv" id="cvv" maxlength="4" value="'.$user['cvv'].'">
+							    </div>
+							  </div>
+						</div>
+					</div>	
+						<input type="submit" name="alterar" value="alterar"><input type="submit" name="remover" value="remover">');
+               }
+               else {
+               	
+               	 echo ('Você não tem nenhum cartão cadastrado :(');
+               }
+                      
+
+
+                             ?>
+					<br>
+				
+			</form>
+
+					 
+				</div>
 	</section>
+	<!--================End Product Description Area =================-->
 
 
 
@@ -322,7 +362,7 @@ session_start();
           <div class="col-xs-6 col-md-3">
             <h6>Equipe</h6>
             <ul class="footer-links">
-   			 
+   			  <!--<li><a href="https://www.linkedin.com/in/bryan-santos-77b53317b/" target="_blank">Bryan Santos</a></li> -->
               <li><a href="https://www.linkedin.com/in/juliane-freitas-9b6287163/" target="_blank">Juliane Freitas</a></li>
               <li><a href="https://www.linkedin.com/in/leticia-amorim-4761b1185/" target="_blank">Leticia Amorim</a></li>
               <li><a href="https://www.linkedin.com/in/pedro-ferreira-6a8417190/" target="_blank">Pedro Ferreira</a></li>
@@ -348,6 +388,12 @@ session_start();
 	<!-- End footer Area -->
 
 
+
+			<!-- mascara inputs -->
+
+
+			<!-- mascara inputs -->
+
 	<script src="js/vendor/jquery-2.2.4.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
 	 crossorigin="anonymous"></script>
@@ -362,4 +408,4 @@ session_start();
 	<script src="js/main.js"></script>
 </body>
 
-</html>
+</html> 

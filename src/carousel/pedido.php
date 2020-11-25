@@ -1,31 +1,28 @@
 <?php
+session_start();
 include ('conexao.php');
 
-$id = $_POST['id'];
 
 
-$id_url = $_REQUEST['id'];
-
-$titulo_produto = $_POST['titulo_produto'];
-$preco = mysqli_real_escape_string ($conexao, trim($_POST['preco']));
-
-$metodopag = mysqli_real_escape_string ($conexao, trim($_POST['metodopag']));
-
-$email_usuario = mysqli_real_escape_string ($conexao, trim($_POST['email_usuario']));
-
-echo ($metodopag);
+$email_usuario = $_SESSION['email'];
+$titulo = $_POST['titulo'];
+$numero = $_POST['numero'];
+$validade = $_POST['validade'];
+$cvv = $_POST['cvv'];
+$saldo = $_POST['saldo'];
 
 
-if ($metodopag == "cartao") {
-	$parcelas  = intval($_POST['parcelas']);
-	$result_contato = "INSERT INTO pedidos (id, titulo_produto, preco, parcelas, metodopag, email_usuario) VALUES ('$id', '$titulo_produto', '$preco', '$parcelas', '$metodopag', '$email_usuario')" ;
+
+
+if ($metodopag == "credito" && $saldo >= $preco) {
+	$parcelas = 0;
+	$result_contato = "INSERT INTO credito (email_usuario, titulo, numero, validade, cvv, saldo) VALUES ('$email_usuario', '$titulo', '$numero', '$validade', '$cvv', '$saldo')";
 }
 else {
-	$parcelas = 0;
-	$result_contato = "INSERT INTO pedidos (id, titulo_produto, preco, metodopag, email_usuario) VALUES ('$id', '$titulo_produto', '$preco', '$metodopag', '$email_usuario')" ;
+	echo ('você não tem saldo suficiente');
 }
 
-if ($conexao->query($result_contato) == TRUE && $metodopag=="cartao") {
+if ($conexao->query($result_contato) == TRUE && $metodopag=="credito") {
 	$id_pedido = mysqli_insert_id($conexao);
      header("Location: pagcartao.php?id=$id_pedido");
  }

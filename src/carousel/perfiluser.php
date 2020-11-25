@@ -82,12 +82,19 @@ include 'conexao.php'
 									<?php
 										if (isset($_SESSION['tipo_usuario']) && $_SESSION['tipo_usuario'] == "user") {
 											echo '<li class="nav-item"><a class="nav-link" href="perfiluser.php">Editar Perfil</a></li>';
+										}else {
+											echo '<li class="nav-item"><a class="nav-link" href="perfiladm.php">Editar Perfil</a></li>';
 										}
 									?>
 
 									<?php
 										if (isset($_SESSION['tipo_usuario']) && $_SESSION['tipo_usuario'] == "admin") {
 											echo '<li class="nav-item"><a class="nav-link" href="add-product/add-product/add-product.php">Cadastrar Material</a></li>';
+										}
+									?>
+									<?php
+										if (isset($_SESSION['tipo_usuario']) && $_SESSION['tipo_usuario'] == "admin") {
+											echo '<li class="nav-item"><a class="nav-link" href="relatorio_vendas/report.php" target="_blank">Relatório de Vendas</a></li>';
 										}
 									?>
 									<li class="nav-item"><a class="nav-link" href="deslogar.php">Logout</a></li>
@@ -188,6 +195,10 @@ include 'conexao.php'
 				</div>
 			</div>
 
+<!-------------------------- MEUS MATERIAIS ----------------------------------------------->
+
+
+
 				<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 				<p>
 					<div class="order_details_table">
@@ -204,7 +215,7 @@ include 'conexao.php'
 				  <tr>
 				    <td>titulo produto</td>
 				    
-				    <td><a href="#" class="genric-btn primary small" style="padding-left: 0px; padding-right: 0px; width: 62px;">Baixar</a></td>
+				    <td><a href="<?php echo 'download.php?id=23' ?>" class="genric-btn primary small" style="padding-left: 0px; padding-right: 0px; width: 62px;">Baixar</a></td>
 				  </tr>
 				  
 				  
@@ -212,14 +223,14 @@ include 'conexao.php'
 				</div>
 				</p>	
 				</div>
-
+<!------------------------------------------------ FIM MEUS MATERIAIS ----------------------------------------------->
 
 				<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
 
 					<h4>Meu saldo</h4>
 
-					<h5><b>R$: 50,00</b></h5>			
-
+					<h5><b>R$: 50,00</b></h5> 	
+					<a href="adicionar_saldo.php"><button style ="background-color: #9677D9; color: white; border: 0; height: 25px;">Adicionar saldo</button></a>
 					<hr/>
 
 					  <form action="cadastrocard.php" method="post">
@@ -291,6 +302,7 @@ include 'conexao.php'
 						$result = mysqli_query($conexao, $query); 
 						 if (mysqli_num_rows($result) !=0) {
 						 	$email = $_SESSION['email'];
+						 	
 							
 					   echo(' <form action="editacartao.php" method="post">
 			  		<div class="form-row">

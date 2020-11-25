@@ -46,12 +46,13 @@ $email = $_SESSION['email'];
 <body>
 
 	<!-- Start Header Area -->
+		<!-- Start Header Area -->
 	<header class="header_area sticky-header">
 		<div class="main_menu">
 			<nav class="navbar navbar-expand-lg navbar-light main_box">
 				<div class="container">
 					<!-- Brand and toggle get grouped for better mobile display -->
-					<a class="navbar-brand logo_h" href="prdutos.php"><img src="imagens/logo.png" width="150px"></a>
+					<a class="navbar-brand logo_h" href="produtos.php"><img src="imagens/logo.png" width="150px"></a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="icon-bar"></span>
@@ -61,9 +62,9 @@ $email = $_SESSION['email'];
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 						<ul class="nav navbar-nav menu_nav ml-auto">
-							<!-- <li class="nav-item active"><a class="nav-link" href="index.html">Inicio</a></li> -->
-							  <li class="nav-item submenu dropdown">
-								<!-- <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+							<li class="nav-item active"><a class="nav-link" href="produtos.php">Inicio</a></li>
+							  <!--<li class="nav-item submenu dropdown">
+								 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
 								 aria-expanded="false">Materiais didáticos</a>
 								<ul class="dropdown-menu">
 									<li class="nav-item"><a class="nav-link" href="">Português</a></li>
@@ -82,12 +83,19 @@ $email = $_SESSION['email'];
 									<?php
 										if (isset($_SESSION['tipo_usuario']) && $_SESSION['tipo_usuario'] == "user") {
 											echo '<li class="nav-item"><a class="nav-link" href="perfiluser.php">Editar Perfil</a></li>';
+										}else {
+											echo '<li class="nav-item"><a class="nav-link" href="perfiladm.php">Editar Perfil</a></li>';
 										}
 									?>
 
 									<?php
 										if (isset($_SESSION['tipo_usuario']) && $_SESSION['tipo_usuario'] == "admin") {
 											echo '<li class="nav-item"><a class="nav-link" href="add-product/add-product/add-product.php">Cadastrar Material</a></li>';
+										}
+									?>
+									<?php
+										if (isset($_SESSION['tipo_usuario']) && $_SESSION['tipo_usuario'] == "admin") {
+											echo '<li class="nav-item"><a class="nav-link" href="relatorio_vendas/report.php" target="_blank">Relatório de Vendas</a></li>';
 										}
 									?>
 									<li class="nav-item"><a class="nav-link" href="deslogar.php">Logout</a></li>
@@ -141,6 +149,10 @@ $email = $_SESSION['email'];
 				<li class="nav-item">
 					<a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
 					 aria-selected="false">Boleto</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
+					 aria-selected="false">Créditos</a>
 				</li>
 				
 
@@ -448,6 +460,111 @@ $email = $_SESSION['email'];
 				<!--================ FIM DIV 2 =================-->
 
 
+
+
+<!--================--------------------------------------------------------------PAGAMENTO COM CRÉDITOS-------------------------------------------------------- =================-->
+				<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+
+
+		<section class="checkout_area section_gap" style="padding-top: 10px;">
+        <div class="container">
+             
+            <div class="billing_details">
+               <div class="row">
+
+                <div class="col-lg-8">
+
+
+
+                            <h3>Créditos</h3>
+
+                            Saldo disponivel: <input type="text" readonly class="form-control-plaintext" id="preco" name="preco" value="R$" style="width: 80px;">
+							
+							
+							
+						
+						
+
+					<!--<div class="button-group-area mt-40">
+						<a href="#" class="genric-btn primary small">Usar outro cartão</a></div>-->
+
+                    </div> 
+
+                    <div class="col-lg-4">
+					
+                        <div class="order_box">
+                        		  
+                            <h2>Seu pedido</h2>
+                            <div>
+                            	 <form method="POST" action="carrinho_compras/finalizar.php">
+							  <div class="form-group row">
+							  	 <input type="hidden" name="email_usuario" id="email_usuario" value="<?php echo($_SESSION['email']); ?>">
+							  	<input type="hidden" name="id" value="">
+							  	
+							    <label for="staticEmail" class="col-sm-2 col-form-label">Itens:</label>
+							    <div class="col-sm-10">
+									<?php
+
+										$preco = 0.0;
+										$conexao = new PDO ('mysql:host=localhost;dbname=bd_pi01',"root","");
+										foreach($itens as $idArquivos=>$quantidade)
+										{
+											$select = $conexao->prepare("SELECT * FROM arquivos WHERE id=?");
+											$select->bindParam(1,$idArquivos);
+											$select->execute();
+											$arquivos = $select->fetchALL();
+											echo(
+											$arquivos[0]["titulo_produto"].'<br>
+											preço: R$
+											'.$arquivos[0]["preco"].'<br>')
+											;
+
+											$preco = floatval($arquivos[0]['preco']) + $preco;
+										}
+									?>	
+							    </div>
+							  </div>
+							  <div class="form-group row">
+							    <label for="staticEmail" class="col-sm-2 col-form-label">Total: </label>
+							    <div class="col-sm-10">
+							      <input type="text" readonly class="form-control-plaintext" id="preco" name="preco" value="R$ <?php echo($preco); ?>">
+							    </div>
+							  </div>
+							  <hr/>
+							</div>
+							<input type="hidden" name="metodopag" id="metodopag" value="credito">
+							
+				
+							<input type="submit" name="Enviar" style="width: 250px;">
+						</form>
+                        
+                         
+                            
+
+							
+
+                            
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    			<!--================DIV 1 =================-->
+				</div>
+				<!--================ FIM DIV 1 =================-->
+
+
+
+
+
+
+				</div>
 			<!--================ =================-->	
 			</div>
 		<!--================ =================-->	
