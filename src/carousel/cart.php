@@ -144,7 +144,7 @@ else{
     </div>
     <div class="product-price"><br>R$'.$arquivos[0]["preco"].'</div>
     <div class="product-removal"><br>
-     <a href="remover.php?remover=carrinho&amp;id=32" class="remove-product" style="padding-top: 5px; padding-bottom: 5px; padding-right: 5px; padding-left: 5px;">Remover</a>
+      <a href="remover.php?remover=carrinho&id='.$idArquivos.'">Remover</a><hr/>
     </div>
       
          
