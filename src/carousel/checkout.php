@@ -161,9 +161,7 @@ $email = $_SESSION['email'];
 
                 <div class="col-lg-8">
 
-				<?php
-print_r($_SESSION['dados']);
-				?>
+
 
                             <h3>Cartão de crédito</h3>
                        
@@ -207,24 +205,26 @@ print_r($_SESSION['dados']);
 							    <div class="form-group">
 							      <label for="volumeBolsa">CVV</label>
 							      <input type="text" class="form-control" name="cvv" maxlength="4" value="'.$user['cvv'].'">
+							      </div>
+						</div>	     
+					
 							    </div>
 							  </div>');
                }
                else {
                	
-               	 echo ('Você não tem nenhum cartão cadastrado :(
-               	 	<a href="cadastrar.php" class="genric-btn primary small">cadastrar cartão</a>');
-
+               	 echo ('Você não tem nenhum cartão cadastrado :( </br>
+               	 	<br>
+               	 	<a href="cadastrar.php" class="genric-btn primary small">cadastrar cartão</a>
+               	 	<br>
+               	');
                }
                ?>
-							     
-					</div>
-				 </div>
+						<br>
 					</form>
 								
 				<div class="product_count">
-					   <br>
-					   <br>
+					   
 					<?php
 
 			   		$preco = 0.0;
@@ -235,20 +235,19 @@ print_r($_SESSION['dados']);
 						$select->bindParam(1,$idArquivos);
 						$select->execute();
 						$arquivos = $select->fetchALL();
-						echo
-						'Nome: '.$arquivos[0]["titulo_produto"].'<br/>
-						Preço: '.$arquivos[0]["preco"].'<br/>'
-						;
-
 						$preco = floatval($arquivos[0]['preco']) + $preco;
 						}
 					?>	
+					<form method="POST" action="carrinho_compras/finalizar.php">
+					<label for="Parcelas">Parcelas</label>
+							<input class="foo" type="number" min="1" max="12" maxlength="4" value="1" id="parcelas" name="parcelas">
+							até <b>12x </b>sem juros.
 							<!-- <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;" class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
 							<button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;" class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button> -->
 
 						</div>
 						
-						<br>
+						
 						
 
 					<!--<div class="button-group-area mt-40">
@@ -257,7 +256,7 @@ print_r($_SESSION['dados']);
                     </div> 
 
                     <div class="col-lg-4">
-					<form method="POST" action="carrinho_compras/finalizar.php">
+					
                         <div class="order_box">
                         		  
                             <h2>Seu pedido</h2>
@@ -279,8 +278,9 @@ print_r($_SESSION['dados']);
 											$select->execute();
 											$arquivos = $select->fetchALL();
 											echo(
-											$arquivos[0]["titulo_produto"].'<br/>
-											'.$arquivos[0]["preco"].'<br/>')
+											$arquivos[0]["titulo_produto"].'<br>
+											preço: R$
+											'.$arquivos[0]["preco"].'<br>')
 											;
 
 											$preco = floatval($arquivos[0]['preco']) + $preco;
@@ -289,26 +289,20 @@ print_r($_SESSION['dados']);
 							    </div>
 							  </div>
 							  <div class="form-group row">
-							    <label for="staticEmail" class="col-sm-2 col-form-label">Preço:</label>
+							    <label for="staticEmail" class="col-sm-2 col-form-label">Total: </label>
 							    <div class="col-sm-10">
-							      <input type="text" readonly class="form-control-plaintext" id="preco" name="preco" value="<?php echo($preco); ?>">
+							      <input type="text" readonly class="form-control-plaintext" id="preco" name="preco" value="R$ <?php echo($preco); ?>">
 							    </div>
 							  </div>
 							  <hr/>
 							</div>
 							<input type="hidden" name="metodopag" id="metodopag" value="cartao">
-							<label for="Parcelas">Parcelas</label>
-							<input class="foo" type="number" min="1" max="12" maxlength="4" value="1" id="parcelas" name="parcelas">
-							até <b>12x </b>sem juros.
+							
 				
 							<input type="submit" name="Enviar" style="width: 250px;">
 						</form>
                         
-                          <!--  <div class="creat_account">
-                                <input type="checkbox" id="f-option4" name="selector">
-                                <label for="f-option4">Eu li e aceito os</label>
-                                <a href="#">termos e condições*</a>
-                            </div> -->
+                         
                             
 
 							
@@ -385,15 +379,12 @@ print_r($_SESSION['dados']);
 							$select->bindParam(1,$idArquivos);
 							$select->execute();
 							$arquivos = $select->fetchALL();
-							echo(
-							$arquivos[0]["titulo_produto"].'<br/>
-							'.$arquivos[0]["preco"].'<br/>')
-							;
+							
 
 							$preco = floatval($arquivos[0]['preco']) + $preco;
 						}
 ?>	
-				<form action="carrinho_compras/finalizar.php" method="POST">
+				
                     <div class="col-lg-4">
                         <div class="order_box">
                             <h2>Seu pedido</h2>
@@ -414,6 +405,7 @@ print_r($_SESSION['dados']);
 											$arquivos = $select->fetchALL();
 											echo(
 											$arquivos[0]["titulo_produto"].'<br/>
+											Preço:
 											'.$arquivos[0]["preco"].'<br/>')
 											;
 
@@ -423,9 +415,9 @@ print_r($_SESSION['dados']);
 							    </div>
 							  </div>
 							  <div class="form-group row">
-							    <label for="staticEmail" class="col-sm-2 col-form-label">Preço:</label>
+							    <label for="staticEmail" class="col-sm-2 col-form-label">Total:</label>
 							    <div class="col-sm-10">
-							      <input type="text" readonly class="form-control-plaintext" id="preco" name="preco" value="<?php echo($preco); ?>">
+							      <input type="text" readonly class="form-control-plaintext" id="preco" name="preco" value="R$<?php echo($preco); ?>">
 							      <hr/>
 							    </div>
 							  </div>

@@ -130,7 +130,7 @@ include 'conexao.php'
 
 							<li><a href="#"><span>Numero do Pedido</span> : '.$_REQUEST['id'].'</a></li>
 							<li><a href="#"><span>Data</span> : 20/10/2020</a></li>
-							<li><a href="#"><span>Total</span> : R$ </a></li>
+							
 							<li><a href="#"><span>Método de pagamento</span> : '.$infos_produto["metodopag"].'</a></li>
 							
 						</ul>
@@ -186,7 +186,7 @@ include 'conexao.php'
 									<h5></h5>
 								</td>
 								<td>
-									<p>R$</p>
+									
 								</td>
 							</tr>
 						</tbody>
@@ -200,7 +200,7 @@ include 'conexao.php'
 
 			
 			<div class="button-group-area mt-40">
-			<a href="produtos.php" class="genric-btn primary small">Continuar comprando</a><a class="genric-btn primary small small" href="boleto.php">Imprimir Boleto</a></div>
+			<a href="produtos.php" class="genric-btn primary small">Continuar comprando</a><a class="genric-btn primary small small" href="boleto.php" target="_blank">Imprimir Boleto</a></div>
 
 	</section>
 	<!--================End Order Details Area =================-->
