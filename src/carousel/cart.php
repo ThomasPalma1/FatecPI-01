@@ -114,10 +114,10 @@ include("conexao.php");
 
   <div class="column-labels">
     <label class="product-image">Image</label>
-    <label class="product-details">Product</label>
+    <label class="product-details">Produtos</label>
     <label class="product-price">Preço</label>
     <label class="product-removal">Remove</label>
-    <label class="product-line-price">Total</label>
+    <label class="product-line-price" style="padding-bottom: 39px;"></label>
   </div>
 
 
@@ -135,7 +135,22 @@ else{
     $select->bindParam(1,$idArquivos);
     $select->execute();
     $arquivos = $select->fetchALL();
-    echo
+    echo('<div class="product">
+    <div class="product-image">
+      <img src="https://s.cdpn.io/3/large-NutroNaturalChoiceAdultLambMealandRiceDryDogFood.png">
+    </div>
+    <div class="product-details">
+      <div class="product-title"><br>'.$arquivos[0]["titulo_produto"].'</div>
+    </div>
+    <div class="product-price"><br>R$'.$arquivos[0]["preco"].'</div>
+    <div class="product-removal"><br>
+     <a href="remover.php?remover=carrinho&amp;id=32" class="remove-product" style="padding-top: 5px; padding-bottom: 5px; padding-right: 5px; padding-left: 5px;">Remover</a>
+    </div>
+      
+         
+    
+   
+  </div> ');
     'Nome: '.$arquivos[0]["titulo_produto"].'<br/>
     Preço: '.$arquivos[0]["preco"].'<br/>
     <a href="remover.php?remover=carrinho&id='.$idArquivos.'">Remover</a><hr/>'
@@ -167,18 +182,19 @@ else{
     </div>
     <div class="product-line-price">45.99</div>
   </div> -->
-  <div class="totals">
+  <!--<div class="totals">
     <div class="totals-item totals-item-total">
       <label>Total:</label>
       <div class="totals-value" id="cart-total"></div>
-    </div>
+    </div>-->
 
   </div>
-     <a href="checkout.php"><button class="checkout"><p>Checkout de pagamento</p></button></a>
-      <a href="produtos.php"><button class="continue" ><p>Adicionar novos produtos</p></button></a>
+     <a href="checkout.php"><button class="checkout"><p style="padding-top: 8px;">Checkout de pagamento</p></button></a>
+      <a href="produtos.php"><button class="continue" ><p style="padding-top: 8px;">Adicionar novos produtos</p></button></a>
 </div> 
 
 <br><br><br><br><br><br>
+<br>
     <!--================End Cart Area =================-->
 
     <!-- start footer Area -->

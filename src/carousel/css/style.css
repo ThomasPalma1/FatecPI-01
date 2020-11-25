@@ -59,7 +59,7 @@ Side note: I know that this style of nesting in SASS doesn't result in the most 
 
 /* Body/Header stuff */
 body {position: absolute;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 100;
   width: 100%;
 }
@@ -107,7 +107,7 @@ label {
 }
 .product .product-details .product-title {
   margin-right: 20px;
-  font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium";
+  font-family: "Poppins", sans-serif;
 }
 .product .product-details .product-description {
   margin: 5px 20px 5px 0;
@@ -115,15 +115,15 @@ label {
 }
 
 .product .remove-product {
-  background-color: blue;
+  background-color: #5B2CBF;
   color: #fff;
-  font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium";
+  font-family: "Poppins", sans-serif;
   font-size: 12px;
   border-radius: 3px;
   border: 0;
 }
 .product .remove-product:hover {
-  background-color: #0a00bf;
+  background-color: #6f42c1;
 }
 
 /* Totals section */
@@ -147,7 +147,7 @@ label {
   left: 80%;
 }
 .totals .totals-item-total {
-  font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium";
+  font-family: "Poppins", sans-serif;
 }
 
 .continue{
@@ -164,7 +164,7 @@ label {
 }
 
 .continue:hover {
-  background-color: #0a00bf;
+  background-color: #6f42c1;
 }
 
 .checkout {
@@ -180,7 +180,7 @@ label {
   left: 68%}
 
 .checkout:hover {
-  background-color: #0a00bf;
+  background-color: #5B2CBF;
 }
 
 /* Make adjustments for tablet */
