@@ -103,7 +103,7 @@ include 'conexao.php'
 							</li>
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
-							<li class="nav-item"><a href="#" class="cart"><span class="lnr lnr-cart"></span></a></li>
+							<li class="nav-item"><a href="cart.php" class="cart"><span class="lnr lnr-cart"></span></a></li>
 							<li class="nav-item">
 								<button class="search"><span class="lnr lnr-magnifier" id="search"></span></button>
 							</li>
@@ -258,16 +258,26 @@ include 'conexao.php'
 				<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
 
 					<h4>Meu saldo</h4>
+					<?php
 
-					<h5><b>R$: 50,00</b></h5> 	
+					
+					$query = "SELECT * FROM credito WHERE email_usuario = '$email';";
+					$result = mysqli_query($conexao, $query);
+
+					$saldo = mysqli_fetch_assoc($result); {
+					echo ('
+					<h5><b>R$'.$saldo['saldo'].'</b></h5> 	
 					<a href="adicionar_saldo.php"><button style ="background-color: #9677D9; color: white; border: 0; height: 25px;">Adicionar saldo</button></a>
-					<hr/>
+					<hr/>');
+						}
+						?>
 
 					  <form action="cadastrocard.php" method="post">
 						  <div class="form-row">
 						    <h4>Cadastrar novo cartão:</h4>
 						    <br>
 						  </div>
+						  
 						  		  	<?php
 			  	$email = $_SESSION['email'];
 				$query = "select * from usuario where email = '$email'";

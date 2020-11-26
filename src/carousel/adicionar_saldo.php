@@ -210,11 +210,7 @@ include 'conexao.php'
 
 				<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
 
-					<h4>Saldo atual</h4>
-
-					<h5><b>00</b></h5>			
-
-					<hr/>
+					
 
 
 
@@ -275,7 +271,8 @@ include 'conexao.php'
                else {
                	
                	 echo ('Você não tem nenhum cartão cadastrado</br>
-               	 <a href ="perfiluser.php"><button>Cadastrar</button></a>');
+               	 <a href="perfiluser.php" class="genric-btn primary small">cadastrar cartão</a>
+               	 	<br>');
 
                }
                       
