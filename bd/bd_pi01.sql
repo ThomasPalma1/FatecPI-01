@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 24-Nov-2020 às 20:19
--- Versão do servidor: 10.4.11-MariaDB
--- versão do PHP: 7.4.4
+-- Tempo de geração: 26-Nov-2020 às 15:21
+-- Versão do servidor: 10.4.14-MariaDB
+-- versão do PHP: 7.4.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -38,14 +38,6 @@ CREATE TABLE `arquivos` (
   `preco` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Extraindo dados da tabela `arquivos`
---
-
-INSERT INTO `arquivos` (`id`, `nome_arquivo`, `caminho`, `disciplina`, `descricao`, `extensao_arquivo`, `titulo_produto`, `preco`) VALUES
-(29, 'RESUMÃO.pdf', 'arquivos/RESUMÃO.pdf', 'Administração Geral', 'Estrutura do balanço ', 'pdf', 'Estrutura do balanço ', '50'),
-(31, 'Resumo_Sistemas_Numeracao_Bertoldo_Schneider_Jr.pdf', 'arquivos/Resumo_Sistemas_Numeracao_Bertoldo_Schneider_Jr.pdf', 'Algoritmos e Lógica de Programação', 'lagrimas', 'pdf', 'Introdução a python', '40');
-
 -- --------------------------------------------------------
 
 --
@@ -68,7 +60,8 @@ CREATE TABLE `avaliacao` (
 INSERT INTO `avaliacao` (`id`, `id_produto`, `nome`, `email`, `mensagem`, `qnt_estrela`) VALUES
 (48, 29, 'juliane.freitas1@hotmail.com', 'juliane.freitas1@hotmail.com', '66666', 0),
 (49, 29, 'juliane.freitas1@hotmail.com', 'juliane.freitas1@hotmail.com', 'mt lindo', 0),
-(50, 29, 'juliane.freitas1@hotmail.com', 'juliane.freitas1@hotmail.com', 'aaaaaaaaaaaaaaaaaaa', 4);
+(50, 29, 'juliane.freitas1@hotmail.com', 'juliane.freitas1@hotmail.com', 'aaaaaaaaaaaaaaaaaaa', 4),
+(51, 29, 'Antonio Egydio', 'admin@root.com', 'teste 25/11', 5);
 
 -- --------------------------------------------------------
 
@@ -84,13 +77,6 @@ CREATE TABLE `cartao` (
   `validade` varchar(50) NOT NULL,
   `cvv` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Extraindo dados da tabela `cartao`
---
-
-INSERT INTO `cartao` (`id`, `email_usuario`, `titulo`, `numero`, `validade`, `cvv`) VALUES
-(3, 'juliane.freitas1@hotmail.com', 'Juliane Freitas', '789789789', '0123', '1234');
 
 -- --------------------------------------------------------
 
@@ -111,6 +97,22 @@ CREATE TABLE `contato` (
 
 INSERT INTO `contato` (`nome`, `email`, `assunto`, `mensagem`) VALUES
 ('Juliane Freitas Silvestre', 'c0380f3f07114bccf737b5bd3224ba69', '', 'ablueablue');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `credito`
+--
+
+CREATE TABLE `credito` (
+  `id` int(11) NOT NULL,
+  `email_usuario` varchar(250) NOT NULL,
+  `saldo` varchar(250) NOT NULL,
+  `titulo` varchar(150) NOT NULL,
+  `numero` varchar(50) NOT NULL,
+  `validade` varchar(50) NOT NULL,
+  `cvv` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -181,6 +183,13 @@ ALTER TABLE `contato`
   ADD PRIMARY KEY (`nome`);
 
 --
+-- Índices para tabela `credito`
+--
+ALTER TABLE `credito`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `email_usuario` (`email_usuario`);
+
+--
 -- Índices para tabela `pedidos`
 --
 ALTER TABLE `pedidos`
@@ -201,19 +210,25 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de tabela `arquivos`
 --
 ALTER TABLE `arquivos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT de tabela `avaliacao`
 --
 ALTER TABLE `avaliacao`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
 -- AUTO_INCREMENT de tabela `cartao`
 --
 ALTER TABLE `cartao`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT de tabela `credito`
+--
+ALTER TABLE `credito`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `pedidos`

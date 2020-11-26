@@ -9,7 +9,7 @@ $titulo = $_POST['titulo'];
 $numero = $_POST['numero'];
 $validade = $_POST['validade'];
 $cvv = $_POST['cvv'];
-$saldo = $_POST['saldo'];
+$saldo = $_POST['saldo']= array();
 
 
 
