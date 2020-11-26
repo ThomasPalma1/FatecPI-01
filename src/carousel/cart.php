@@ -3,6 +3,10 @@
 session_start();
 include("conexao.php");
 
+  $result_produtos = "SELECT * FROM arquivos WHERE disciplina";
+  $resultado_produtos = mysqli_query($conexao, $result_produtos);
+  $infos_produto = mysqli_fetch_assoc($resultado_produtos);
+
 ?>
 
 <!DOCTYPE html>
@@ -138,9 +142,8 @@ include("conexao.php");
     <label class="product-line-price" style="padding-bottom: 39px;"></label>
   </div>
  
+   <?php
 
-<?php
-/*EXIBE NO CARRINHO*/
 if(count($_SESSION['itens'])==0){
 	echo 'Opa, parece que seu carrinho esta vazio :(<br><a href="produtos.php" class="genric-btn primary small">Adicionar itens</a>';
 }
@@ -160,29 +163,63 @@ else{
     </div>
     <div class="product-price"><br>R$'.$arquivos[0]["preco"].'</div>
      <div class="product-removal"><br>
-    <a href="remover.php?remover=carrinho&id='.$idArquivos.'" class="remove-product" style="padding-top: 5px; padding-bottom: 5px; padding-right: 5px; padding-left: 5px;">Remover</a>
-    </div>
-      
-         
-    
-   
-  </div> ');
-    'Nome: '.$arquivos[0]["titulo_produto"].'<br/>
-    Preço: '.$arquivos[0]["preco"].'<br/>
-    <a href="remover.php?remover=carrinho&id='.$idArquivos.' " class="remove-product" style="padding-top: 5px; padding-bottom: 5px; padding-right: 5px; padding-left: 5px;">Remover</a><hr/>'
-    ;
+    <a href="remover.php?remover=carrinho&id='.$idArquivos.'" class="remove-product" style="padding-top: 5px; padding-bottom: 5px; padding-right: 5px; padding-left: 5px;">Remover</a></div>');?>
+
+<div class="product-image"> 
+ <?php   
+   if($arquivos[0]["disciplina"] == "Português"){
+          echo '<img src="imagens/produtos/p7.jpg" alt="">';
+        }
+   else if ($arquivos[0]["disciplina"] == "Inglês") {
+          echo '<img src="imagens/produtos/p1.jpg" alt="">';
+        }
+        else if ($arquivos[0]["disciplina"] == "Matemática Discreta") {
+          echo '<img src="imagens/produtos/p6.jpg" alt="">';
+        }
+        else if ($arquivos[0]["disciplina"] == "Laboratório de Hardware") {
+          echo '<img src="imagens/produtos/p4.jpg" alt="">';
+        }
+        else if ($arquivos[0]["disciplina"] == "Administração Geral") {
+          echo '<img src="imagens/produtos/p3.jpg" alt="">';
+        }
+        else if ($arquivos[0]["disciplina"] == "Algoritmos e Lógica de Programação") {
+          echo '<img src="imagens/produtos/p2.jpg" alt="">';
+        }
+        else {
+          echo '<img src="imagens/produtos/p8.jpg" alt="">
+
+   </div>
+  </div>';
+
     array_push($_SESSION['dados'],
     array('id_arquivos' => $idArquivos,
     'titulo_produto'=> $arquivos[0]['titulo_produto'],
     'preco' => $arquivos[0]['preco']));
   }
-  
-  // print_r($_SESSION['dados']);
 
-}
-?>
- <div class="product-image">
+						$preco = 0.0;
+						$conexao = new PDO ('mysql:host=localhost;dbname=bd_pi01',"root","");
+						foreach($_SESSION["itens"] as $idArquivos=>$quantidade)
+						{
+							$select = $conexao->prepare("SELECT * FROM arquivos WHERE id=?");
+							$select->bindParam(1,$idArquivos);
+							$select->execute();
+							$arquivos = $select->fetchALL();
+							
+
+							$preco = floatval($arquivos[0]['preco']) + $preco;
+						}}}
+						  // print_r($_SESSION['dados']);
+?>	
+
+
+ <div class="totals">
+<div class="totals-item totals-item-total">
+      <label style = "color: #5c5a5a; text-indent: -40px; text-align: center;"></a>Total: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R$<?php echo $preco ?></a> </label>
     </div>
+  </div>
+  </div></div></div>
+
 
 <!--<div class="product">
     <div class="product-image">
@@ -205,7 +242,7 @@ else{
       <div class="totals-value" id="cart-total"></div>
     </div>-->
 
-  </div>
+  </div></div>
      <a href="checkout.php"><button class="checkout"><p style="padding-top: 8px;">Checkout de pagamento</p></button></a>
       <a href="produtos.php"><button class="continue" ><p style="padding-top: 8px;">Adicionar novos produtos</p></button></a>
 </div> 
