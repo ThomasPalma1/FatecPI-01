@@ -263,15 +263,21 @@ include 'conexao.php'
 					
 					$query = "SELECT * FROM credito WHERE email_usuario = '$email';";
 					$result = mysqli_query($conexao, $query);
+					$saldo = mysqli_fetch_assoc($result);
 
-					$saldo = mysqli_fetch_assoc($result); {
+					if ($saldo !=0) {
 					echo ('
 					<h5><b>R$'.$saldo['saldo'].'</b></h5> 	
 					<a href="adicionar_saldo.php"><button style ="background-color: #9677D9; color: white; border: 0; height: 25px;">Adicionar saldo</button></a>
 					<hr/>');
 						}
+						else {
+							echo ('<h5><b>R$ 00.00</b></h5> Você não possui nenhum saldo ainda! <br><br> <a href="adicionar_saldo.php"><button style ="background-color: #9677D9; color: white; border: 0; height: 25px;">Adicionar saldo</button></a>
+					<hr/> ');
+						}
 						?>
-
+						<br>
+						<br>
 					  <form action="cadastrocard.php" method="post">
 						  <div class="form-row">
 						    <h4>Cadastrar novo cartão:</h4>

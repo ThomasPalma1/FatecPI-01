@@ -9,7 +9,7 @@ $titulo = $_POST['titulo'];
 $numero = $_POST['numero'];
 $validade = $_POST['validade'];
 $cvv = $_POST['cvv'];
-$saldo = $_POST['saldo']= array();
+$saldo = $_POST['saldo'];
 
 
 
@@ -19,10 +19,10 @@ $resultado_contato = mysqli_query($conexao, $result_contato);
 
 if(mysqli_insert_id($conexao)){
     
-    header("Location: adicionar_saldo.php");
+    header("Location: perfiluser.php");
 }
 else{
     
-    header("Location: perfiluser.php");
+    header("Location: adicionar_saldo.php");
 }
 ?>
