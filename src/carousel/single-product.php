@@ -160,7 +160,7 @@ session_start();
 				<div class="col-lg-5 offset-lg-1">
 					<div class="s_product_text">
 						<h3><?php echo($infos_produto["titulo_produto"]); ?></h3>
-						<h2><?php echo($infos_produto["preco"]); ?></h2>
+						<h2><?php echo("R$".number_format($infos_produto["preco"], 2, ',', '')); ?></h2>
 						<ul class="list">
 							<li><a class="active" href="#"><span>Categoria:</span><?php echo($infos_produto["disciplina"]); ?></a></li>					
 							<br>

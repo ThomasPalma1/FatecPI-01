@@ -261,8 +261,8 @@
 								<h6>'.$row_usuario['titulo_produto'].'</h6>
 								<h6>'.$row_usuario['disciplina'].'</h6>
 								<div class="price">
-									<h6>'.$row_usuario['preco'].'</h6>
-									<h6 class="l-through">'.$row_usuario['preco'].'</h6>
+									<h6>R$'.number_format($row_usuario["preco"], 2, ',', '').'</h6>
+									<h6 class="l-through">'.number_format($row_usuario["preco"], 2, ',', '').'</h6>
 								</div>
 								<div class="prd-bottom"> 
 
@@ -299,8 +299,8 @@
 								<h6>'.$row_usuario['titulo_produto'].'</h6>
 								<h6>'.$row_usuario['disciplina'].'</h6>
 								<div class="price">
-									<h6>'.$row_usuario['preco'].'</h6>
-									<h6 class="l-through">'.$row_usuario['preco'].'</h6>
+									<h6>R$'.number_format($row_usuario["preco"], 2, ',', '').'</h6>
+									<h6 class="l-through">'.number_format($row_usuario["preco"], 2, ',', '').'</h6>
 								</div>
 								<div class="prd-bottom"> 
 
@@ -337,8 +337,8 @@
 								<h6>'.$row_usuario['titulo_produto'].'</h6>
 								<h6>'.$row_usuario['disciplina'].'</h6>
 								<div class="price">
-									<h6>'.$row_usuario['preco'].'</h6>
-									<h6 class="l-through">'.$row_usuario['preco'].'</h6>
+									<h6>R$'.number_format($row_usuario["preco"], 2, ',', '').'</h6>
+									<h6 class="l-through">'.number_format($row_usuario["preco"], 2, ',', '').'</h6>
 								</div>
 								<div class="prd-bottom"> 
 
@@ -375,8 +375,8 @@
 								<h6>'.$row_usuario['titulo_produto'].'</h6>
 								<h6>'.$row_usuario['disciplina'].'</h6>
 								<div class="price">
-									<h6>'.$row_usuario['preco'].'</h6>
-									<h6 class="l-through">'.$row_usuario['preco'].'</h6>
+									<h6>R$'.number_format($row_usuario["preco"], 2, ',', '').'</h6>
+									<h6 class="l-through">'.number_format($row_usuario["preco"], 2, ',', '').'</h6>
 								</div>
 								<div class="prd-bottom"> 
 
@@ -413,8 +413,8 @@
 								<h6>'.$row_usuario['titulo_produto'].'</h6>
 								<h6>'.$row_usuario['disciplina'].'</h6>
 								<div class="price">
-									<h6>'.$row_usuario['preco'].'</h6>
-									<h6 class="l-through">'.$row_usuario['preco'].'</h6>
+									<h6>R$'.number_format($row_usuario["preco"], 2, ',', '').'</h6>
+									<h6 class="l-through">'.number_format($row_usuario["preco"], 2, ',', '').'</h6>
 								</div>
 								<div class="prd-bottom"> 
 
@@ -451,8 +451,8 @@
 								<h6>'.$row_usuario['titulo_produto'].'</h6>
 								<h6>'.$row_usuario['disciplina'].'</h6>
 								<div class="price">
-									<h6>'.$row_usuario['preco'].'</h6>
-									<h6 class="l-through">'.$row_usuario['preco'].'</h6>
+									<h6>R$'.number_format($row_usuario["preco"], 2, ',', '').'</h6>
+									<h6 class="l-through">'.number_format($row_usuario["preco"], 2, ',', '').'</h6>
 								</div>
 								<div class="prd-bottom"> 
 
@@ -490,8 +490,8 @@
 								<h6>'.$row_usuario['titulo_produto'].'</h6>
 								<h6>'.$row_usuario['disciplina'].'</h6>
 								<div class="price">
-									<h6>'.$row_usuario['preco'].'</h6>
-									<h6 class="l-through">'.$row_usuario['preco'].'</h6>
+									<h6>R$'.number_format($row_usuario["preco"], 2, ',', '').'</h6>
+									<h6 class="l-through">'.number_format($row_usuario["preco"], 2, ',', '').'</h6>
 								</div>
 								<div class="prd-bottom"> 
 

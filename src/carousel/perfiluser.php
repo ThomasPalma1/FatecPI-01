@@ -201,26 +201,56 @@ include 'conexao.php'
 
 				<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 				<p>
+
+				<?php
+
+				$query = "SELECT * FROM pedidos WHERE email_usuario = '$email';";
+				$result = mysqli_query($conexao, $query);
+
+				while ($compras = mysqli_fetch_assoc($result)) {
+
+
+					echo '
 					<div class="order_details_table">
-				<h2>Número do Pedido:</h2>
+						<h2>Número do Pedido: '.$compras['id_pedido'].'</h2>';
 
-				<table style="width:100%">
-				  <tr>
-				    <th>Produto</th>
-				   
-				    <th>Download</th>
+					$produtos = explode(",",$compras['id_produto']);
 
-				  <hr/>
-				  </tr>
-				  <tr>
-				    <td>titulo produto</td>
-				    
-				    <td><a href="<?php echo 'download.php?id=23' ?>" class="genric-btn primary small" style="padding-left: 0px; padding-right: 0px; width: 62px;">Baixar</a></td>
-				  </tr>
-				  
-				  
-				</table>
-				</div>
+					foreach ($produtos as $infos_produto) {
+						$id = $infos_produto;
+						$query_produto = "SELECT * FROM arquivos WHERE id = '$id';";
+
+						$result_produto = mysqli_query($conexao, $query_produto);
+
+						while ($arquivos = mysqli_fetch_assoc($result_produto)) {
+
+							// formatando preco
+							$precoFormatado = number_format($arquivos["preco"], 2, ',', '');
+
+							echo '
+								<table style="width:100%">
+								<tr>
+									<th>Produto</th>
+									<hr/>
+								</tr>
+								<tr>
+									<td>'.$arquivos["titulo_produto"].'</td>
+								</tr>
+								<tr>
+									<td>Preço: R$'.$precoFormatado.'</td>
+								</tr>
+									<td><a href="download.php?id='.$arquivos['id'].'" class="genric-btn primary small" style="padding-left: 0px; padding-right: 0px; width: 62px;">Baixar</a></td>
+								</tr>
+								
+								
+								</table>
+							';
+						}
+					}
+					echo '</div>';
+				}
+
+				?>
 				</p>	
 				</div>
 <!------------------------------------------------ FIM MEUS MATERIAIS ----------------------------------------------->

@@ -81,7 +81,7 @@
                                 <div class="input-group js-input-file">
                                     <input type="file" name="file_cv">
                                 </div>
-                                <div class="label--desc">Faça o upload do material didático. As extensões permitidas são: <b><i>pdf, doc e docx</i></b></div>
+                                <div class="label--desc">Faça o upload do material didático. OS formatos permitidas são: <b><i>pdf e apk.</i></b></div>
                             </div>
                         </div>
                         <div class="form-row">

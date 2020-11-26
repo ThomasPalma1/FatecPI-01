@@ -17,7 +17,7 @@ $infos_produto = mysqli_fetch_assoc($resultado_produtos);
 
     $nome = $infos_produto['nome_arquivo'];
     $tipo = $infos_produto['extensao_arquivo'];
-    $file = '../pi01/carousel/add-product/add-product/' . $infos_produto['caminho']; // teste
+    $file = 'add-product/add-product/' . $infos_produto['caminho']; // teste
 
     function setHeaders ($nome, $file, $tipo){
         header ("content-disposition: attachment; filename={$nome}");

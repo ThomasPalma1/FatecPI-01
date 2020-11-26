@@ -4,7 +4,7 @@
 ?>    
 <?php
         if (isset($_POST['enviar'])):
-            $formatosPermitidos = array ("pdf", "doc","docx");
+            $formatosPermitidos = array ("pdf", "apk");
 
                 $extensao = pathinfo($_FILES['file_cv']['name'], PATHINFO_EXTENSION);
                 if (in_array($extensao, $formatosPermitidos)):
