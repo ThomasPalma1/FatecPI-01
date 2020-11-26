@@ -137,7 +137,7 @@ include("conexao.php");
     <label class="product-removal">Remove</label>
     <label class="product-line-price" style="padding-bottom: 39px;"></label>
   </div>
-
+ 
 
 <?php
 /*EXIBE NO CARRINHO*/
@@ -154,9 +154,7 @@ else{
     $select->execute();
     $arquivos = $select->fetchALL();
     echo('<div class="product">
-    <div class="product-image">
-      <img src="https://s.cdpn.io/3/large-NutroNaturalChoiceAdultLambMealandRiceDryDogFood.png">
-    </div>
+  
     <div class="product-details">
       <div class="product-title"><br>'.$arquivos[0]["titulo_produto"].'</div>
     </div>
@@ -183,7 +181,8 @@ else{
 
 }
 ?>
-
+ <div class="product-image">
+    </div>
 
 <!--<div class="product">
     <div class="product-image">

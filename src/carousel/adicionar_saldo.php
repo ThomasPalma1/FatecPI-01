@@ -212,9 +212,21 @@ include 'conexao.php'
 
 					<h4>Saldo atual</h4>
 
-					<h5><b>00</b></h5>			
+					<h5><b><?php
 
-					<hr/>
+					
+					$query = "SELECT * FROM credito WHERE email_usuario = '$email';";
+					$result = mysqli_query($conexao, $query);
+
+					$saldo = mysqli_fetch_assoc($result); {
+					echo ('
+					<h5><b> R$'.$saldo['saldo'].'</b></h5> 	
+					<a href="adicionar_saldo.php"><button style ="background-color: #9677D9; color: white; border: 0; height: 25px;">Adicionar saldo</button></a>
+					<hr/>');
+						}
+						?></b></h5>			
+
+					
 
 
 
