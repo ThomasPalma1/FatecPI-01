@@ -131,13 +131,21 @@ include("conexao.php");
     <!--================Cart Area =================-->
 <br><br><br>
 
+
+
+
+
+
+
+
 <div class = "Interface">
 <div class="shopping-cart">
 
   <div class="column-labels">
+
     <label class="product-image">Image</label>
-    <label class="product-details">Produtos</label>
-    <label class="product-price">Preço</label>
+    <label class="product-details">Preço</label>
+    <label class="product-price" style="padding-bottom: 39px;"></label>
     <label class="product-removal">Remove</label>
     <label class="product-line-price" style="padding-bottom: 39px;"></label>
   </div>
@@ -159,6 +167,7 @@ else{
     echo('<div class="product">
   
     <div class="product-details">
+
       <div class="product-title"><br>'.$arquivos[0]["titulo_produto"].'</div>
     </div>
     <div class="product-price"><br>R$'.$arquivos[0]["preco"].'</div>
@@ -168,25 +177,32 @@ else{
 <div class="product-image"> 
  <?php   
    if($arquivos[0]["disciplina"] == "Português"){
-          echo '<img src="imagens/produtos/p7.jpg" alt="">';
+          echo '<img src="imagens/produtos/p7.jpg" alt=""> </div>
+  </div>';
         }
    else if ($arquivos[0]["disciplina"] == "Inglês") {
-          echo '<img src="imagens/produtos/p1.jpg" alt="">';
+          echo '<img src="imagens/produtos/p1.jpg" alt=""> </div>
+  </div>';
         }
         else if ($arquivos[0]["disciplina"] == "Matemática Discreta") {
-          echo '<img src="imagens/produtos/p6.jpg" alt="">';
+          echo '<img src="imagens/produtos/p6.jpg" alt=""> </div>
+  </div>';
         }
         else if ($arquivos[0]["disciplina"] == "Laboratório de Hardware") {
-          echo '<img src="imagens/produtos/p4.jpg" alt="">';
+          echo '<img src="imagens/produtos/p4.jpg" alt=""> </div>
+  </div>';
         }
         else if ($arquivos[0]["disciplina"] == "Administração Geral") {
-          echo '<img src="imagens/produtos/p3.jpg" alt="">';
+          echo '<img src="imagens/produtos/p3.jpg" alt=""> </div>
+  </div>';
         }
         else if ($arquivos[0]["disciplina"] == "Algoritmos e Lógica de Programação") {
-          echo '<img src="imagens/produtos/p2.jpg" alt="">';
+          echo '<img src="imagens/produtos/p2.jpg" alt="">
+   </div>
+  </div>';
         }
         else {
-          echo '<img src="imagens/produtos/p8.jpg" alt="">
+          echo '<img src="imagens/produtos/p8.jpg" alt="" >
 
    </div>
   </div>';
@@ -208,17 +224,31 @@ else{
 							
 
 							$preco = floatval($arquivos[0]['preco']) + $preco;
-						}}}
+						}}
 						  // print_r($_SESSION['dados']);
-?>	
 
 
- <div class="totals">
+          
+
+if ($preco ==0) {
+ echo ('<div class="totals">
 <div class="totals-item totals-item-total">
-      <label style = "color: #5c5a5a; text-indent: -40px; text-align: center;"></a>Total: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R$<?php echo $preco ?></a> </label>
+      <br>
+      <label style = "color: #5c5a5a; text-indent: -40px; text-align: center;"></a>Total: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R$00.00</a> </label>
     </div>
   </div>
-  </div></div></div>
+  </div></div></div>');
+  } else {
+
+   echo ('<div class="totals">
+   <div class="totals-item totals-item-total">
+    <label style = "color: #5c5a5a; text-indent: -40px; text-align: center;"><br><a>Total: R$'.$preco.'</a> </label>
+    </div>
+  </div>
+  </div></div></div>');
+  }}
+  ?>
+  <br>
 
 
 <!--<div class="product">
