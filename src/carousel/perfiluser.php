@@ -1,6 +1,7 @@
 <?php
 session_start();
-include 'conexao.php'
+include 'conexao.php';
+$email = $_SESSION['email'];
 
 ?>
 
@@ -285,7 +286,6 @@ include 'conexao.php'
 						  </div>
 						  
 						  		  	<?php
-			  	$email = $_SESSION['email'];
 				$query = "select * from usuario where email = '$email'";
 			    $result = mysqli_query ($conexao, $query);
 			    $row = mysqli_num_rows ($result);

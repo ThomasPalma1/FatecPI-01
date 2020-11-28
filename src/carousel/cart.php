@@ -152,8 +152,8 @@ include("conexao.php");
  
    <?php
 
-if(count($_SESSION['itens'])==0){
-	echo 'Opa, parece que seu carrinho esta vazio :(<br><a href="produtos.php" class="genric-btn primary small">Adicionar itens</a>';
+if(!isset($_SESSION['itens']) || count($_SESSION['itens'])==0){
+	echo 'Opa, parece que seu carrinho esta vazio :(<br><br><a href="produtos.php" class="genric-btn primary small">Adicionar itens</a>';
 }
 else{
 	$_SESSION['dados'] = array();
@@ -174,43 +174,43 @@ else{
      <div class="product-removal"><br>
     <a href="remover.php?remover=carrinho&id='.$idArquivos.'" class="remove-product" style="padding-top: 5px; padding-bottom: 5px; padding-right: 5px; padding-left: 5px;">Remover</a></div>');?>
 
-<div class="product-image"> 
- <?php   
-   if($arquivos[0]["disciplina"] == "Português"){
-          echo '<img src="imagens/produtos/p7.jpg" alt=""> </div>
-  </div>';
-        }
-   else if ($arquivos[0]["disciplina"] == "Inglês") {
-          echo '<img src="imagens/produtos/p1.jpg" alt=""> </div>
-  </div>';
-        }
-        else if ($arquivos[0]["disciplina"] == "Matemática Discreta") {
-          echo '<img src="imagens/produtos/p6.jpg" alt=""> </div>
-  </div>';
-        }
-        else if ($arquivos[0]["disciplina"] == "Laboratório de Hardware") {
-          echo '<img src="imagens/produtos/p4.jpg" alt=""> </div>
-  </div>';
-        }
-        else if ($arquivos[0]["disciplina"] == "Administração Geral") {
-          echo '<img src="imagens/produtos/p3.jpg" alt=""> </div>
-  </div>';
-        }
-        else if ($arquivos[0]["disciplina"] == "Algoritmos e Lógica de Programação") {
-          echo '<img src="imagens/produtos/p2.jpg" alt="">
-   </div>
-  </div>';
-        }
-        else {
-          echo '<img src="imagens/produtos/p8.jpg" alt="" >
+    <div class="product-image"> 
+    <?php   
+    if($arquivos[0]["disciplina"] == "Português"){
+            echo '<img src="imagens/produtos/p7.jpg" alt=""> </div>
+    </div>';
+          }
+    else if ($arquivos[0]["disciplina"] == "Inglês") {
+            echo '<img src="imagens/produtos/p1.jpg" alt=""> </div>
+    </div>';
+          }
+          else if ($arquivos[0]["disciplina"] == "Matemática Discreta") {
+            echo '<img src="imagens/produtos/p6.jpg" alt=""> </div>
+    </div>';
+          }
+          else if ($arquivos[0]["disciplina"] == "Laboratório de Hardware") {
+            echo '<img src="imagens/produtos/p4.jpg" alt=""> </div>
+    </div>';
+          }
+          else if ($arquivos[0]["disciplina"] == "Administração Geral") {
+            echo '<img src="imagens/produtos/p3.jpg" alt=""> </div>
+    </div>';
+          }
+          else if ($arquivos[0]["disciplina"] == "Algoritmos e Lógica de Programação") {
+            echo '<img src="imagens/produtos/p2.jpg" alt="">
+    </div>
+    </div>';
+          }
+          else {
+            echo '<img src="imagens/produtos/p8.jpg" alt="" >';
+          }
+    '</div>
+    </div>';
 
-   </div>
-  </div>';
-
-    array_push($_SESSION['dados'],
-    array('id_arquivos' => $idArquivos,
-    'titulo_produto'=> $arquivos[0]['titulo_produto'],
-    'preco' => $arquivos[0]['preco']));
+      array_push($_SESSION['dados'],
+      array('id_arquivos' => $idArquivos,
+      'titulo_produto'=> $arquivos[0]['titulo_produto'],
+      'preco' => $arquivos[0]['preco']));
   }
 
 						$preco = 0.0;
@@ -231,22 +231,23 @@ else{
           
 
 if ($preco ==0) {
- echo ('<div class="totals">
-<div class="totals-item totals-item-total">
-      <br>
-      <label style = "color: #5c5a5a; text-indent: -40px; text-align: center;"></a>Total: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R$00.00</a> </label>
+  echo ('<div class="totals">
+  <div class="totals-item totals-item-total">
+        <br>
+        <label style = "color: #5c5a5a; text-indent: -40px; text-align: center;"></a>Total: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R$00.00</a> </label>
+      </div>
     </div>
-  </div>
-  </div></div></div>');
-  } else {
+    </div></div></div>');
+}
+else {
 
-   echo ('<div class="totals">
-   <div class="totals-item totals-item-total">
-    <label style = "color: #5c5a5a; text-indent: -40px; text-align: center;"><br><a>Total: R$'.$preco.'</a> </label>
+    echo ('<div class="totals">
+    <div class="totals-item totals-item-total">
+      <label style = "color: #5c5a5a; text-indent: -40px; text-align: center;"><br><a>Total: R$'.$preco.'</a> </label>
+      </div>
     </div>
-  </div>
-  </div></div></div>');
-  }}
+    </div></div></div>');
+}
   ?>
   <br>
 

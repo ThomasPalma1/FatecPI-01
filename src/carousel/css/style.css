@@ -181,6 +181,7 @@ label {
 
 .checkout:hover {
   background-color: #5B2CBF;
+  cursor: pointer;
 }
 
 /* Make adjustments for tablet */

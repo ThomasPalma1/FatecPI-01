@@ -5,7 +5,7 @@ html, body {
 }
 
 body {
-    background:#f6f6f6;
+    background:#FFFFFF;
     display: grid;
     grid-template-columns: 10% auto;
     height: 100vh;
@@ -14,7 +14,7 @@ body {
     grid-gap: .5em;
 }
 sidebar {
-    background: #5D26C1;
+    background:black ;
 }
 .content {
     background: #6C22FF;
@@ -26,7 +26,7 @@ sidebar {
 h1 {
     margin-left: 1em;
     font-size: 1em;
-    color: black;
+    color: white;
 }
 h3 {
     margin: 0;

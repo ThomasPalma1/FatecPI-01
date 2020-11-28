@@ -4,4 +4,4 @@ define('USUARIO','root');
 define('SENHA','');
 define('BD','bd_pi01');
 
-$conexao = mysqli_connect (HOST,USUARIO,SENHA,BD) or die ('Could not connect');
+$conexao = mysqli_connect(HOST,USUARIO,SENHA,BD) or die ('Could not connect');
