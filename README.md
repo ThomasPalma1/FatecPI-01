@@ -111,7 +111,7 @@ Para 3ª sprint iremos desenvolver as telas gerenciais referentes ao perfil de a
 <br>
 <br>
 
- - -[ ] __Apresentação Final – 06/12/2020__<br>
+ - -[ ] __Apresentação Final – 10/12/2020__<br>
 A quarta e última Sprint refere-se à finalização do website, onde irá se verificar se o objetivo geral e os específicos foram desenvolvidos de acordo com a proposta e o planejamento. Dessa forma, será observado se detalhes extras que forem considerados necessários, serão adicionados para o aperfeiçoamento e a otimização da plataforma. Garantindo, dessa forma, melhor experiência para o cliente/usuário.
 <img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/imagens/Slide4.PNG"  width="550px" height="300px" style="max-width:100%">
 <br>
