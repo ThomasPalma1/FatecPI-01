@@ -83,7 +83,20 @@ Nessa segunda sprint iremos apresentar ao cliente a parte de editar/ alterar inf
 
  - -[ ] __3ª Sprint – 29/11/2020__<br>
 Para 3ª sprint iremos desenvolver as telas gerenciais referentes ao perfil de administrador, sendo elas a exibição dos históricos de venda, permitindo a extração de relatórios de vendas. A criação de um game capaz de auxiliar o aprendizado de matérias especificas. A disponibilização do material didático simplificado solicitado pelo cliente. Caso necessário, melhorias serão feitas. 
-<img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/imagens/Slide3.PNG"  width="550px" height="300px" style="max-width:100%">
+<table>
+  <tr>
+    <td>Detalhes</td>
+     <td>Demonstração</td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/imagens/Slide3.PNG" width=460 height=280></td>
+    <td><img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/pi03.gif" width=460 height=280></td>
+  </tr>
+ </table>
+ 
+ <p>para mais detalhes, veja: <a href="https://youtu.be/SooPz-2a4lg">Vídeo no YouTube</a></p>
+
+
 <br>
 <br>
 
@@ -208,6 +221,6 @@ A quarta e última Sprint refere-se à finalização do website, onde irá se ve
 - [x] Descrição do conteúdo 
 - [x] Carrinho de compras
 - [x] Checkout de pagamento
-- [ ] Relatório de vendas
-- [ ] Perfil do usuário
-- [ ] Perfil do administrador
+- [x] Relatório de vendas
+- [x] Perfil do usuário
+- [x] Perfil do administrador
