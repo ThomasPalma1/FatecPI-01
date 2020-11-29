@@ -90,7 +90,7 @@ Para 3ª sprint iremos desenvolver as telas gerenciais referentes ao perfil de a
   </tr>
   <tr>
     <td><img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/imagens/Slide3.PNG" width=460 height=280></td>
-    <td>ADICIONAR BURNDOWN SPRINT 3</td>
+    <td><img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/Burndown%20sprint%203.PNG" width=460 height=280></td>
   </tr>
  </table>
 
