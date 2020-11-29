@@ -81,7 +81,7 @@ Nessa segunda sprint iremos apresentar ao cliente a parte de editar/ alterar inf
 <p>para mais detalhes, veja: <a href="https://youtu.be/Z7nFDO1azE8">Vídeo no YouTube</a></p>
 
 
- - -[ ] __3ª Sprint – 29/11/2020__<br>
+ - -[x] __3ª Sprint – 29/11/2020__<br>
 Para 3ª sprint iremos desenvolver as telas gerenciais referentes ao perfil de administrador, sendo elas a exibição dos históricos de venda, permitindo a extração de relatórios de vendas. A criação de um game capaz de auxiliar o aprendizado de matérias especificas. A disponibilização do material didático simplificado solicitado pelo cliente. Caso necessário, melhorias serão feitas. 
 <table>
   <tr>
