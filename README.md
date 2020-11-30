@@ -130,7 +130,6 @@ A quarta e última Sprint refere-se à finalização do website, onde irá se ve
 - __Tela cadastro__    
   - Nome/Sobrenome
   - E-mail/senha
-  - CPF
   - Botão __voltar__ (para tela inicial)
 
 - __Tela login__ 
