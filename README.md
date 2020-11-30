@@ -104,6 +104,14 @@ Para 3ª sprint iremos desenvolver as telas gerenciais referentes ao perfil de a
     <td><img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/pi03a.gif" width=460 height=280></td>
   </tr>
  </table>
+ <table>
+  <tr>
+    <td>Destaque - Tela de Avaliação</td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/tela_avaliacao.jpg" width=460 height=280></td>
+  </tr>
+ </table>
  
  <p>para mais detalhes, veja: <a href="https://youtu.be/SooPz-2a4lg">Vídeo no YouTube</a></p>
 
