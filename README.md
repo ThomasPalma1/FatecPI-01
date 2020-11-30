@@ -105,23 +105,16 @@ Para 3ª sprint foi produzido as telas gerenciais referentes ao perfil de admini
     <td><img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/pi03a.gif" width=460 height=280></td>        
   </tr>
  </table>
-  <table>
-  <tr>
-     <td>Tela Game</td>          
-  </tr>
-  <tr>
-    <td><img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/jogo1.gif" width=240 height=350></td>         
-  </tr>
- </table>
  <table>
   <tr>
-    <td>Destaque - Tela de Avaliação</td>          
+    <td>Destaque - Tela de Avaliação</td>
+     <td>Tela Game</td>        
   </tr>
   <tr>
-    <td><img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/tela_avaliacao.jpg" width=460 height=280></td>        
+    <td><img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/tela_avaliacao.jpg" width=640 height=280></td>
+    <td><img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/jogo1.gif" width=280 height=350></td>      
   </tr>
- </table>
- 
+ </table> 
  <p>para mais detalhes, veja: <a href="https://youtu.be/SooPz-2a4lg">Vídeo no YouTube</a></p>
 
 
