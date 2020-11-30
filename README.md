@@ -160,7 +160,6 @@ A quarta e última Sprint refere-se à finalização do website, onde irá se ve
 - __Perfil cliente__
    - Editar informações:
      - Nome
-     - Foto do perfil
      - E-mail
      - Senha
    - Histórico de compras 
