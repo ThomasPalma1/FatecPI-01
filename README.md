@@ -82,7 +82,7 @@ Nessa segunda sprint iremos apresentar ao cliente a parte de editar/ alterar inf
 
 
  - -[x] __3ª Sprint – 29/11/2020__<br>
-Para 3ª sprint iremos desenvolver as telas gerenciais referentes ao perfil de administrador, sendo elas a exibição dos históricos de venda, permitindo a extração de relatórios de vendas. A criação de um game capaz de auxiliar o aprendizado de matérias especificas. A disponibilização do material didático simplificado solicitado pelo cliente. Caso necessário, melhorias serão feitas. 
+Para 3ª sprint foi produzido as telas gerenciais referentes ao perfil de administrador, sendo elas a exibição dos históricos de venda, permitindo a extração de relatórios de vendas, definimos que nossa funcionabilidade será a avaliação por parte do usuário porque é interessante termos um feedback sobre o site e desenvolvimentos de conteúdo didáticos e se acharem necessário, podem sugerir o acréscimo de outras diciplinas. A criação de um game capaz de auxiliar o aprendizado de matérias especificas. A disponibilização do material didático simplificado solicitado pelo cliente. Caso necessário, melhorias serão feitas. 
 <table>
   <tr>
     <td>Detalhes</td>
@@ -91,25 +91,34 @@ Para 3ª sprint iremos desenvolver as telas gerenciais referentes ao perfil de a
   <tr>
     <td><img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/imagens/Slide3.PNG" width=460 height=280></td>
     <td><img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/Burndown%20sprint%203.PNG" width=460 height=280></td>
+             
   </tr>
  </table>
 
 <table>
   <tr>
     <td>Tela Administrador</td>
-     <td>Tela Estudante</td>
+     <td>Tela Estudante</td>        
   </tr>
   <tr>
     <td><img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/pi03b.gif" width=460 height=280></td>
-    <td><img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/pi03a.gif" width=460 height=280></td>
+    <td><img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/pi03a.gif" width=460 height=280></td>        
+  </tr>
+ </table>
+  <table>
+  <tr>
+     <td>Tela Game</td>          
+  </tr>
+  <tr>
+    <td><img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/jogo1.gif" width=240 height=350></td>         
   </tr>
  </table>
  <table>
   <tr>
-    <td>Destaque - Tela de Avaliação</td>
+    <td>Destaque - Tela de Avaliação</td>          
   </tr>
   <tr>
-    <td><img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/tela_avaliacao.jpg" width=460 height=280></td>
+    <td><img src="https://github.com/ThomasPalma1/FatecPI-01/blob/master/docs/tela_avaliacao.jpg" width=460 height=280></td>        
   </tr>
  </table>
  
